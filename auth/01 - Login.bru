@@ -1,0 +1,47 @@
+meta {
+  name: Login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/partner/auth/login
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mobile": "{{mobile}}",
+    "password": "{{password}}",
+    "device_id": "{{device_id}}"
+  }
+}
+
+script:post-response {
+  if (res.body && res.body.results && res.body.results.token) {
+    bru.setEnvVar("token", res.body.results.token);
+  }
+}
+
+docs {
+  # Login
+
+  Login a support_center user with mobile + password.
+
+  **Rate limit:** 5 attempts / 60 minutes
+
+  ## Required fields
+  - `mobile` (string)
+  - `password` (string)
+  - `device_id` (string)
+
+  ## Notes
+  - Only users with `base_role = support_center` can log in here.
+  - On success, `results.token` is auto-saved to the `token` env var for use in protected requests.
+  - Possible `error_type` values: `validation_error`, `auth_error`.
+}

@@ -1,0 +1,37 @@
+meta {
+  name: Send Reset OTP
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/partner/auth/send-reset-otp
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "{{email}}"
+  }
+}
+
+docs {
+  # Send Password Reset OTP
+
+  Sends a 6-digit OTP to the user's email for password reset.
+
+  **Rate limit:** 3 attempts / 60 minutes
+
+  ## Required fields
+  - `email` (must exist in `user_profiles.email`)
+
+  ## Notes
+  - Requires the linked user to have `base_role = support_center` and `status = active`.
+  - OTP expires in 10 minutes.
+  - Possible `error_type` values: `validation_error`, `auth_error`, `account_inactive`, `email_failed`.
+}

@@ -1,0 +1,46 @@
+meta {
+  name: Verify Reset OTP
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{base_url}}/partner/auth/verify-reset-otp
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "{{email}}",
+    "otp": "{{otp}}"
+  }
+}
+
+script:post-response {
+  if (res.body && res.body.results && res.body.results.reset_token) {
+    bru.setEnvVar("reset_token", res.body.results.reset_token);
+  }
+}
+
+docs {
+  # Verify Password Reset OTP
+
+  Verifies the OTP from `Send Reset OTP` and issues a `reset_token`
+  used to actually change the password.
+
+  **Rate limit:** 5 attempts / 10 minutes
+
+  ## Required fields
+  - `email` (must exist in `user_profiles.email`)
+  - `otp` (string, exactly 6 digits)
+
+  ## Notes
+  - On success, `results.reset_token` is auto-saved to the `reset_token` env var.
+  - The reset token is valid for 30 minutes (checked in the next step).
+  - Possible `error_type` values: `validation_error`, `invalid_otp`, `otp_expired`.
+}

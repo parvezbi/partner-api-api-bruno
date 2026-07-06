@@ -1,0 +1,38 @@
+meta {
+  name: Send OTP
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/partner/auth/send-otp
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mobile": "{{mobile}}"
+  }
+}
+
+docs {
+  # Send OTP (mobile login)
+
+  Generates and stores a 6-digit OTP for the given mobile number.
+
+  **Rate limit:** 3 attempts / 60 minutes
+
+  ## Required fields
+  - `mobile` (string)
+
+  ## Notes
+  - SMS sending is currently a TODO in the controller — the OTP is returned directly
+    in `results.otp` in the response for now (dev/testing convenience).
+  - OTP expires in 10 minutes.
+  - Any existing OTP for the same mobile is deleted before a new one is created.
+}

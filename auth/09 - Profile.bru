@@ -1,0 +1,25 @@
+meta {
+  name: Profile
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{base_url}}/partner/auth/profile
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+docs {
+  # Get Authenticated Profile
+
+  Returns the logged-in user, their `user_profiles` record, and partner (support center) info.
+
+  ## Auth
+  Requires `Authorization: Bearer {{token}}` (Sanctum).
+  Token is auto-filled from the `token` env var set by Login/Verify OTP/Reset Password.
+}

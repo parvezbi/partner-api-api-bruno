@@ -1,0 +1,48 @@
+meta {
+  name: Verify OTP
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/partner/auth/verify-otp
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mobile": "{{mobile}}",
+    "otp": "{{otp}}",
+    "device_id": "{{device_id}}"
+  }
+}
+
+script:post-response {
+  if (res.body && res.body.results && res.body.results.token) {
+    bru.setEnvVar("token", res.body.results.token);
+  }
+}
+
+docs {
+  # Verify OTP (mobile login)
+
+  Verifies the OTP sent via `Send OTP` and logs the user in.
+
+  **Rate limit:** 5 attempts / 10 minutes
+
+  ## Required fields
+  - `mobile` (string)
+  - `otp` (string, exactly 6 digits)
+  - `device_id` (string)
+
+  ## Notes
+  - OTP is single-use and deleted after successful verification.
+  - OTP expires 10 minutes after creation.
+  - On success, `results.token` is auto-saved to the `token` env var.
+  - Possible `error_type` values: `validation_error`, `otp_error`, `otp_expired`, `auth_error`.
+}

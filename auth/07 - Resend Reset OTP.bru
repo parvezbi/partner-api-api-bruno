@@ -1,0 +1,38 @@
+meta {
+  name: Resend Reset OTP
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base_url}}/partner/auth/resend-reset-otp
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "{{email}}"
+  }
+}
+
+docs {
+  # Resend Password Reset OTP
+
+  Resends a fresh 6-digit OTP to the user's email.
+
+  **Rate limit:** 2 attempts / 60 minutes
+
+  ## Required fields
+  - `email` (must exist in `user_profiles.email`)
+
+  ## Notes
+  - Blocks resending if the last OTP was created less than 2 minutes ago
+    (`error_type: too_many_requests`).
+  - Possible `error_type` values: `validation_error`, `auth_error`, `account_inactive`,
+    `too_many_requests`, `email_failed`.
+}
