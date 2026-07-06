@@ -1,4 +1,0 @@
-name: Dev - 141
-variables:
-  - name: base_url
-    value: https://nmsbackend.acloudplanet.com/api/shadhin/v3

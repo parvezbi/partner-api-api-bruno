@@ -1,0 +1,6 @@
+{
+  "version": "1",
+  "name": "Partner App Auth",
+  "type": "collection",
+  "ignore": ["node_modules", ".git"]
+}
