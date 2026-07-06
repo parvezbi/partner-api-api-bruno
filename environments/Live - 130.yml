@@ -1,0 +1,4 @@
+name: Live - 130
+variables:
+  - name: base_url
+    value: https://userapp-backend.shadhinwifi.com/api/shadhin/v3
