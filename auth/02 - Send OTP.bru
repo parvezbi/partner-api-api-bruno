@@ -22,17 +22,74 @@ body:json {
 
 docs {
   # Send OTP (mobile login)
-
+  
   Generates and stores a 6-digit OTP for the given mobile number.
-
+  
   **Rate limit:** 3 attempts / 60 minutes
-
+  
   ## Required fields
   - `mobile` (string)
-
+  
   ## Notes
   - SMS sending is currently a TODO in the controller — the OTP is returned directly
     in `results.otp` in the response for now (dev/testing convenience).
   - OTP expires in 10 minutes.
   - Any existing OTP for the same mobile is deleted before a new one is created.
+}
+
+example {
+  name: success
+  
+  request: {
+    url: {{base_url}}/partner/auth/send-otp
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+    }
+  
+    body:json: {
+      {
+        "mobile": "{{mobile}}"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Tue, 07 Jul 2026 10:34:56 GMT
+      server: Apache/2.4.59 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 3
+      x-ratelimit-remaining: 2
+      vary: Origin
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "mobile": "01700000002",
+            "otp": 273210,
+            "expires_in": 10
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "OTP sent successfully.",
+          "message_en": "OTP sent successfully.",
+          "message_bn": "ওটিপি সফলভাবে পাঠানো হয়েছে।"
+        }
+      '''
+    }
+  }
 }

@@ -30,19 +30,130 @@ script:post-response {
 
 docs {
   # Verify OTP (mobile login)
-
+  
   Verifies the OTP sent via `Send OTP` and logs the user in.
-
+  
   **Rate limit:** 5 attempts / 10 minutes
-
+  
   ## Required fields
   - `mobile` (string)
   - `otp` (string, exactly 6 digits)
   - `device_id` (string)
-
+  
   ## Notes
   - OTP is single-use and deleted after successful verification.
   - OTP expires 10 minutes after creation.
   - On success, `results.token` is auto-saved to the `token` env var.
   - Possible `error_type` values: `validation_error`, `otp_error`, `otp_expired`, `auth_error`.
+}
+
+example {
+  name: success
+  
+  request: {
+    url: {{base_url}}/partner/auth/verify-otp
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+    }
+  
+    body:json: {
+      {
+        "mobile": "{{mobile}}",
+        "otp": "{{otp}}",
+        "device_id": "{{device_id}}"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Tue, 07 Jul 2026 10:35:33 GMT
+      server: Apache/2.4.59 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 5
+      x-ratelimit-remaining: 3
+      vary: Origin
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "token": "6319|w3WImk8N7J9k41QS1bJsG9NZJZgpBwuHF1dZqBh9",
+            "user": {
+              "id": 2,
+              "user_unique_id": "SHD-829813",
+              "auth_id": "01700000002",
+              "status": "active",
+              "panel_access": 1,
+              "base_role": "support_center",
+              "text_password": "123456",
+              "permissions": null,
+              "is_password_changed": 1,
+              "last_access": "2024-12-12 12:29:41",
+              "created_at": "2024-12-12T06:28:42.000000Z",
+              "updated_at": "2026-01-27T06:37:44.000000Z",
+              "is_admin": 0
+            },
+            "partner_info": {
+              "id": 204,
+              "uid": 2,
+              "zone_name": "muktagacha",
+              "service_charge": 200,
+              "is_test_mode": 0,
+              "simultaneous_use_disable": 0,
+              "zone_id": "8221080",
+              "zone_ip": "103.131.146.156",
+              "zone_username": "webadmin",
+              "zone_password": "Plexus$%Webadmin",
+              "wifi_commission_rate": 0,
+              "broadband_commission_rate": 0,
+              "commission_rate_type": "auto",
+              "center_type": "support_center",
+              "sub_centers": null,
+              "package_list": "[]",
+              "opening_package_id": null,
+              "total_desh_package": null,
+              "coverage_type": "union",
+              "coverage_ids": "4281,4286",
+              "support_number": "01916782048",
+              "whatsapp_number": null,
+              "email": null,
+              "division_id": 8,
+              "district_id": 62,
+              "upazila_id": 465,
+              "union_id": 4281,
+              "village_id": 23843,
+              "address": "গ্রাম: রামভদ্রপুর, ইউনিয়ন/পৌরসভা: বাশাটি, থানা/উপজেলা: মুক্তাগাছা, জেলা: ময়মনসিংহ, বিভাগ: ময়মনসিংহ।",
+              "latitude": 23.86921,
+              "longitude": 90.405361,
+              "status": "active",
+              "data_object": "{\"existing_facilities\":\"1,2,3,4,5,6,7,8,9,10\",\"current_business\":\"\\u09ae\\u09c7\\u09a1\\u09bf\\u09b8\\u09bf\\u09a8\",\"monthly_sale\":\"150000\",\"interested_investment\":585000,\"service_package_id\":\"2\",\"interest_reason\":\"\\u09ac\\u09bf\\u099c\\u09a8\\u09c7\\u09b8 \\u0995\\u09b0\\u09be\\u09b0 \\u099c\\u09a8\\u09cd\\u09af\",\"previous_experience\":0,\"forward_months\":\"12_m\",\"ref_person_name\":null,\"ref_person_mobile\":null,\"ref_person_relation\":null}",
+              "updated_by": "5589",
+              "created_at": "2023-06-22T04:11:40.000000Z",
+              "updated_at": "2026-01-24T18:04:58.000000Z"
+            },
+            "message": "OTP verification successful."
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Verification successful.",
+          "message_en": "Verification successful.",
+          "message_bn": "সফলভাবে যাচাই করা হয়েছে।"
+        }
+      '''
+    }
+  }
 }
