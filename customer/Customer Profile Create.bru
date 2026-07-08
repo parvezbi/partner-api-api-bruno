@@ -1,0 +1,337 @@
+meta {
+  name: Customer Profile Create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/partner/customer/profile/create
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: 6326|9vuI9sHdOJso3TqXIdmqOfWCCAbIKKIYqdWQzxVS
+}
+
+body:multipart-form {
+  client_id: 2
+  full_name: Md. Rahim Khan
+  mobile_number: 01712345678
+  alternative_mobile: 01712345678
+  email: rahim.khan@example.com
+  nid: 1234567890123
+  nid_front_image: @file(F:\Alamin\alamin.png) @contentType(image/png)
+  nid_back_image: @file(F:\Alamin\alamin-1.png) @contentType(image/png)
+  gender: male
+  division_id: 1
+  district_id: 1
+  upazila_id: 1
+  union_id: 1
+  village_id: 2696
+  house_no: House : 5
+  road_no: Road : 5
+  address: House #45, Road #12, Dhanmondi Residential Area
+  latitude: 23.8103
+  longitude: 90.4125
+  building_name: Green Tower, 5th Floor
+  whatsapp_number: 01912345678
+  profession: Software Engineer
+  address_direction: Near Dhanmondi Lake, beside City Bank
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  {
+      // ==================== REQUIRED FIELDS ====================
+      
+      /**
+       * REQUIRED | string
+       * Network Support Center unique identifier
+       * Must exist in network_support_centers table
+       * Validation: exists:network_support_centers,uid
+       * Example: "SUPPORT001", "NSC-2024-001"
+       */
+      "client_id": "SUPPORT001",
+      
+      /**
+       * REQUIRED | string | max:255
+       * User's full legal name as per NID
+       * Should match NID document
+       * Example: "Md. Rahim Khan", "Ayesha Begum"
+       */
+      "full_name": "Md. Rahim Khan",
+      
+      /**
+       * REQUIRED | string | regex:/^01[3-9]\d{8}$/
+       * Bangladeshi mobile number (11 digits)
+       * Must start with 01 and third digit must be 3-9
+       * Must be unique in users table
+       * Format: 01XXXXXXXXX
+       * Example: "01712345678", "01987654321"
+       * NOT ALLOWED: "01512345678" (third digit must be 3-9)
+       */
+      "mobile_number": "01712345678",
+      
+      /**
+       * REQUIRED | string | max:50
+       * National ID Card number
+       * Should be 10 or 17 digits (depends on NID version)
+       * Example: "1234567890123", "9876543210"
+       */
+      "nid": "1234567890123",
+      
+      /**
+       * REQUIRED | string | in:male,female,other
+       * User's gender identity
+       * Must be one of: male, female, other
+       * Example: "male", "female", "other"
+       */
+      "gender": "male",
+      
+      /**
+       * REQUIRED | integer
+       * Division ID from geo_divisions table
+       * Must exist in geo_divisions table
+       * Example: 1 (Dhaka), 2 (Chittagong)
+       */
+      "division_id": 1,
+      
+      /**
+       * REQUIRED | integer
+       * District ID from geo_districts table
+       * Must exist in geo_districts table
+       * Must belong to the selected division
+       * Example: 2 (Dhaka District)
+       */
+      "district_id": 2,
+      
+      /**
+       * REQUIRED | integer
+       * Upazila/Thana ID from geo_upazilas table
+       * Must exist in geo_upazilas table
+       * Must belong to the selected district
+       * Example: 3 (Dhanmondi Thana)
+       */
+      "upazila_id": 3,
+      
+      /**
+       * REQUIRED | integer
+       * Union/Pouroshova ID from geo_union_pouroshovas table
+       * Must exist in geo_union_pouroshovas table
+       * Must belong to the selected upazila
+       * Example: 4 (Dhanmondi Union)
+       */
+      "union_id": 4,
+      
+      /**
+       * REQUIRED | integer
+       * Village/Moholla ID from geo_villages table
+       * Must exist in geo_villages table
+       * Must belong to the selected union
+       * Example: 5 (Dhanmondi Village)
+       */
+      "village_id": 5,
+      
+      /**
+       * REQUIRED | string | max:500
+       * Full address (house + road + area)
+       * Should be detailed enough for delivery/installation
+       * Example: "House #45, Road #12, Dhanmondi Residential Area"
+       */
+      "address": "House #45, Road #12, Dhanmondi",
+      
+      /**
+       * REQUIRED | numeric | between:-90,90
+       * Latitude coordinate for map location
+       * Used for installation and service delivery
+       * Must be between -90 and 90 degrees
+       * Example: 23.8103 (Dhaka), 22.3568 (Chittagong)
+       */
+      "latitude": 23.8103,
+      
+      /**
+       * REQUIRED | numeric | between:-180,180
+       * Longitude coordinate for map location
+       * Used for installation and service delivery
+       * Must be between -180 and 180 degrees
+       * Example: 90.4125 (Dhaka), 91.7832 (Chittagong)
+       */
+      "longitude": 90.4125,
+      
+      /**
+       * REQUIRED | string | max:255
+       * Building or apartment name
+       * Used for identification and delivery
+       * Example: "Green Tower", "Rupayan City", "House 45"
+       */
+      "building_name": "Green Tower",
+      
+      /**
+       * REQUIRED | integer
+       * Internet package ID from internet_packages table
+       * Must exist in internet_packages table
+       * Determines speed, price, and features
+       * Example: 1 (Basic), 2 (Standard), 3 (Premium)
+       */
+      "package": 1,
+      
+      // ==================== OPTIONAL FIELDS ====================
+      
+      /**
+       * OPTIONAL | string | regex:/^01[3-9]\d{8}$/
+       * Alternative mobile number for backup contact
+       * Must follow same format as mobile_number
+       * Used for emergency contacts
+       * Example: "01812345678", "01987654321"
+       */
+      "alternative_mobile": "01812345678",
+      
+      /**
+       * OPTIONAL | string | max:255
+       * WhatsApp number (usually same as mobile)
+       * Used for communication and support
+       * Example: "01912345678"
+       */
+      "whatsapp_number": "01912345678",
+      
+      /**
+       * OPTIONAL | email | max:255
+       * Email address for communication
+       * Used for billing, notifications, and support
+       * Example: "rahim.khan@example.com"
+       */
+      "email": "rahim.khan@example.com",
+      
+      /**
+       * OPTIONAL | file | image|mimes:jpeg,png,jpg,gif|max:10240
+       * NID front image file
+       * Must be image format (jpeg, png, jpg, gif)
+       * Max size: 10MB (10240 KB)
+       * Will be compressed automatically to ~900KB
+       * Used for KYC verification
+       * Example: nid_front.jpg
+       */
+      "nid_front_image": null,
+      
+      /**
+       * OPTIONAL | file | image|mimes:jpeg,png,jpg,gif|max:10240
+       * NID back image file
+       * Must be image format (jpeg, png, jpg, gif)
+       * Max size: 10MB (10240 KB)
+       * Will be compressed automatically to ~900KB
+       * Used for KYC verification
+       * Example: nid_back.jpg
+       */
+      "nid_back_image": null,
+      
+      /**
+       * OPTIONAL | string | max:100
+       * House/flat number
+       * Used for location identification
+       * Example: "45/A", "Flat 5B", "House 22"
+       */
+      "house_no": "45/A",
+      
+      /**
+       * OPTIONAL | string | max:100
+       * Road/street number
+       * Used for location identification
+       * Example: "12", "Road 5", "Street 7"
+       */
+      "road_no": "12",
+      
+      /**
+       * OPTIONAL | string | max:255
+       * User's profession/occupation
+       * Used for demographic data and marketing
+       * Example: "Software Engineer", "Doctor", "Business"
+       */
+      "profession": "Software Engineer",
+      
+      /**
+       * OPTIONAL | string | max:500
+       * Additional location directions or landmarks
+       * Helps delivery/installation teams find the location
+       * Example: "Near Dhanmondi Lake, beside City Bank"
+       */
+      "address_direction": "Near Dhanmondi Lake, beside City Bank"
+  }
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/customer/profile/create
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      client_id: 2
+      full_name: Md. Rahim Khan
+      mobile_number: 01712345678
+      alternative_mobile: 01712345678
+      email: rahim.khan@example.com
+      nid: 1234567890123
+      nid_front_image: @file(F:\Alamin\alamin.png) @contentType(image/png)
+      nid_back_image: @file(F:\Alamin\alamin-1.png) @contentType(image/png)
+      gender: male
+      division_id: 1
+      district_id: 1
+      upazila_id: 1
+      union_id: 1
+      village_id: 2696
+      house_no: House : 5
+      road_no: Road : 5
+      address: House #45, Road #12, Dhanmondi Residential Area
+      latitude: 23.8103
+      longitude: 90.4125
+      building_name: Green Tower, 5th Floor
+      whatsapp_number: 01912345678
+      profession: Software Engineer
+      address_direction: Near Dhanmondi Lake, beside City Bank
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 08 Jul 2026 07:49:43 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "uid": 3294,
+            "mobile_number": "01712345678",
+            "password": 496151,
+            "nid_front_image": "https://nmsbackend.acloudplanet.com/storage/users/nid_images/3294_1783496983_6a4e0117e81e6.png",
+            "nid_back_image": "https://nmsbackend.acloudplanet.com/storage/users/nid_images/3294_1783496983_6a4e0117eb1c3.png"
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Broadband user created successfully."
+        }
+      '''
+    }
+  }
+}

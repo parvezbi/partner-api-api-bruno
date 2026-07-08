@@ -1,0 +1,140 @@
+meta {
+  name: Customer Profile Update
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base_url}}/partner/customer/profile/update
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: 6327|YzMivXaeiMxugbejGMERLnMn9QKExPfSqUv6vbrJ
+}
+
+body:multipart-form {
+  client_id: 2
+  full_name: Md. Rahim Khan
+  mobile_number: 01712345678
+  alternative_mobile: 01898765432
+  email: rahim.updated@example.com
+  nid: 9876543210123
+  gender: male
+  division_id: 1
+  district_id: 1
+  upazila_id: 1
+  union_id: 1
+  village_id: 2696
+  house_no: 78/B
+  road_no: 25
+  address: House #78/B, Road #25, Gulshan-1
+  latitude: 23.7900
+  longitude: 90.4150
+  building_name: Blue Sky Apartment
+  whatsapp_number: 01998765432
+  profession: Senior Software Engineer
+  address_direction: Near Gulshan Lake, opposite to Police Box
+  uid: 3294
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/customer/profile/update
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      client_id: 2
+      full_name: Md. Rahim Khan
+      mobile_number: 01712345678
+      alternative_mobile: 01898765432
+      email: rahim.updated@example.com
+      nid: 9876543210123
+      gender: male
+      division_id: 1
+      district_id: 1
+      upazila_id: 1
+      union_id: 1
+      village_id: 2696
+      house_no: 78/B
+      road_no: 25
+      address: House #78/B, Road #25, Gulshan-1
+      latitude: 23.7900
+      longitude: 90.4150
+      building_name: Blue Sky Apartment
+      whatsapp_number: 01998765432
+      profession: Senior Software Engineer
+      address_direction: Near Gulshan Lake, opposite to Police Box
+      uid: 3294
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 08 Jul 2026 08:14:53 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "uid": 3294,
+            "mobile_number": "01712345678",
+            "updated_fields": [
+              "uid",
+              "client_id",
+              "full_name",
+              "mobile_number",
+              "alternative_mobile",
+              "email",
+              "nid",
+              "gender",
+              "division_id",
+              "district_id",
+              "upazila_id",
+              "union_id",
+              "village_id",
+              "house_no",
+              "road_no",
+              "address",
+              "latitude",
+              "longitude",
+              "building_name",
+              "whatsapp_number",
+              "profession",
+              "address_direction"
+            ],
+            "nid_front_image": "https://nmsbackend.acloudplanet.com/storage/users/nid_images/3294_1783496983_6a4e0117e81e6.png",
+            "nid_back_image": "https://nmsbackend.acloudplanet.com/storage/users/nid_images/3294_1783496983_6a4e0117eb1c3.png"
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "User updated successfully."
+        }
+      '''
+    }
+  }
+}
