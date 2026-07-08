@@ -1,0 +1,108 @@
+meta {
+  name: Broadband Payment Details
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/partner/customer/broadband/payment/details
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 6326|9vuI9sHdOJso3TqXIdmqOfWCCAbIKKIYqdWQzxVS
+}
+
+body:json {
+  {
+    "uid": 3298,
+    "package_id": 504,
+    "package_type": "broadband",
+    "connection_media": "fiber",
+    "user_type": "individual",
+    "ip_type": "dynamic",
+    "billing_cycle": "fixed_date",
+    "payment_method": "bkash",
+    "billing_start_date": "2026-07-08",
+    "billing_due_days": 10,
+    "pop_id": 1,
+    "installation_date": "2026-07-08",
+    "installation_notes": "Install on 3rd floor, Building A",
+    "ins_cost": 500
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/customer/broadband/payment/details
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "uid": 3298,
+        "package_id": 504,
+        "package_type": "broadband",
+        "connection_media": "fiber",
+        "user_type": "individual",
+        "ip_type": "dynamic",
+        "billing_cycle": "fixed_date",
+        "payment_method": "bkash",
+        "billing_start_date": "2026-07-08",
+        "billing_due_days": 10,
+        "pop_id": 1,
+        "installation_date": "2026-07-08",
+        "installation_notes": "Install on 3rd floor, Building A",
+        "ins_cost": 500
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 08 Jul 2026 13:59:10 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "uid": 3298,
+            "mobile_number": "01700503034",
+            "package": null,
+            "package_price": 2625,
+            "payable_amount": 2032.26,
+            "billing_cycle": "fixed_date",
+            "payment_method": "bkash",
+            "payment_cache_key": "broadband_payment_3298"
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Broadband user setup completed. Please proceed to payment."
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,20 @@
+meta {
+  name: Broadband Payment Callback Response
+  type: http
+  seq: 6
+}
+
+post {
+  url: https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/broadband/payment/bkash/callback
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"status":"success","message":"Successful","transaction_id":"DG840OZA5U","invoice_id":"INV17835277608951766","payment_id":"TR0011wRGxXQO1783527761270","full_name":"Tanvir Mahtab","mobile_number":"01700503034","package":"Freelancer","days_left":24,"final_price":2625,"payment_method":"bkash","payment_date":"2026-07-08 22:23:18"}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

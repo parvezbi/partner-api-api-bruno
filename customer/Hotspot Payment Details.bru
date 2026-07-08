@@ -1,0 +1,102 @@
+meta {
+  name: Hotspot Payment Details
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{base_url}}/partner/customer/hotspot/payment/details
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 6326|9vuI9sHdOJso3TqXIdmqOfWCCAbIKKIYqdWQzxVS
+}
+
+body:json {
+  {
+    "uid": 3298,
+    "package_id": 6,
+    "package_type": "wifi",
+    "connection_media": "fiber",
+    "user_type": "individual",
+    "ip_type": "dynamic",
+    "billing_cycle": "fixed_date",
+    "payment_method": "bkash",
+    "billing_start_date": "2026-07-08",
+    "billing_due_days": 0,
+    "pop_id": 1
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/customer/hotspot/payment/details
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "uid": 3298,
+        "package_id": 6,
+        "package_type": "wifi",
+        "connection_media": "fiber",
+        "user_type": "individual",
+        "ip_type": "dynamic",
+        "billing_cycle": "fixed_date",
+        "payment_method": "bkash",
+        "billing_start_date": "2026-07-08",
+        "billing_due_days": 0,
+        "pop_id": 1
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 08 Jul 2026 14:07:11 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "uid": 3298,
+            "mobile_number": "01700503034",
+            "package": "SHADHIN-EXPRESS",
+            "package_price": 250,
+            "payable_amount": 250,
+            "billing_cycle": "fixed_date",
+            "payment_method": "bkash",
+            "payment_cache_key": "hotspot_payment_3298"
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Hotspot user setup completed. Please proceed to payment."
+        }
+      '''
+    }
+  }
+}
