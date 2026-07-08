@@ -1,11 +1,11 @@
 meta {
-  name: Resend Reset OTP
+  name: Resend Reset OTP Via SMS
   type: http
-  seq: 7
+  seq: 11
 }
 
 post {
-  url: {{base_url}}/partner/auth/resend-reset-otp
+  url: {{base_url}}/partner/auth/resend-reset-otp-mobile-sms
   body: json
   auth: none
 }
@@ -16,7 +16,7 @@ headers {
 
 body:json {
   {
-    "email": "{{email}}"
+    "mobile": "{{mobile}}"
   }
 }
 
@@ -38,10 +38,10 @@ docs {
 }
 
 example {
-  name: success-live
+  name: success-dev
   
   request: {
-    url: {{base_url}}/partner/auth/resend-reset-otp
+    url: {{base_url}}/partner/auth/resend-reset-otp-mobile-sms
     method: POST
     mode: json
     headers: {
@@ -50,20 +50,20 @@ example {
   
     body:json: {
       {
-        "email": "{{email}}"
+        "mobile": "{{mobile}}"
       }
     }
   }
   
   response: {
     headers: {
-      date: Wed, 08 Jul 2026 05:27:21 GMT
-      server: Apache/2.4.66 (Debian)
+      date: Wed, 08 Jul 2026 09:59:41 GMT
+      server: Apache/2.4.59 (Debian)
       cache-control: no-cache, private
       x-ratelimit-limit: 200
-      x-ratelimit-remaining: 199
+      x-ratelimit-remaining: 198
       vary: Origin
-      keep-alive: timeout=10, max=100
+      keep-alive: timeout=5, max=100
       connection: Keep-Alive
       transfer-encoding: chunked
       content-type: application/json
@@ -79,8 +79,8 @@ example {
       content: '''
         {
           "results": {
-            "email": "abadmahmud5@gmail.com",
-            "message": "Password reset code has been resent to your email.",
+            "mobile": "01764717803",
+            "message": "Password reset code has been resent to your mobile.",
             "expires_in": 10
           },
           "status": "success",

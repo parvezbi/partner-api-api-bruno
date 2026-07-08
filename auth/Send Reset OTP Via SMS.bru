@@ -1,0 +1,94 @@
+meta {
+  name: Send Reset OTP Via SMS
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{base_url}}/partner/auth/send-reset-otp-mobile-sms
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "mobile": "{{mobile}}"
+  }
+}
+
+docs {
+  # Send Password Reset OTP
+  
+  Sends a 6-digit OTP to the user's email for password reset.
+  
+  **Rate limit:** 3 attempts / 60 minutes
+  
+  ## Required fields
+  - `email` (must exist in `user_profiles.email`)
+  
+  ## Notes
+  - Requires the linked user to have `base_role = support_center` and `status = active`.
+  - OTP expires in 10 minutes.
+  - Possible `error_type` values: `validation_error`, `auth_error`, `account_inactive`, `email_failed`.
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/auth/send-reset-otp-mobile-sms
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+    }
+  
+    body:json: {
+      {
+        "mobile": "{{mobile}}"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 08 Jul 2026 09:55:53 GMT
+      server: Apache/2.4.59 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "mobile": "01764717803",
+            "message": "Password reset code has been sent to your mobile.",
+            "expires_in": 10
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Password reset code sent successfully.",
+          "message_en": "Password reset code sent successfully.",
+          "message_bn": "পাসওয়ারড রিসেট কোড সফলভাবে পাঠানো হয়েছে।"
+        }
+      '''
+    }
+  }
+}

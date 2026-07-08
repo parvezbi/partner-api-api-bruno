@@ -1,11 +1,11 @@
 meta {
-  name: Verify Reset OTP
+  name: Verify Reset OTP Via Mail
   type: http
   seq: 5
 }
 
 post {
-  url: {{base_url}}/partner/auth/verify-reset-otp
+  url: {{base_url}}/partner/auth/verify-reset-otp-mail
   body: json
   auth: none
 }
@@ -29,16 +29,16 @@ script:post-response {
 
 docs {
   # Verify Password Reset OTP
-
+  
   Verifies the OTP from `Send Reset OTP` and issues a `reset_token`
   used to actually change the password.
-
+  
   **Rate limit:** 5 attempts / 10 minutes
-
+  
   ## Required fields
   - `email` (must exist in `user_profiles.email`)
   - `otp` (string, exactly 6 digits)
-
+  
   ## Notes
   - On success, `results.reset_token` is auto-saved to the `reset_token` env var.
   - The reset token is valid for 30 minutes (checked in the next step).

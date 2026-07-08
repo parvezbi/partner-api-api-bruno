@@ -1,0 +1,95 @@
+meta {
+  name: Resend Reset OTP Via Mail
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base_url}}/partner/auth/resend-reset-otp-mail
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "email": "{{email}}"
+  }
+}
+
+docs {
+  # Resend Password Reset OTP
+  
+  Resends a fresh 6-digit OTP to the user's email.
+  
+  **Rate limit:** 2 attempts / 60 minutes
+  
+  ## Required fields
+  - `email` (must exist in `user_profiles.email`)
+  
+  ## Notes
+  - Blocks resending if the last OTP was created less than 2 minutes ago
+    (`error_type: too_many_requests`).
+  - Possible `error_type` values: `validation_error`, `auth_error`, `account_inactive`,
+    `too_many_requests`, `email_failed`.
+}
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/auth/resend-reset-otp
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+    }
+  
+    body:json: {
+      {
+        "email": "{{email}}"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 08 Jul 2026 05:27:21 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "email": "abadmahmud5@gmail.com",
+            "message": "Password reset code has been resent to your email.",
+            "expires_in": 10
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Password reset code resent successfully.",
+          "message_en": "Password reset code resent successfully.",
+          "message_bn": "পাসওয়ার্ড রিসেট কোড পুনরায় পাঠানো হয়েছে।"
+        }
+      '''
+    }
+  }
+}
