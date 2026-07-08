@@ -44,3 +44,61 @@ docs {
   - The reset token is valid for 30 minutes (checked in the next step).
   - Possible `error_type` values: `validation_error`, `invalid_otp`, `otp_expired`.
 }
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/auth/verify-reset-otp-mail
+    method: POST
+    mode: json
+    headers: {
+      Content-Type: application/json
+    }
+  
+    body:json: {
+      {
+        "email": "{{email}}",
+        "otp": "{{otp}}"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 08 Jul 2026 05:24:29 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 5
+      x-ratelimit-remaining: 1
+      vary: Origin
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "email": "abadmahmud5@gmail.com",
+            "reset_token": "nA0L1mynTcInMLnLEcl4OVN44p8AtlOmemPvBbr3kIEWOES87Z8ASbDjzTdurSke",
+            "message": "Code verified. Now you can reset your password."
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Code verification successful.",
+          "message_en": "Code verification successful.",
+          "message_bn": "কোড যাচাই সফল হয়েছে।"
+        }
+      '''
+    }
+  }
+}
