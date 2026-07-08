@@ -16,10 +16,54 @@ auth:bearer {
 
 docs {
   # Logout
-
+  
   Revokes all Sanctum tokens for the authenticated user.
-
+  
   ## Auth
   Requires `Authorization: Bearer {{token}}` (Sanctum).
   Token is auto-filled from the `token` env var set by Login/Verify OTP/Reset Password.
+}
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/auth/logout
+    method: POST
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 08 Jul 2026 05:34:01 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": [],
+          "status": "success",
+          "error_type": "",
+          "message": "Logged out successfully.",
+          "message_en": "Logged out successfully.",
+          "message_bn": "সফলভাবে লগআউট করা হয়েছে।"
+        }
+      '''
+    }
+  }
 }

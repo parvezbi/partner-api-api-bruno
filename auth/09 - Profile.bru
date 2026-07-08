@@ -16,10 +16,153 @@ auth:bearer {
 
 docs {
   # Get Authenticated Profile
-
+  
   Returns the logged-in user, their `user_profiles` record, and partner (support center) info.
-
+  
   ## Auth
   Requires `Authorization: Bearer {{token}}` (Sanctum).
   Token is auto-filled from the `token` env var set by Login/Verify OTP/Reset Password.
+}
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/auth/profile
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 08 Jul 2026 05:34:41 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "user": {
+              "id": 28380,
+              "user_unique_id": null,
+              "auth_id": "01628210207",
+              "status": "active",
+              "added_by": null,
+              "panel_access": 0,
+              "base_role": "support_center",
+              "text_password": "210207",
+              "is_password_changed": 0,
+              "permissions": null,
+              "last_access": "2026-05-16 11:41:42",
+              "created_at": "2024-01-24T06:08:09.000000Z",
+              "updated_at": "2026-07-08T05:26:58.000000Z"
+            },
+            "profile": {
+              "id": 28368,
+              "uid": 28380,
+              "full_name": "Lothif islam",
+              "wallet_amount": 0,
+              "mobile_number": "01628210207",
+              "whatsapp_number": "01628210207",
+              "email": "abadmahmud5@gmail.com",
+              "profile_image": null,
+              "profession": "Not Found",
+              "nid": "4626106738",
+              "nid_photo": null,
+              "gender": "Male",
+              "division_id": 1000000,
+              "district_id": 1,
+              "upazila_id": 11,
+              "union_id": 1000000,
+              "village_id": "1000000",
+              "ward_no": null,
+              "road_no": null,
+              "block_no": null,
+              "house_no": null,
+              "address": "Janumia moshjid er last, cumilla.",
+              "latitude": "23.465119",
+              "longitude": "91.181616",
+              "address_direction": null,
+              "photo_source": null,
+              "device_info": "{\"brand\":\"website\"}",
+              "is_smartphone": 0,
+              "created_at": "2024-01-24T06:08:09.000000Z",
+              "updated_at": "2026-05-16T05:41:42.000000Z"
+            },
+            "partner_info": {
+              "id": 720,
+              "uid": 28380,
+              "zone_name": "cumilla",
+              "is_test_mode": 0,
+              "simultaneous_use_disable": 0,
+              "zone_id": "2350039",
+              "zone_ip": "103.131.145.12",
+              "zone_username": "webadmin",
+              "zone_password": "Human&%Plexus",
+              "wifi_commission_rate": 40,
+              "broadband_commission_rate": 40,
+              "commission_rate_type": "auto",
+              "center_type": "support_center",
+              "billing_cycle": "fixed_date",
+              "broadband_commission": 40,
+              "wifi_commission": 40,
+              "sub_centers": null,
+              "package_list": "[\"511\",\"510\",\"508\",\"507\",\"506\",\"505\",\"504\",\"503\",\"502\",\"501\",\"5\",\"6\"]",
+              "opening_package_id": null,
+              "total_desh_package": 9999,
+              "coverage_type": "district",
+              "coverage_ids": "1",
+              "support_number": "01628210207",
+              "whatsapp_number": null,
+              "email": null,
+              "division_id": 1,
+              "district_id": 1,
+              "upazila_id": 555,
+              "union_id": 4740,
+              "village_id": 86058,
+              "address": "গ্রাম: মোগলটুলী (বজ্রপুর ও মনোহরপুর মৌজা), ইউনিয়ন/পৌরসভা: ওয়ার্ড-০৫, থানা/উপজেলা: কোতোয়ালী থানা, জেলা: কুমিল্লা, বিভাগ: চট্টগ্রাম।",
+              "office_deed": null,
+              "pop_declaration": 0,
+              "branch_manager": null,
+              "latitude": 23.465119,
+              "longitude": 91.181616,
+              "activation_date": null,
+              "deactivation_date": null,
+              "capacity_mbps": null,
+              "nttn_provider_primary": null,
+              "distance_primary": null,
+              "nttn_provider_secondary": null,
+              "distance_secondary": null,
+              "pop_within_1km": 0,
+              "status": "active",
+              "data_object": "{\"existing_facilities\":\"1,2,3,4,5,6,7,8,9,10\",\"current_business\":null,\"monthly_sale\":\"50000\",\"interested_investment\":825000,\"service_package_id\":\"3\",\"interest_reason\":null,\"previous_experience\":0,\"forward_months\":\"12_m\",\"ref_person_name\":null,\"ref_person_mobile\":null,\"ref_person_relation\":null}",
+              "updated_by": "28380",
+              "created_at": "2024-01-24T06:53:23.000000Z",
+              "updated_at": "2026-07-01T10:37:31.000000Z"
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Profile retrieved successfully.",
+          "message_en": "Profile retrieved successfully.",
+          "message_bn": "প্রোফাইল সফলভাবে প্রাপ্ত হয়েছে।"
+        }
+      '''
+    }
+  }
 }
