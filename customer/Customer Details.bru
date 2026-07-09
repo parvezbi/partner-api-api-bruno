@@ -1,0 +1,2417 @@
+meta {
+  name: Customer Details
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{base_url}}/partner/customer/details?uid=186686&status=all
+  body: none
+  auth: bearer
+}
+
+params:query {
+  uid: 186686
+  status: all
+}
+
+auth:bearer {
+  token: 209571|A4As1hbJGcW603DNT8iikt7SDyYZsgSTRBSrU2qH
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/customer/list?status=all&communication_status=&package_type=&package_id=&division=&district=&upazila=&union=&skip=&client_id=28380
+    method: GET
+    mode: none
+    params:query: {
+      status: all
+      communication_status: 
+      package_type: 
+      package_id: 
+      division: 
+      district: 
+      upazila: 
+      union: 
+      skip: 
+      client_id: 28380
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 09 Jul 2026 10:35:47 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "total": 2467,
+            "list": [
+              {
+                "mobile_number": "01765543413",
+                "id": 163657,
+                "uid": 187602,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-07-09T08:27:45.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Ayesha begum",
+                  "mobile_number": "01765543413",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01771784542",
+                "id": 163550,
+                "uid": 187486,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-07-07T11:27:53.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Mehedi Hassan",
+                  "mobile_number": "01771784542",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 2.52,
+                    "upload_gb": 29.7,
+                    "total_gb": 32.22
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 5.04,
+                    "upload": 59.4,
+                    "overall": 32.22
+                  },
+                  "status": "normal"
+                }
+              },
+              {
+                "mobile_number": "01608414018",
+                "id": 163476,
+                "uid": 187266,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-07-06T11:47:23.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Mr. Obaidur Rahman",
+                  "mobile_number": "01608414018",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 1.4,
+                    "upload_gb": 28.17,
+                    "total_gb": 29.57
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 2.8,
+                    "upload": 56.34,
+                    "overall": 29.57
+                  },
+                  "status": "normal"
+                }
+              },
+              {
+                "mobile_number": "01406525250",
+                "id": 163463,
+                "uid": 187252,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-07-06T08:54:38.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "kazi shimul",
+                  "mobile_number": "01406525250",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 0.84,
+                    "upload_gb": 15.85,
+                    "total_gb": 16.69
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 1.68,
+                    "upload": 31.7,
+                    "overall": 16.69
+                  },
+                  "status": "normal"
+                }
+              },
+              {
+                "mobile_number": "01892664701",
+                "id": 163200,
+                "uid": 186751,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-07-03T06:08:58.000000Z",
+                "package_type": "broadband",
+                "package_id": 501,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Mr. Obaidur Rahman",
+                  "mobile_number": "01892664701",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Student",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 5.26,
+                    "upload_gb": 57.3,
+                    "total_gb": 62.56
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01820679234",
+                "id": 163138,
+                "uid": 186686,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-07-02T11:18:55.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Rifat",
+                  "mobile_number": "01820679234",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 5.02,
+                    "upload_gb": 59.62,
+                    "total_gb": 64.64
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 10.04,
+                    "upload": 100,
+                    "overall": 64.64
+                  },
+                  "status": "moderate"
+                }
+              },
+              {
+                "mobile_number": "01818523511",
+                "id": 163037,
+                "uid": 186505,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-07-01T12:10:12.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Saifulislam",
+                  "mobile_number": "01818523511",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 6.91,
+                    "upload_gb": 109.98,
+                    "total_gb": 116.89
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 13.82,
+                    "upload": 100,
+                    "overall": 100
+                  },
+                  "status": "critical"
+                }
+              },
+              {
+                "mobile_number": "01847240779",
+                "id": 162981,
+                "uid": 186395,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-07-01T07:43:55.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Md.Hiru Miah",
+                  "mobile_number": "01847240779",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 1.79,
+                    "upload_gb": 27.38,
+                    "total_gb": 29.17
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 3.58,
+                    "upload": 54.76,
+                    "overall": 29.17
+                  },
+                  "status": "normal"
+                }
+              },
+              {
+                "mobile_number": "01878800761",
+                "id": 162879,
+                "uid": 186121,
+                "user_type": "Other",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-30T12:05:55.000000Z",
+                "package_type": "broadband",
+                "package_id": 501,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Mehedi Hassan",
+                  "mobile_number": "01878800761",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Student",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 6.27,
+                    "upload_gb": 79.83,
+                    "total_gb": 86.1
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01639076261",
+                "id": 162760,
+                "uid": 185871,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-29T08:42:59.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Abir",
+                  "mobile_number": "01639076261",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 3.57,
+                    "upload_gb": 85.14,
+                    "total_gb": 88.71
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 7.14,
+                    "upload": 100,
+                    "overall": 88.71
+                  },
+                  "status": "warning"
+                }
+              },
+              {
+                "mobile_number": "01865368788",
+                "id": 162631,
+                "uid": 185609,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-28T06:39:14.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Nusrat Jahan",
+                  "mobile_number": "01865368788",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 11.32,
+                    "upload_gb": 49.49,
+                    "total_gb": 60.81
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 22.64,
+                    "upload": 98.98,
+                    "overall": 60.81
+                  },
+                  "status": "moderate"
+                }
+              },
+              {
+                "mobile_number": "01312345391",
+                "id": 162603,
+                "uid": 185580,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-27T12:47:58.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "taslima bagum",
+                  "mobile_number": "01312345391",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 8.8,
+                    "upload_gb": 121.76,
+                    "total_gb": 130.56
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 17.6,
+                    "upload": 100,
+                    "overall": 100
+                  },
+                  "status": "critical"
+                }
+              },
+              {
+                "mobile_number": "01921529048",
+                "id": 162545,
+                "uid": 129746,
+                "user_type": null,
+                "connection_status": "pending",
+                "c_status": "busy",
+                "created_at": "2026-06-26T19:03:44.000000Z",
+                "package_type": "wifi",
+                "package_id": 5,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Md Majharul Islam",
+                  "mobile_number": "01921529048",
+                  "division_id": 1,
+                  "district_id": 1,
+                  "upazila_id": 11,
+                  "union_id": 129
+                },
+                "package": {
+                  "package_name": "Shadhin",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01721879389",
+                "id": 162451,
+                "uid": 185392,
+                "user_type": "Other",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-25T08:31:02.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Mehedi Hassan",
+                  "mobile_number": "01721879389",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 2.55,
+                    "upload_gb": 36.74,
+                    "total_gb": 39.29
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 5.1,
+                    "upload": 73.48,
+                    "overall": 39.29
+                  },
+                  "status": "normal"
+                }
+              },
+              {
+                "mobile_number": "01601962766",
+                "id": 162407,
+                "uid": 185334,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-24T13:07:00.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Mim akter",
+                  "mobile_number": "01601962766",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 7.5,
+                    "upload_gb": 127.34,
+                    "total_gb": 134.84
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 15,
+                    "upload": 100,
+                    "overall": 100
+                  },
+                  "status": "critical"
+                }
+              },
+              {
+                "mobile_number": "01917462634",
+                "id": 162387,
+                "uid": 185307,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-24T09:27:43.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Rashel ahmed",
+                  "mobile_number": "01917462634",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 1.39,
+                    "upload_gb": 27.17,
+                    "total_gb": 28.56
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 2.78,
+                    "upload": 54.34,
+                    "overall": 28.56
+                  },
+                  "status": "normal"
+                }
+              },
+              {
+                "mobile_number": "01648863223",
+                "id": 162361,
+                "uid": 185254,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-24T06:31:56.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "roni sha",
+                  "mobile_number": "01648863223",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 4.14,
+                    "upload_gb": 26.21,
+                    "total_gb": 30.35
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 8.28,
+                    "upload": 52.42,
+                    "overall": 30.35
+                  },
+                  "status": "normal"
+                }
+              },
+              {
+                "mobile_number": "01636766690",
+                "id": 162314,
+                "uid": 185193,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-23T10:34:50.000000Z",
+                "package_type": "broadband",
+                "package_id": 502,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Farjana Sultana",
+                  "mobile_number": "01636766690",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Home",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 7.01,
+                    "upload_gb": 147.25,
+                    "total_gb": 154.26
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01938293989",
+                "id": 162294,
+                "uid": 185170,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-23T06:59:54.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Mohammed Ershadul islam",
+                  "mobile_number": "01938293989",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 4.33,
+                    "upload_gb": 98.67,
+                    "total_gb": 103
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 8.66,
+                    "upload": 100,
+                    "overall": 100
+                  },
+                  "status": "critical"
+                }
+              },
+              {
+                "mobile_number": "01768400691",
+                "id": 161944,
+                "uid": 184775,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-18T07:15:29.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Norul Islam",
+                  "mobile_number": "01768400691",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 11.65,
+                    "upload_gb": 119.84,
+                    "total_gb": 131.49
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 23.3,
+                    "upload": 100,
+                    "overall": 100
+                  },
+                  "status": "critical"
+                }
+              },
+              {
+                "mobile_number": "01822187164",
+                "id": 161875,
+                "uid": 184694,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-17T08:17:18.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Md Ibrahim",
+                  "mobile_number": "01822187164",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 2.64,
+                    "upload_gb": 68.01,
+                    "total_gb": 70.65
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 5.28,
+                    "upload": 100,
+                    "overall": 70.65
+                  },
+                  "status": "moderate"
+                }
+              },
+              {
+                "mobile_number": "01732546483",
+                "id": 161795,
+                "uid": 184578,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-16T06:42:30.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "dr, minhaj uddin",
+                  "mobile_number": "01732546483",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 1.14,
+                    "upload_gb": 16.81,
+                    "total_gb": 17.95
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 2.28,
+                    "upload": 33.62,
+                    "overall": 17.95
+                  },
+                  "status": "normal"
+                }
+              },
+              {
+                "mobile_number": "01999099899",
+                "id": 161749,
+                "uid": 184507,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-15T14:10:50.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Tushar",
+                  "mobile_number": "01999099899",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 16.59,
+                    "upload_gb": 30.72,
+                    "total_gb": 47.31
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 33.18,
+                    "upload": 61.44,
+                    "overall": 47.31
+                  },
+                  "status": "normal"
+                }
+              },
+              {
+                "mobile_number": "01719594402",
+                "id": 161703,
+                "uid": 184450,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-15T08:43:57.000000Z",
+                "package_type": "broadband",
+                "package_id": 508,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Badal karmokar",
+                  "mobile_number": "01719594402",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Bondhu",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 2.01,
+                    "upload_gb": 46.74,
+                    "total_gb": 48.75
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01931978131",
+                "id": 161637,
+                "uid": 184354,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-14T12:06:50.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Parves Ahmed Rafi",
+                  "mobile_number": "01931978131",
+                  "division_id": 1,
+                  "district_id": 1,
+                  "upazila_id": 11,
+                  "union_id": 0
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 1.62,
+                    "upload_gb": 28.16,
+                    "total_gb": 29.78
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 3.24,
+                    "upload": 56.32,
+                    "overall": 29.78
+                  },
+                  "status": "normal"
+                }
+              },
+              {
+                "mobile_number": "01911463737",
+                "id": 161556,
+                "uid": 184243,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-13T11:42:18.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "md shariful Islam",
+                  "mobile_number": "01911463737",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 1.25,
+                    "upload_gb": 18.23,
+                    "total_gb": 19.48
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 2.5,
+                    "upload": 36.46,
+                    "overall": 19.48
+                  },
+                  "status": "normal"
+                }
+              },
+              {
+                "mobile_number": "01716441533",
+                "id": 161520,
+                "uid": 184204,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-13T06:57:12.000000Z",
+                "package_type": "broadband",
+                "package_id": 502,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Aminul Islam",
+                  "mobile_number": "01716441533",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Home",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 7.43,
+                    "upload_gb": 147.77,
+                    "total_gb": 155.2
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01518908610",
+                "id": 161501,
+                "uid": 184177,
+                "user_type": "shadhin",
+                "connection_status": "pending",
+                "c_status": "switch_off",
+                "created_at": "2026-06-13T02:43:27.000000Z",
+                "package_type": "wifi",
+                "package_id": 5,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "অনিক ইসলাম",
+                  "mobile_number": "01518908610",
+                  "division_id": 1,
+                  "district_id": 1,
+                  "upazila_id": 11,
+                  "union_id": 4590
+                },
+                "package": {
+                  "package_name": "Shadhin",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01617303723",
+                "id": 161311,
+                "uid": 183921,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-11T09:02:53.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "hasan",
+                  "mobile_number": "01617303723",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 20.35,
+                    "upload_gb": 41.94,
+                    "total_gb": 62.29
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 40.7,
+                    "upload": 83.88,
+                    "overall": 62.29
+                  },
+                  "status": "moderate"
+                }
+              },
+              {
+                "mobile_number": "01963794436",
+                "id": 161239,
+                "uid": 183819,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-10T12:45:49.000000Z",
+                "package_type": "broadband",
+                "package_id": 501,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "sorif",
+                  "mobile_number": "01963794436",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Student",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 3.59,
+                    "upload_gb": 72.45,
+                    "total_gb": 76.04
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01939235188",
+                "id": 161218,
+                "uid": 183793,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-10T10:33:02.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "hasan",
+                  "mobile_number": "01939235188",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 3.17,
+                    "upload_gb": 56.6,
+                    "total_gb": 59.77
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 6.34,
+                    "upload": 100,
+                    "overall": 59.77
+                  },
+                  "status": "moderate"
+                }
+              },
+              {
+                "mobile_number": "01766303636",
+                "id": 161197,
+                "uid": 183767,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-10T07:56:36.000000Z",
+                "package_type": "broadband",
+                "package_id": 508,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Mehedi Hassan",
+                  "mobile_number": "01766303636",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Bondhu",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 3.02,
+                    "upload_gb": 28.42,
+                    "total_gb": 31.44
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01918820365",
+                "id": 160961,
+                "uid": 183471,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-08T07:05:15.000000Z",
+                "package_type": "broadband",
+                "package_id": 508,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Anam",
+                  "mobile_number": "01918820365",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Bondhu",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 3.53,
+                    "upload_gb": 114.13,
+                    "total_gb": 117.66
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01717518071",
+                "id": 160854,
+                "uid": 183327,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-07T07:10:24.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Mehedi Hassan",
+                  "mobile_number": "01717518071",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 4.2,
+                    "upload_gb": 79.26,
+                    "total_gb": 83.46
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 8.4,
+                    "upload": 100,
+                    "overall": 83.46
+                  },
+                  "status": "warning"
+                }
+              },
+              {
+                "mobile_number": "01603116001",
+                "id": 160845,
+                "uid": 183317,
+                "user_type": "shadhin",
+                "connection_status": "pending",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-07T06:13:20.000000Z",
+                "package_type": "wifi",
+                "package_id": 5,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Sihab Sikder",
+                  "mobile_number": "01603116001",
+                  "division_id": 1,
+                  "district_id": 1,
+                  "upazila_id": 14,
+                  "union_id": 1000000
+                },
+                "package": {
+                  "package_name": "Shadhin",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01517825733",
+                "id": 160636,
+                "uid": 182958,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-05T07:07:20.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Sagar Sarker",
+                  "mobile_number": "01517825733",
+                  "division_id": 1,
+                  "district_id": 1,
+                  "upazila_id": 11,
+                  "union_id": 0
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 4.1,
+                    "upload_gb": 77.43,
+                    "total_gb": 81.53
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 8.2,
+                    "upload": 100,
+                    "overall": 81.53
+                  },
+                  "status": "warning"
+                }
+              },
+              {
+                "mobile_number": "01722273971",
+                "id": 160553,
+                "uid": 182802,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-04T08:06:27.000000Z",
+                "package_type": "broadband",
+                "package_id": 501,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Sagar Sarker",
+                  "mobile_number": "01722273971",
+                  "division_id": 0,
+                  "district_id": 0,
+                  "upazila_id": 0,
+                  "union_id": 0
+                },
+                "package": {
+                  "package_name": "Student",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 9.1,
+                    "upload_gb": 99.4,
+                    "total_gb": 108.5
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01616370764",
+                "id": 160402,
+                "uid": 182552,
+                "user_type": null,
+                "connection_status": "pending",
+                "c_status": "interested",
+                "created_at": "2026-06-02T16:38:07.000000Z",
+                "package_type": "wifi",
+                "package_id": 5,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Jobair",
+                  "mobile_number": "01616370764",
+                  "division_id": 1,
+                  "district_id": 1,
+                  "upazila_id": 11,
+                  "union_id": 4590
+                },
+                "package": {
+                  "package_name": "Shadhin",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01815387307",
+                "id": 160214,
+                "uid": 182275,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-06-01T11:10:47.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "mamun",
+                  "mobile_number": "01815387307",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 70.1,
+                    "upload_gb": 107.43,
+                    "total_gb": 177.53
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 100,
+                    "upload": 100,
+                    "overall": 100
+                  },
+                  "status": "critical"
+                }
+              },
+              {
+                "mobile_number": "01641697184",
+                "id": 160134,
+                "uid": 182159,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-05-31T10:55:14.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Mehedi Hassan",
+                  "mobile_number": "01641697184",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 4.54,
+                    "upload_gb": 33.37,
+                    "total_gb": 37.91
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 9.08,
+                    "upload": 66.74,
+                    "overall": 37.91
+                  },
+                  "status": "normal"
+                }
+              },
+              {
+                "mobile_number": "01711064482",
+                "id": 160074,
+                "uid": 182090,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-05-30T10:03:20.000000Z",
+                "package_type": "broadband",
+                "package_id": 501,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Mehedi Hassan",
+                  "mobile_number": "01711064482",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Student",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 0.84,
+                    "upload_gb": 11.45,
+                    "total_gb": 12.29
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01932181253",
+                "id": 159914,
+                "uid": 181915,
+                "user_type": "Other",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-05-27T04:56:34.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "abdullah al mamun",
+                  "mobile_number": "01932181253",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 4.6,
+                    "upload_gb": 51.46,
+                    "total_gb": 56.06
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 9.2,
+                    "upload": 100,
+                    "overall": 56.06
+                  },
+                  "status": "moderate"
+                }
+              },
+              {
+                "mobile_number": "01705294269",
+                "id": 159743,
+                "uid": 181716,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-05-24T12:47:11.000000Z",
+                "package_type": "broadband",
+                "package_id": 508,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Mehedi Hassan",
+                  "mobile_number": "01705294269",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Bondhu",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 4.82,
+                    "upload_gb": 107.1,
+                    "total_gb": 111.92
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01730707399",
+                "id": 159495,
+                "uid": 181352,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-05-21T06:33:06.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "alauddin",
+                  "mobile_number": "01730707399",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 0.04,
+                    "upload_gb": 0.49,
+                    "total_gb": 0.53
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 0.08,
+                    "upload": 0.98,
+                    "overall": 0.53
+                  },
+                  "status": "normal"
+                }
+              },
+              {
+                "mobile_number": "01645074480",
+                "id": 159241,
+                "uid": 181064,
+                "user_type": "shadhin",
+                "connection_status": "pending",
+                "c_status": "not_interested",
+                "created_at": "2026-05-17T13:57:40.000000Z",
+                "package_type": "wifi",
+                "package_id": 5,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Rafi Uddin",
+                  "mobile_number": "01645074480",
+                  "division_id": 1,
+                  "district_id": 1,
+                  "upazila_id": 16,
+                  "union_id": 177
+                },
+                "package": {
+                  "package_name": "Shadhin",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01647167173",
+                "id": 158585,
+                "uid": 180436,
+                "user_type": "Home user",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-05-17T07:51:38.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Mehedi Hassan",
+                  "mobile_number": "01647167173",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 10.76,
+                    "upload_gb": 103.23,
+                    "total_gb": 113.99
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 21.52,
+                    "upload": 100,
+                    "overall": 100
+                  },
+                  "status": "critical"
+                }
+              },
+              {
+                "mobile_number": "01641552972",
+                "id": 154228,
+                "uid": 176342,
+                "user_type": null,
+                "connection_status": "pending",
+                "c_status": "unreachable",
+                "created_at": "2026-05-17T04:23:29.000000Z",
+                "package_type": "wifi",
+                "package_id": 5,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Nazmul Hasan",
+                  "mobile_number": "01641552972",
+                  "division_id": 1,
+                  "district_id": 1,
+                  "upazila_id": 11,
+                  "union_id": 4590
+                },
+                "package": {
+                  "package_name": "Shadhin",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01783986393",
+                "id": 154206,
+                "uid": 176318,
+                "user_type": "shadhin",
+                "connection_status": "pending",
+                "c_status": "interested",
+                "created_at": "2026-05-16T18:53:37.000000Z",
+                "package_type": "wifi",
+                "package_id": 5,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Md. Riyazul islam",
+                  "mobile_number": "01783986393",
+                  "division_id": 1,
+                  "district_id": 0,
+                  "upazila_id": 0,
+                  "union_id": 0
+                },
+                "package": {
+                  "package_name": "Shadhin",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01907241651",
+                "id": 136455,
+                "uid": 159405,
+                "user_type": "regular",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-05-16T05:41:42.000000Z",
+                "package_type": "broadband",
+                "package_id": 501,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Dulal",
+                  "mobile_number": "01907241651",
+                  "division_id": 1000000,
+                  "district_id": 1,
+                  "upazila_id": 11,
+                  "union_id": 1000000
+                },
+                "package": {
+                  "package_name": "Student",
+                  "download_limit": 0,
+                  "upload_limit": 0,
+                  "total_limit": 0
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "limits": {
+                    "download_gb": 0,
+                    "upload_gb": 0,
+                    "total_gb": 0
+                  },
+                  "percentages": {
+                    "download": 0,
+                    "upload": 0,
+                    "overall": 0
+                  },
+                  "status": "no_usage"
+                }
+              },
+              {
+                "mobile_number": "01984314394",
+                "id": 136453,
+                "uid": 159403,
+                "user_type": "regular",
+                "connection_status": "active",
+                "c_status": "Uncontacted",
+                "created_at": "2026-05-16T05:41:34.000000Z",
+                "package_type": "broadband",
+                "package_id": 511,
+                "zone_id": "2350039",
+                "user_profile": {
+                  "full_name": "Fahima Akter",
+                  "mobile_number": "01984314394",
+                  "division_id": 1,
+                  "district_id": 1,
+                  "upazila_id": 11,
+                  "union_id": 1000000
+                },
+                "package": {
+                  "package_name": "Desh",
+                  "download_limit": 50,
+                  "upload_limit": 50,
+                  "total_limit": 100
+                },
+                "bandwidth_usage": {
+                  "current_month": {
+                    "download_gb": 5.35,
+                    "upload_gb": 40.91,
+                    "total_gb": 46.26
+                  },
+                  "limits": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  },
+                  "percentages": {
+                    "download": 10.7,
+                    "upload": 81.82,
+                    "overall": 46.26
+                  },
+                  "status": "normal"
+                }
+              }
+            ]
+          },
+          "status": "success",
+          "error_type": "",
+          "message": ""
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/customer/details?uid=186686&status=all
+    method: GET
+    mode: none
+    params:query: {
+      uid: 186686
+      status: all
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 09 Jul 2026 10:54:18 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "user": {
+              "id": 163138,
+              "uid": 186686,
+              "mobile_number": "01820679234",
+              "full_name": "Rifat",
+              "email": "hasanahmed01958@gmail.com",
+              "nid": "4630843912",
+              "gender": "Male",
+              "address": "50 ,Rascourse cumilla ,Kalirbazer ,Comilla Sadar ,Comilla ,Chattagram",
+              "latitude": "23.820919018754562",
+              "longitude": "90.418676743724",
+              "division": null,
+              "district": null,
+              "upazila": null,
+              "union": null
+            },
+            "package": {
+              "id": 511,
+              "name": "Desh",
+              "type": "broadband",
+              "price": 525,
+              "download_limit": 50,
+              "upload_limit": 50,
+              "expiration": 43200
+            },
+            "connection": {
+              "status": "active",
+              "zone_id": "2350039",
+              "zone_name": "cumilla",
+              "connection_media": "fiber",
+              "user_type": "Home user",
+              "ip_type": null,
+              "billing_cycle": null,
+              "billing_start_date": null,
+              "billing_due_days": null,
+              "installation_date": null,
+              "installation_notes": null,
+              "installation_charge": 0,
+              "activation_date": "2026-07-02 17:19:55",
+              "created_at": "2026-07-02T11:18:55.000000Z"
+            },
+            "device_info": {
+              "onu": {
+                "interface_name": null,
+                "mac_address": null,
+                "connection_state": null,
+                "vendor_id": null,
+                "model_id": null,
+                "bind_type": null,
+                "dereg_reason": null,
+                "rx_power": 0,
+                "signal_quality": "Unknown",
+                "performance": "Unknown",
+                "distance": 0,
+                "uptime": null,
+                "last_up_time": null,
+                "last_down_time": null,
+                "updated_at": null
+              },
+              "olt": {
+                "ip_address": null,
+                "name": null,
+                "model": null,
+                "status": null
+              },
+              "pon_port": null,
+              "connected_devices": [],
+              "connected_devices_count": 0
+            },
+            "bandwidth_usage": {
+              "download_gb": 5.04,
+              "upload_gb": 59.92,
+              "total_gb": 64.96,
+              "download_percentage": 10.08,
+              "upload_percentage": 100,
+              "overall_percentage": 64.96,
+              "status": "moderate",
+              "limit": {
+                "download_gb": 50,
+                "upload_gb": 50,
+                "total_gb": 100
+              }
+            },
+            "navigation": {
+              "previous_id": 163666,
+              "next_id": null
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": ""
+        }
+      '''
+    }
+  }
+}
