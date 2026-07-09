@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{base_url}}/partner/notices?page=&per_page=&sort_by=&sort_order=&title=&type=&types=&from_date=&to_date=&published_from=&published_to=&is_active=&user_id=3270&target_segment_id=&target_segment_ids=&search=&expired=
+  url: {{base_url}}/partner/notices?page=&per_page=&sort_by=&sort_order=&title=&type=&types=&from_date=&to_date=&published_from=&published_to=&is_active=&target_segment_id=&target_segment_ids=&search=&expired=
   body: none
   auth: bearer
 }
@@ -23,18 +23,280 @@ params:query {
   published_from: 
   published_to: 
   is_active: 
-  user_id: 3270
   target_segment_id: 
   target_segment_ids: 
   search: 
   expired: 
+  ~user_id: 3270
 }
 
 auth:bearer {
-  token: 6352|WxoFY1FD3HT9z5WPEXV8yPBhVC2OGP9KkIYBLA0Y
+  token: 6355|cPiZv6mgHruxZjVxBH0dsnlNprlwyHc0x4Ua2Fcd
 }
 
 settings {
   encodeUrl: true
   timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/notices?page=&per_page=&sort_by=&sort_order=&title=&type=&types=&from_date=&to_date=&published_from=&published_to=&is_active=&target_segment_id=&target_segment_ids=&search=&expired=
+    method: GET
+    mode: none
+    params:query: {
+      page: 
+      per_page: 
+      sort_by: 
+      sort_order: 
+      title: 
+      type: 
+      types: 
+      from_date: 
+      to_date: 
+      published_from: 
+      published_to: 
+      is_active: 
+      ~user_id: 3270
+      target_segment_id: 
+      target_segment_ids: 
+      search: 
+      expired: 
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 09 Jul 2026 15:38:31 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "notices": {
+              "current_page": 1,
+              "data": [
+                {
+                  "id": 1,
+                  "title": "Maintenace",
+                  "message": "This is under maintenace",
+                  "type": "Announcement",
+                  "attachment_path": "notices/attachments/3270/afrin-shahana_1783610373_6a4fbc05d97b7.pdf",
+                  "attachment_name": "afrin-shahana.pdf",
+                  "user_id": 3270,
+                  "is_active": true,
+                  "published_at": "2026-07-09T15:19:33.000000Z",
+                  "expires_at": null,
+                  "created_at": "2026-07-09T15:19:33.000000Z",
+                  "updated_at": "2026-07-09T15:19:33.000000Z",
+                  "targets": [],
+                  "user": {
+                    "id": 3270,
+                    "user_unique_id": "SHD-846920",
+                    "auth_id": "01764717803",
+                    "status": "active",
+                    "panel_access": 0,
+                    "base_role": "support_center",
+                    "text_password": "123456",
+                    "permissions": null,
+                    "is_password_changed": 0,
+                    "last_access": "2026-06-20 12:35:28",
+                    "created_at": "2026-06-20T06:35:28.000000Z",
+                    "updated_at": "2026-07-09T10:44:27.000000Z",
+                    "is_admin": 0
+                  }
+                },
+                {
+                  "id": 2,
+                  "title": "Maintenace",
+                  "message": "This is under maintenace",
+                  "type": "Announcement",
+                  "attachment_path": "notices/attachments/3270/afrin-shahana_1783610534_6a4fbca6a83a0.pdf",
+                  "attachment_name": "afrin-shahana.pdf",
+                  "user_id": 3270,
+                  "is_active": true,
+                  "published_at": "2026-07-09T15:22:14.000000Z",
+                  "expires_at": null,
+                  "created_at": "2026-07-09T15:22:14.000000Z",
+                  "updated_at": "2026-07-09T15:22:14.000000Z",
+                  "targets": [],
+                  "user": {
+                    "id": 3270,
+                    "user_unique_id": "SHD-846920",
+                    "auth_id": "01764717803",
+                    "status": "active",
+                    "panel_access": 0,
+                    "base_role": "support_center",
+                    "text_password": "123456",
+                    "permissions": null,
+                    "is_password_changed": 0,
+                    "last_access": "2026-06-20 12:35:28",
+                    "created_at": "2026-06-20T06:35:28.000000Z",
+                    "updated_at": "2026-07-09T10:44:27.000000Z",
+                    "is_admin": 0
+                  }
+                },
+                {
+                  "id": 3,
+                  "title": "Maintenace",
+                  "message": "This is under maintenace",
+                  "type": "Announcement",
+                  "attachment_path": "notices/attachments/3270/afrin-shahana_1783610563_6a4fbcc36f976.pdf",
+                  "attachment_name": "afrin-shahana.pdf",
+                  "user_id": 3270,
+                  "is_active": true,
+                  "published_at": "2026-07-09T15:22:43.000000Z",
+                  "expires_at": null,
+                  "created_at": "2026-07-09T15:22:43.000000Z",
+                  "updated_at": "2026-07-09T15:22:43.000000Z",
+                  "targets": [
+                    {
+                      "id": 1,
+                      "name": "Premium Customers",
+                      "slug": "premium-customers",
+                      "description": "Those Users are Premium Customers",
+                      "is_active": true,
+                      "created_at": "2026-07-09T15:14:50.000000Z",
+                      "updated_at": "2026-07-09T15:14:50.000000Z",
+                      "pivot": {
+                        "notice_id": 3,
+                        "target_segment_id": 1
+                      }
+                    }
+                  ],
+                  "user": {
+                    "id": 3270,
+                    "user_unique_id": "SHD-846920",
+                    "auth_id": "01764717803",
+                    "status": "active",
+                    "panel_access": 0,
+                    "base_role": "support_center",
+                    "text_password": "123456",
+                    "permissions": null,
+                    "is_password_changed": 0,
+                    "last_access": "2026-06-20 12:35:28",
+                    "created_at": "2026-06-20T06:35:28.000000Z",
+                    "updated_at": "2026-07-09T10:44:27.000000Z",
+                    "is_admin": 0
+                  }
+                }
+              ],
+              "first_page_url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/notices?page=1",
+              "from": 1,
+              "last_page": 1,
+              "last_page_url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/notices?page=1",
+              "links": [
+                {
+                  "url": null,
+                  "label": "&laquo; Previous",
+                  "active": false
+                },
+                {
+                  "url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/notices?page=1",
+                  "label": "1",
+                  "active": true
+                },
+                {
+                  "url": null,
+                  "label": "Next &raquo;",
+                  "active": false
+                }
+              ],
+              "next_page_url": null,
+              "path": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/notices",
+              "per_page": 15,
+              "prev_page_url": null,
+              "to": 3,
+              "total": 3
+            },
+            "notice_types": {
+              "Announcement": {
+                "en": "Announcement",
+                "bn": "ঘোষণা",
+                "current": "Announcement"
+              },
+              "Maintenance": {
+                "en": "Maintenance",
+                "bn": "রক্ষণাবেক্ষণ",
+                "current": "Maintenance"
+              },
+              "Promotion": {
+                "en": "Promotion",
+                "bn": "প্রচারণা",
+                "current": "Promotion"
+              },
+              "Urgent": {
+                "en": "Urgent",
+                "bn": "জরুরি",
+                "current": "Urgent"
+              },
+              "Information": {
+                "en": "Information",
+                "bn": "তথ্য",
+                "current": "Information"
+              },
+              "Policy Update": {
+                "en": "Policy Update",
+                "bn": "নীতি হালনাগাদ",
+                "current": "Policy Update"
+              },
+              "Event": {
+                "en": "Event",
+                "bn": "ইভেন্ট",
+                "current": "Event"
+              },
+              "Reminder": {
+                "en": "Reminder",
+                "bn": "স্মারক",
+                "current": "Reminder"
+              }
+            },
+            "filters": {
+              "page": null,
+              "per_page": null,
+              "sort_by": null,
+              "sort_order": null,
+              "title": null,
+              "type": null,
+              "types": null,
+              "from_date": null,
+              "to_date": null,
+              "published_from": null,
+              "published_to": null,
+              "is_active": null,
+              "target_segment_id": null,
+              "target_segment_ids": null,
+              "search": null,
+              "expired": null
+            },
+            "current_language": "en",
+            "partner_id": 3270
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Notice list retrieved successfully",
+          "message_en": "Notice list retrieved successfully",
+          "message_bn": "বিজ্ঞপ্তির তালিকা সফলভাবে প্রাপ্ত হয়েছে"
+        }
+      '''
+    }
+  }
 }

@@ -69,3 +69,64 @@ example {
     }
   }
 }
+
+example {
+  name: success-dev-result
+  
+  request: {
+    url: {{base_url}}/partner/notices/statistics
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 09 Jul 2026 15:39:19 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "total": 3,
+            "active": 3,
+            "inactive": 0,
+            "published_today": 3,
+            "expired": 0,
+            "type_wise": [
+              {
+                "type": "Announcement",
+                "type_label": {
+                  "en": "Announcement",
+                  "bn": "ঘোষণা"
+                },
+                "count": 3
+              }
+            ],
+            "partner_id": 3270
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Statistics retrieved successfully",
+          "message_en": "Statistics retrieved successfully",
+          "message_bn": "পরিসংখ্যান সফলভাবে প্রাপ্ত হয়েছে"
+        }
+      '''
+    }
+  }
+}

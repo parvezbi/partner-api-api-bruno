@@ -1,0 +1,32 @@
+meta {
+  name: Notice Update
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base_url}}/partner/notices/update
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: 6355|cPiZv6mgHruxZjVxBH0dsnlNprlwyHc0x4Ua2Fcd
+}
+
+body:multipart-form {
+  id: 1
+  title: Heloo Bangladhes
+  message: 
+  type: 
+  attachment: 
+  target_segment_ids[]: 
+  is_active: 
+  published_at: 
+  expires_at: 
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
