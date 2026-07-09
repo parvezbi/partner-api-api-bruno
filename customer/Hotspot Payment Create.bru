@@ -1,0 +1,87 @@
+meta {
+  name: Hotspot Payment Create
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base_url}}/partner/hotspot/payment/bkash/create
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: 6326|9vuI9sHdOJso3TqXIdmqOfWCCAbIKKIYqdWQzxVS
+}
+
+body:json {
+  {
+    "zone_id": 8221080,
+    "uid": 3298,
+    "mobile_number": "01700503034",
+    "payable_amount": 100,
+    "package": "SHADHIN",
+    "cache_key": "hotspot_payment_3298"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/hotspot/payment/bkash/create
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "zone_id": 8221080,
+        "uid": 3298,
+        "mobile_number": "01700503034",
+        "payable_amount": 100,
+        "package": "SHADHIN",
+        "cache_key": "hotspot_payment_3298"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 09 Jul 2026 09:18:11 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "status": "success",
+          "message": "Payment initiated successfully.",
+          "result": {
+            "payment_url": "https://sandbox.payment.bkash.com/?paymentId=TR0011F85hSGj1783588691758&hash=Kqi!1h.!YIJTh5J-8qRExyEmEd8kxkRhYRWLMHcq1pmYrYM4Ng3e2b_NsSH1MO2UN)Yphj0UyeQ_IfizLjeDvGHkJdo9pdfBCcQF1783588691758&mode=0011&apiVersion=v1.2.0-beta/",
+            "payment_id": "TR0011F85hSGj1783588691758",
+            "invoice_number": "INV17835886912735563",
+            "amount": 100
+          }
+        }
+      '''
+    }
+  }
+}

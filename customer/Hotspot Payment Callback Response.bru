@@ -1,0 +1,20 @@
+meta {
+  name: Hotspot Payment Callback Response
+  type: http
+  seq: 8
+}
+
+get {
+  url: Showing only response
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {"status":"success","message":"Successful","transaction_id":"DG980OZDOM","invoice_id":"INV17835886912735563","payment_id":"TR0011F85hSGj1783588691758","full_name":"Tanvir Mahtab","mobile_number":"01700503034","package":"SHADHIN","expiry_date":"2026-08-08T15:18:50+06:00","final_price":100,"payment_method":"bkash","payment_date":"2026-07-09 15:19:18"}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
