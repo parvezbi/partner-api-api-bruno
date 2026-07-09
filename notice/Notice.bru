@@ -1,0 +1,40 @@
+meta {
+  name: Notice
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/partner/notices?page=&per_page=&sort_by=&sort_order=&title=&type=&types=&from_date=&to_date=&published_from=&published_to=&is_active=&user_id=3270&target_segment_id=&target_segment_ids=&search=&expired=
+  body: none
+  auth: bearer
+}
+
+params:query {
+  page: 
+  per_page: 
+  sort_by: 
+  sort_order: 
+  title: 
+  type: 
+  types: 
+  from_date: 
+  to_date: 
+  published_from: 
+  published_to: 
+  is_active: 
+  user_id: 3270
+  target_segment_id: 
+  target_segment_ids: 
+  search: 
+  expired: 
+}
+
+auth:bearer {
+  token: 6352|WxoFY1FD3HT9z5WPEXV8yPBhVC2OGP9KkIYBLA0Y
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

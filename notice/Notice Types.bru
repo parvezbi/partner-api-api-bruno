@@ -1,0 +1,119 @@
+meta {
+  name: Notice Types
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/partner/notices/types
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: 6352|WxoFY1FD3HT9z5WPEXV8yPBhVC2OGP9KkIYBLA0Y
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/notices/types
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 09 Jul 2026 11:43:04 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": [
+            {
+              "id": "Announcement",
+              "label": "Announcement",
+              "label_en": "Announcement",
+              "label_bn": "ঘোষণা",
+              "value": "Announcement"
+            },
+            {
+              "id": "Maintenance",
+              "label": "Maintenance",
+              "label_en": "Maintenance",
+              "label_bn": "রক্ষণাবেক্ষণ",
+              "value": "Maintenance"
+            },
+            {
+              "id": "Promotion",
+              "label": "Promotion",
+              "label_en": "Promotion",
+              "label_bn": "প্রচারণা",
+              "value": "Promotion"
+            },
+            {
+              "id": "Urgent",
+              "label": "Urgent",
+              "label_en": "Urgent",
+              "label_bn": "জরুরি",
+              "value": "Urgent"
+            },
+            {
+              "id": "Information",
+              "label": "Information",
+              "label_en": "Information",
+              "label_bn": "তথ্য",
+              "value": "Information"
+            },
+            {
+              "id": "Policy Update",
+              "label": "Policy Update",
+              "label_en": "Policy Update",
+              "label_bn": "নীতি হালনাগাদ",
+              "value": "Policy Update"
+            },
+            {
+              "id": "Event",
+              "label": "Event",
+              "label_en": "Event",
+              "label_bn": "ইভেন্ট",
+              "value": "Event"
+            },
+            {
+              "id": "Reminder",
+              "label": "Reminder",
+              "label_en": "Reminder",
+              "label_bn": "স্মারক",
+              "value": "Reminder"
+            }
+          ],
+          "status": "success",
+          "error_type": "",
+          "message": "Notice types retrieved successfully"
+        }
+      '''
+    }
+  }
+}
