@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{base_url}}/partner/customer/list?status=all&communication_status=&package_type=&package_id=&division=&district=&upazila=&union=&skip=&client_id=28380
+  url: {{base_url}}/partner/customer/list?status=all&communication_status=&package_type=&package_id=&division=&district=&upazila=&union=&skip=
   body: none
   auth: bearer
 }
@@ -20,7 +20,7 @@ params:query {
   upazila: 
   union: 
   skip: 
-  client_id: 28380
+  ~client_id: 28380
 }
 
 auth:bearer {
