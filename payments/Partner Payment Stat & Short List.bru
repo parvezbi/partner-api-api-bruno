@@ -1,0 +1,525 @@
+meta {
+  name: Partner Payment Stat & Short List
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/partner/payments/history?from_date=2026-01-01&to_date=2026-01-15
+  body: none
+  auth: bearer
+}
+
+params:query {
+  from_date: 2026-01-01
+  to_date: 2026-01-15
+}
+
+auth:bearer {
+  token: 212188|Il6s3kfuNv8PQoWAWnQ08CvYRjuJu3q74qaL6uI6
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/payments/history?from_date=2026-01-01&to_date=2026-01-15
+    method: GET
+    mode: none
+    params:query: {
+      from_date: 2026-01-01
+      to_date: 2026-01-15
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 12 Jul 2026 13:16:59 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": [
+            {
+              "id": 224956,
+              "uid": 140651,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DAF75LXGDJ",
+              "invoice_number": "INV17684581542943043",
+              "amount": 375,
+              "service_charge": 0,
+              "payment_id": "TR0011xeF0Nba1768458154712",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-15T06:22:34.000000Z",
+              "updated_at": "2026-01-15T06:23:19.000000Z",
+              "auth_id": "01718350153",
+              "package_type": "broadband",
+              "package_id": 511,
+              "package_name": "Desh"
+            },
+            {
+              "id": 224802,
+              "uid": 56691,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DAD63XWTDQ",
+              "invoice_number": "INV17683122435603867",
+              "amount": 685,
+              "service_charge": 0,
+              "payment_id": "TR00118KMfQ9K1768312243989",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-13T13:50:44.000000Z",
+              "updated_at": "2026-01-13T13:51:27.000000Z",
+              "auth_id": "01613075994",
+              "package_type": "broadband",
+              "package_id": 501,
+              "package_name": "Student"
+            },
+            {
+              "id": 224798,
+              "uid": 140517,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DAD13XBL85",
+              "invoice_number": "INV17683115284869803",
+              "amount": 419,
+              "service_charge": 0,
+              "payment_id": "TR0011wia3Hbk1768311530162",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-13T13:38:50.000000Z",
+              "updated_at": "2026-01-13T13:39:29.000000Z",
+              "auth_id": "01785921370",
+              "package_type": "broadband",
+              "package_id": 501,
+              "package_name": "Student"
+            },
+            {
+              "id": 224605,
+              "uid": 140389,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DAC32L4PR9",
+              "invoice_number": "INV17682158925933217",
+              "amount": 441,
+              "service_charge": 0,
+              "payment_id": "TR0011Jizd2GC1768215892989",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-12T11:04:53.000000Z",
+              "updated_at": "2026-01-12T11:05:31.000000Z",
+              "auth_id": "01714725631",
+              "package_type": "broadband",
+              "package_id": 501,
+              "package_name": "Student"
+            },
+            {
+              "id": 224567,
+              "uid": 140368,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DAC129240T",
+              "invoice_number": "INV17681972677795701",
+              "amount": 441,
+              "service_charge": 0,
+              "payment_id": "TR0011kwLHcmq1768197269445",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-12T05:54:29.000000Z",
+              "updated_at": "2026-01-12T05:55:13.000000Z",
+              "auth_id": "01717807969",
+              "package_type": "broadband",
+              "package_id": 501,
+              "package_name": "Student"
+            },
+            {
+              "id": 224541,
+              "uid": 140347,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DAB21UDIIM",
+              "invoice_number": "INV17681472048016151",
+              "amount": 464,
+              "service_charge": 0,
+              "payment_id": "TR0011xIaHKUW1768147205738",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-11T16:00:05.000000Z",
+              "updated_at": "2026-01-11T16:00:38.000000Z",
+              "auth_id": "01777997347",
+              "package_type": "broadband",
+              "package_id": 501,
+              "package_name": "Student"
+            },
+            {
+              "id": 224501,
+              "uid": 140327,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DAB71KQCXP",
+              "invoice_number": "INV17681355092702596",
+              "amount": 569,
+              "service_charge": 0,
+              "payment_id": "TR001175uIanD1768135509476",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Bondhu",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-11T12:45:09.000000Z",
+              "updated_at": "2026-01-11T12:46:15.000000Z",
+              "auth_id": "01308177477",
+              "package_type": "broadband",
+              "package_id": 508,
+              "package_name": "Bondhu"
+            },
+            {
+              "id": 224209,
+              "uid": 140102,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DAB019TOMA",
+              "invoice_number": "INV17681211303558351",
+              "amount": 355,
+              "service_charge": 0,
+              "payment_id": "TR0011RmMvF3Q1768121131279",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-11T08:45:31.000000Z",
+              "updated_at": "2026-01-11T08:46:07.000000Z",
+              "auth_id": "01311700708",
+              "package_type": "broadband",
+              "package_id": 511,
+              "package_name": "Desh"
+            },
+            {
+              "id": 224155,
+              "uid": 140056,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DAB717BZ9J",
+              "invoice_number": "INV17681169864267819",
+              "amount": 464,
+              "service_charge": 0,
+              "payment_id": "TR0011BGcjOTN1768116987516",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-11T07:36:27.000000Z",
+              "updated_at": "2026-01-11T07:37:09.000000Z",
+              "auth_id": "01742791541",
+              "package_type": "broadband",
+              "package_id": 501,
+              "package_name": "Student"
+            },
+            {
+              "id": 223719,
+              "uid": 139668,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DAA10NYNUV",
+              "invoice_number": "INV17680609186102254",
+              "amount": 372,
+              "service_charge": 0,
+              "payment_id": "TR00112YTihfj1768060919586",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-10T16:01:59.000000Z",
+              "updated_at": "2026-01-10T16:02:32.000000Z",
+              "auth_id": "01741334738",
+              "package_type": "broadband",
+              "package_id": 511,
+              "package_name": "Desh"
+            },
+            {
+              "id": 223717,
+              "uid": 139664,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DAA60MYPZA",
+              "invoice_number": "INV17680594347029654",
+              "amount": 486.13,
+              "service_charge": 0,
+              "payment_id": "TR0011C0ZCQ1v1768059434911",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-10T15:37:15.000000Z",
+              "updated_at": "2026-01-10T15:37:50.000000Z",
+              "auth_id": "01998781569",
+              "package_type": "broadband",
+              "package_id": 501,
+              "package_name": "Student"
+            },
+            {
+              "id": 223520,
+              "uid": 50350,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "payBill",
+              "trx_id": "DA99WELK4N",
+              "invoice_number": null,
+              "amount": 685,
+              "service_charge": 0,
+              "payment_id": "DA99WELK4N",
+              "process_status": 1,
+              "purpose": "internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-09T13:02:01.000000Z",
+              "updated_at": "2026-01-09T13:02:01.000000Z",
+              "auth_id": "01710810125",
+              "package_type": "broadband",
+              "package_id": 501,
+              "package_name": "Student"
+            },
+            {
+              "id": 223508,
+              "uid": 69467,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "payBill",
+              "trx_id": "DA95WD51GN",
+              "invoice_number": null,
+              "amount": 525,
+              "service_charge": 0,
+              "payment_id": "DA95WD51GN",
+              "process_status": 1,
+              "purpose": "internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-09T12:35:50.000000Z",
+              "updated_at": "2026-01-09T12:35:50.000000Z",
+              "auth_id": "01704404421",
+              "package_type": "broadband",
+              "package_id": 511,
+              "package_name": "Desh"
+            },
+            {
+              "id": 223414,
+              "uid": 39836,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "payBill",
+              "trx_id": "DA81VIW70D",
+              "invoice_number": null,
+              "amount": 685,
+              "service_charge": 0,
+              "payment_id": "DA81VIW70D",
+              "process_status": 1,
+              "purpose": "internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-08T15:44:09.000000Z",
+              "updated_at": "2026-01-08T15:44:09.000000Z",
+              "auth_id": "01796702821",
+              "package_type": "broadband",
+              "package_id": 501,
+              "package_name": "Student"
+            },
+            {
+              "id": 223372,
+              "uid": 139535,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DA82VC6KCG",
+              "invoice_number": "INV17678788363759903",
+              "amount": 406,
+              "service_charge": 0,
+              "payment_id": "TR0011JrM6aoQ1767878836607",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-08T13:27:16.000000Z",
+              "updated_at": "2026-01-08T13:28:13.000000Z",
+              "auth_id": "01792922942",
+              "package_type": "broadband",
+              "package_id": 501,
+              "package_name": "Student"
+            },
+            {
+              "id": 223300,
+              "uid": 139520,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DA80V5FFI6",
+              "invoice_number": "INV17678716370157004",
+              "amount": 530.32,
+              "service_charge": 0,
+              "payment_id": "TR0011yX50ZxA1767871637273",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-08T11:27:17.000000Z",
+              "updated_at": "2026-01-08T11:28:18.000000Z",
+              "auth_id": "01782158207",
+              "package_type": "broadband",
+              "package_id": 501,
+              "package_name": "Student"
+            },
+            {
+              "id": 223288,
+              "uid": 50434,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "payBill",
+              "trx_id": "DA84V3KQNG",
+              "invoice_number": null,
+              "amount": 525,
+              "service_charge": 0,
+              "payment_id": "DA84V3KQNG",
+              "process_status": 1,
+              "purpose": "internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-08T10:51:28.000000Z",
+              "updated_at": "2026-01-08T10:51:28.000000Z",
+              "auth_id": "01794496956",
+              "package_type": "broadband",
+              "package_id": 511,
+              "package_name": "Desh"
+            },
+            {
+              "id": 223266,
+              "uid": 139514,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DA87UU47H9",
+              "invoice_number": "INV17678549564328282",
+              "amount": 530,
+              "service_charge": 0,
+              "payment_id": "TR0011iBIE1PL1767854956650",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-08T06:49:16.000000Z",
+              "updated_at": "2026-01-08T06:49:48.000000Z",
+              "auth_id": "01781555165",
+              "package_type": "broadband",
+              "package_id": 501,
+              "package_name": "Student"
+            },
+            {
+              "id": 223251,
+              "uid": 125224,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "payBill",
+              "trx_id": "DA82UQ9Z02",
+              "invoice_number": null,
+              "amount": 840,
+              "service_charge": 0,
+              "payment_id": "DA82UQ9Z02",
+              "process_status": 1,
+              "purpose": "internet_bill_payment",
+              "package": "Bondhu",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-08T05:28:25.000000Z",
+              "updated_at": "2026-01-08T05:28:25.000000Z",
+              "auth_id": "01753913014",
+              "package_type": "broadband",
+              "package_id": 508,
+              "package_name": "Bondhu"
+            },
+            {
+              "id": 223173,
+              "uid": 135311,
+              "zone_id": 38776,
+              "is_test_mode": 0,
+              "vendor_name": "bkash",
+              "trx_id": "DA71U81VGP",
+              "invoice_number": "INV17677956329798336",
+              "amount": 685,
+              "service_charge": 0,
+              "payment_id": "TR0011DWc4Tnr1767795633196",
+              "process_status": 1,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-01-07T14:20:33.000000Z",
+              "updated_at": "2026-01-07T14:21:21.000000Z",
+              "auth_id": "01908214228",
+              "package_type": "broadband",
+              "package_id": 501,
+              "package_name": "Student"
+            }
+          ],
+          "status": "success",
+          "error_type": "",
+          "message": "",
+          "summary": {
+            "total_amount": 136009.26,
+            "total_paid_customers": 207,
+            "total_transactions": 207
+          },
+          "pagination": {
+            "current_page": 1,
+            "last_page": 11,
+            "per_page": 20,
+            "total": 207,
+            "from": 1,
+            "to": 20
+          }
+        }
+      '''
+    }
+  }
+}

@@ -30,3 +30,101 @@ settings {
   encodeUrl: true
   timeout: 0
 }
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/notices/update
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      id: 1
+      title: Heloo Bangladhes
+      message: This is under maintenace
+      type: Announcement
+      attachment: @file(F:\Alamin\afrin-shahana.pdf) @contentType(application/pdf)
+      target_segment_ids[]: 1
+      is_active: 1
+      published_at: 
+      expires_at: 
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 12 Jul 2026 08:55:14 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "id": 1,
+            "title": "Heloo Bangladhes",
+            "message": "This is under maintenace",
+            "type": "Announcement",
+            "attachment_path": "notices/attachments/3270/afrin-shahana_1783846514_6a5356723194c.pdf",
+            "attachment_name": "afrin-shahana.pdf",
+            "user_id": 3270,
+            "is_active": true,
+            "published_at": null,
+            "expires_at": null,
+            "created_at": "2026-07-09T15:19:33.000000Z",
+            "updated_at": "2026-07-12T08:55:14.000000Z",
+            "targets": [
+              {
+                "id": 1,
+                "name": "Premium Customers",
+                "slug": "premium-customers",
+                "description": "Those Users are Premium Customers",
+                "is_active": true,
+                "created_at": "2026-07-09T15:14:50.000000Z",
+                "updated_at": "2026-07-09T15:14:50.000000Z",
+                "pivot": {
+                  "notice_id": 1,
+                  "target_segment_id": 1
+                }
+              }
+            ],
+            "user": {
+              "id": 3270,
+              "user_unique_id": "SHD-846920",
+              "auth_id": "01764717803",
+              "status": "active",
+              "panel_access": 0,
+              "base_role": "support_center",
+              "text_password": "123456",
+              "permissions": null,
+              "is_password_changed": 0,
+              "last_access": "2026-06-20 12:35:28",
+              "created_at": "2026-06-20T06:35:28.000000Z",
+              "updated_at": "2026-07-09T10:44:27.000000Z",
+              "is_admin": 0
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Notice updated successfully",
+          "message_en": "Notice updated successfully",
+          "message_bn": "বিজ্ঞপ্তি সফলভাবে আপডেট করা হয়েছে"
+        }
+      '''
+    }
+  }
+}

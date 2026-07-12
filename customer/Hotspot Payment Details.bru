@@ -11,12 +11,12 @@ post {
 }
 
 auth:bearer {
-  token: 6326|9vuI9sHdOJso3TqXIdmqOfWCCAbIKKIYqdWQzxVS
+  token: 212070|QAaneUqi1nJYhVJ5BsNgQxF9BRPjpZ8TniQGlqbc
 }
 
 body:json {
   {
-    "uid": 3298,
+    "uid": 187598,
     "package_id": 5,
     "package_type": "wifi",
     "connection_media": "fiber",
@@ -24,7 +24,7 @@ body:json {
     "ip_type": "dynamic",
     "billing_cycle": "fixed_date",
     "payment_method": "bkash",
-    "billing_start_date": "2026-07-09",
+    "billing_start_date": "2026-07-12",
     "billing_due_days": 0,
     "pop_id": 1
   }
@@ -91,6 +91,73 @@ example {
             "billing_cycle": "fixed_date",
             "payment_method": "bkash",
             "payment_cache_key": "hotspot_payment_3298"
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Hotspot user setup completed. Please proceed to payment."
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success with zone id
+  
+  request: {
+    url: {{base_url}}/partner/customer/hotspot/payment/details
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "uid": 187598,
+        "package_id": 5,
+        "package_type": "wifi",
+        "connection_media": "fiber",
+        "user_type": "individual",
+        "ip_type": "dynamic",
+        "billing_cycle": "fixed_date",
+        "payment_method": "bkash",
+        "billing_start_date": "2026-07-12",
+        "billing_due_days": 0,
+        "pop_id": 1
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 12 Jul 2026 11:09:08 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "uid": 187598,
+            "zone_id": "38776",
+            "mobile_number": "01797681791",
+            "package": "SHADHIN",
+            "package_price": 150,
+            "payable_amount": 150,
+            "billing_cycle": "fixed_date",
+            "payment_method": "bkash",
+            "payment_cache_key": "hotspot_payment_187598"
           },
           "status": "success",
           "error_type": "",

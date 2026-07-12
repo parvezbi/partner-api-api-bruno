@@ -1,0 +1,15 @@
+meta {
+  name: connected user list
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/partner/connected/user/list
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}
