@@ -1,11 +1,11 @@
 meta {
-  name: Partner Payment Stat & Short List
+  name: Partner Payment History Full with filters and filtered summary
   type: http
   seq: 1
 }
 
 get {
-  url: {{base_url}}/partner/payments/history?from_date=2026-01-01&to_date=2026-01-15
+  url: {{base_url}}/partner/payments/history?from_date=2026-01-01&to_date=2026-01-15&package_type=broadband&package_id=501&month=&search=&per_page=
   body: none
   auth: bearer
 }
@@ -13,6 +13,11 @@ get {
 params:query {
   from_date: 2026-01-01
   to_date: 2026-01-15
+  package_type: broadband
+  package_id: 501
+  month: 
+  search: 
+  per_page: 
 }
 
 auth:bearer {

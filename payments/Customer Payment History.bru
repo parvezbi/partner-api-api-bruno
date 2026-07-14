@@ -5,11 +5,100 @@ meta {
 }
 
 get {
-  url: {{base_url}}/partner/customer/history
+  url: {{base_url}}/partner/payments/customer-payment-history?uid=188016
   body: none
-  auth: inherit
+  auth: bearer
+}
+
+params:query {
+  uid: 188016
+}
+
+auth:bearer {
+  token: 212188|Il6s3kfuNv8PQoWAWnQ08CvYRjuJu3q74qaL6uI6
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/payments/customer-payment-history?uid=188016
+    method: GET
+    mode: none
+    params:query: {
+      uid: 188016
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Tue, 14 Jul 2026 09:16:19 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": [
+            {
+              "id": 276102,
+              "uid": 188016,
+              "vendor_name": "bkash",
+              "trx_id": "DGD1C2S95F",
+              "invoice_number": "INV17839340367082987",
+              "amount": 1050,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Home",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T09:13:57.000000Z",
+              "package_info": {
+                "id": 502,
+                "en_title": "Home",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Home"
+              }
+            }
+          ],
+          "status": "success",
+          "error_type": "",
+          "message": "",
+          "summary": {
+            "total_collection": 1050,
+            "total_payments": 1,
+            "average_payment": 1050,
+            "first_payment": "2026-07-13T09:13:57.000000Z",
+            "last_payment": "2026-07-13T09:13:57.000000Z"
+          },
+          "pagination": {
+            "current_page": 1,
+            "per_page": 20,
+            "last_page": 1,
+            "total": 1,
+            "from": 1,
+            "to": 1
+          }
+        }
+      '''
+    }
+  }
 }

@@ -1,0 +1,1471 @@
+meta {
+  name: Partner Payment Dashboard
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/partner/payments/dashboard
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: 212188|Il6s3kfuNv8PQoWAWnQ08CvYRjuJu3q74qaL6uI6
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/payments/dashboard
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Tue, 14 Jul 2026 07:01:56 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": [
+            {
+              "id": 276289,
+              "uid": 95799,
+              "zone_id": 52589,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1784012490232173165",
+              "invoice_number": "INV17840124902328134",
+              "amount": 200,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "6Mbps-30Days",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T07:01:30.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 95799,
+                "package_id": 1008,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 95799,
+                  "full_name": "Alamin",
+                  "mobile_number": "01786918294"
+                }
+              }
+            },
+            {
+              "id": 276288,
+              "uid": 49363,
+              "zone_id": 45289,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1784010755415635824",
+              "invoice_number": "INV17840107554153399",
+              "amount": 120,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "REGULAR",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T06:32:35.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 49363,
+                "package_id": 40,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 49363,
+                  "full_name": "ramash",
+                  "mobile_number": "01767790839"
+                }
+              }
+            },
+            {
+              "id": 276287,
+              "uid": 188132,
+              "zone_id": 23420189,
+              "vendor_name": "bkash",
+              "trx_id": "DGE1D1HPPP",
+              "invoice_number": "INV17840105709936464",
+              "amount": 290,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Prothom",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T06:29:31.000000Z",
+              "package_info": {
+                "id": 517,
+                "en_title": "Prothom",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Prothom"
+              },
+              "internet_user": {
+                "uid": 188132,
+                "package_id": 517,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188132,
+                  "full_name": "Md Hasan khalpara",
+                  "mobile_number": "01321822691"
+                }
+              }
+            },
+            {
+              "id": 276286,
+              "uid": 188133,
+              "zone_id": 18100177,
+              "vendor_name": "bkash",
+              "trx_id": "DGE1D1CI1L",
+              "invoice_number": "INV17840103566335786",
+              "amount": 304,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T06:25:57.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 188133,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188133,
+                  "full_name": "Chan mia sheikh",
+                  "mobile_number": "01350500746"
+                }
+              }
+            },
+            {
+              "id": 276284,
+              "uid": 188130,
+              "zone_id": 32450196,
+              "vendor_name": "bkash",
+              "trx_id": "DGE4D1AFQ4",
+              "invoice_number": "INV17840102845844587",
+              "amount": 304,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T06:24:44.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 188130,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188130,
+                  "full_name": "Jakaria",
+                  "mobile_number": "01331254570"
+                }
+              }
+            },
+            {
+              "id": 276283,
+              "uid": 188100,
+              "zone_id": 68200187,
+              "vendor_name": "bkash",
+              "trx_id": "DGE4D1AC8K",
+              "invoice_number": "INV17840102813445059",
+              "amount": 304,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T06:24:41.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 188100,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188100,
+                  "full_name": "Ridoy chandra das",
+                  "mobile_number": "01865347431"
+                }
+              }
+            },
+            {
+              "id": 276282,
+              "uid": 188125,
+              "zone_id": 145573,
+              "vendor_name": "bkash",
+              "trx_id": "DGE0D133HI",
+              "invoice_number": "INV17840100230997679",
+              "amount": 304,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T06:20:23.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 188125,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188125,
+                  "full_name": "abu sama",
+                  "mobile_number": "01726094621"
+                }
+              }
+            },
+            {
+              "id": 276281,
+              "uid": 188124,
+              "zone_id": 59836,
+              "vendor_name": "bkash",
+              "trx_id": "DGE2D12CVI",
+              "invoice_number": "INV17840099965088223",
+              "amount": 685,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T06:19:56.000000Z",
+              "package_info": {
+                "id": 501,
+                "en_title": "Student",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Student"
+              },
+              "internet_user": {
+                "uid": 188124,
+                "package_id": 501,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188124,
+                  "full_name": "RAYHAN AHMED",
+                  "mobile_number": "01885685067"
+                }
+              }
+            },
+            {
+              "id": 276280,
+              "uid": 188095,
+              "zone_id": 145573,
+              "vendor_name": "bkash",
+              "trx_id": "DGE5D0WKYL",
+              "invoice_number": "INV17840098012248180",
+              "amount": 304,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T06:16:41.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 188095,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188095,
+                  "full_name": "dulal",
+                  "mobile_number": "01331346118"
+                }
+              }
+            },
+            {
+              "id": 276279,
+              "uid": 188104,
+              "zone_id": 3337035,
+              "vendor_name": "bkash",
+              "trx_id": "DGE6D0QVLA",
+              "invoice_number": "INV17840095851502165",
+              "amount": 397,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T06:13:05.000000Z",
+              "package_info": {
+                "id": 501,
+                "en_title": "Student",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Student"
+              },
+              "internet_user": {
+                "uid": 188104,
+                "package_id": 501,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188104,
+                  "full_name": "thana",
+                  "mobile_number": "01336928569"
+                }
+              }
+            },
+            {
+              "id": 276278,
+              "uid": 188107,
+              "zone_id": 18140195,
+              "vendor_name": "bkash",
+              "trx_id": "DGE1D00HC9",
+              "invoice_number": "INV17840086019859552",
+              "amount": 304,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T05:56:42.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 188107,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188107,
+                  "full_name": "Dipok Baroi",
+                  "mobile_number": "01716921148"
+                }
+              }
+            },
+            {
+              "id": 276277,
+              "uid": 188087,
+              "zone_id": 141214,
+              "vendor_name": "bkash",
+              "trx_id": "DGE4CZZDY0",
+              "invoice_number": "INV17840085959493916",
+              "amount": 525,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T05:56:36.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 188087,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188087,
+                  "full_name": "Md Abdul gofir",
+                  "mobile_number": "01670586502"
+                }
+              }
+            },
+            {
+              "id": 276276,
+              "uid": 188096,
+              "zone_id": 18110188,
+              "vendor_name": "bkash",
+              "trx_id": "DGE1CZX5GZ",
+              "invoice_number": "INV17840084899336282",
+              "amount": 304,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T05:54:50.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 188096,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188096,
+                  "full_name": "Dr Kalu",
+                  "mobile_number": "01770021720"
+                }
+              }
+            },
+            {
+              "id": 276273,
+              "uid": 49058,
+              "zone_id": 45289,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1784008247374176224",
+              "invoice_number": "INV17840082473746281",
+              "amount": 120,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "REGULAR",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T05:50:47.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 49058,
+                "package_id": 40,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 49058,
+                  "full_name": "panju",
+                  "mobile_number": "01785752417"
+                }
+              }
+            },
+            {
+              "id": 276272,
+              "uid": 137637,
+              "zone_id": 45289,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1784006926856172714",
+              "invoice_number": "INV17840069268563489",
+              "amount": 150,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "FAST",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T05:28:47.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 137637,
+                "package_id": 41,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 137637,
+                  "full_name": "semul",
+                  "mobile_number": "01796203768"
+                }
+              }
+            },
+            {
+              "id": 276271,
+              "uid": 184239,
+              "zone_id": 46710137,
+              "vendor_name": "bkash",
+              "trx_id": "DGE3CYNWJN",
+              "invoice_number": "1784006779848033",
+              "amount": 525,
+              "service_charge": 0,
+              "purpose": "internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T05:26:58.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 184239,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 184239,
+                  "full_name": "Sajedul",
+                  "mobile_number": null
+                }
+              }
+            },
+            {
+              "id": 276270,
+              "uid": 179253,
+              "zone_id": 81900162,
+              "vendor_name": "bkash",
+              "trx_id": "DGE6CYNLSS",
+              "invoice_number": "INV17840067847647238",
+              "amount": 525,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T05:26:25.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 179253,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 179253,
+                  "full_name": "Mehedi pouly",
+                  "mobile_number": "01646429987"
+                }
+              }
+            },
+            {
+              "id": 276269,
+              "uid": 148405,
+              "zone_id": 45289,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1784005252663487105",
+              "invoice_number": "INV17840052526638896",
+              "amount": 120,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "REGULAR",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T05:00:52.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 148405,
+                "package_id": 40,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 148405,
+                  "full_name": "mim",
+                  "mobile_number": "01328856697"
+                }
+              }
+            },
+            {
+              "id": 276268,
+              "uid": 184681,
+              "zone_id": 45289,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1784004998648836510",
+              "invoice_number": "INV17840049986482086",
+              "amount": 120,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "REGULAR",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T04:56:38.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 184681,
+                "package_id": 40,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 184681,
+                  "full_name": "obidud",
+                  "mobile_number": "01747355479"
+                }
+              }
+            },
+            {
+              "id": 276267,
+              "uid": 49511,
+              "zone_id": 45289,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1784004800729321473",
+              "invoice_number": "INV17840048007295746",
+              "amount": 120,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "REGULAR",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T04:53:20.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 49511,
+                "package_id": 40,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 49511,
+                  "full_name": "abdur rahman",
+                  "mobile_number": "01725877798"
+                }
+              }
+            },
+            {
+              "id": 276266,
+              "uid": 96231,
+              "zone_id": 45289,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1784004422432385150",
+              "invoice_number": "INV17840044224336586",
+              "amount": 120,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "REGULAR",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T04:47:02.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 96231,
+                "package_id": 40,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 96231,
+                  "full_name": "abdul kader",
+                  "mobile_number": "01624380484"
+                }
+              }
+            },
+            {
+              "id": 276265,
+              "uid": 137290,
+              "zone_id": 45289,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1784004241914919742",
+              "invoice_number": "INV17840042419143087",
+              "amount": 120,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "REGULAR",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T04:44:02.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 137290,
+                "package_id": 40,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 137290,
+                  "full_name": "ajijur",
+                  "mobile_number": "01789806972"
+                }
+              }
+            },
+            {
+              "id": 276264,
+              "uid": 13194,
+              "zone_id": 1720130,
+              "vendor_name": "bkash",
+              "trx_id": "DGE3CWPE69",
+              "invoice_number": "1784004176228091",
+              "amount": 150,
+              "service_charge": 0,
+              "purpose": "internet_bill_payment",
+              "package": "SHADHIN",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T04:43:18.000000Z",
+              "package_info": {
+                "id": 5,
+                "en_title": "Shadhin",
+                "type": "wifi",
+                "mikrotik_radius_group_name": "SHADHIN"
+              },
+              "internet_user": {
+                "uid": 13194,
+                "package_id": 5,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 13194,
+                  "full_name": "MD Jaidul Shikder",
+                  "mobile_number": "01743463679"
+                }
+              }
+            },
+            {
+              "id": 276263,
+              "uid": 51877,
+              "zone_id": 45289,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1784004103094810911",
+              "invoice_number": "INV17840041030945125",
+              "amount": 500,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Familly",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T04:41:43.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 51877,
+                "package_id": 1095,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 51877,
+                  "full_name": "dipu",
+                  "mobile_number": "01788618289"
+                }
+              }
+            },
+            {
+              "id": 276262,
+              "uid": 138403,
+              "zone_id": 135417,
+              "vendor_name": "payBill",
+              "trx_id": "DGE2CWEOAU",
+              "invoice_number": null,
+              "amount": 525,
+              "service_charge": 0,
+              "purpose": "internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T04:35:58.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 138403,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 138403,
+                  "full_name": "khan bayazid hasan",
+                  "mobile_number": "01310203989"
+                }
+              }
+            },
+            {
+              "id": 276260,
+              "uid": 47470,
+              "zone_id": 45289,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1784001981787220614",
+              "invoice_number": "INV17840019817878536",
+              "amount": 120,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "REGULAR",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T04:06:21.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 47470,
+                "package_id": 40,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 47470,
+                  "full_name": "rony",
+                  "mobile_number": "01325206064"
+                }
+              }
+            },
+            {
+              "id": 276259,
+              "uid": 93909,
+              "zone_id": 51255,
+              "vendor_name": "bkash",
+              "trx_id": "DGE5CV973N",
+              "invoice_number": "INV17840019324799519",
+              "amount": 685,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T04:05:32.000000Z",
+              "package_info": {
+                "id": 501,
+                "en_title": "Student",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Student"
+              },
+              "internet_user": {
+                "uid": 93909,
+                "package_id": 501,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 93909,
+                  "full_name": "লুৎফুর রহমান",
+                  "mobile_number": "01752803391"
+                }
+              }
+            },
+            {
+              "id": 276258,
+              "uid": 47834,
+              "zone_id": 45289,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1784001917853153398",
+              "invoice_number": "INV17840019178539288",
+              "amount": 120,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "REGULAR",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T04:05:17.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 47834,
+                "package_id": 40,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 47834,
+                  "full_name": "Sohidul",
+                  "mobile_number": "01326452479"
+                }
+              }
+            },
+            {
+              "id": 276257,
+              "uid": 147865,
+              "zone_id": 45289,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1784001559118330847",
+              "invoice_number": "INV17840015591183264",
+              "amount": 500,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Coporate",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T03:59:19.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 147865,
+                "package_id": 1098,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 147865,
+                  "full_name": "liton",
+                  "mobile_number": "01726650411"
+                }
+              }
+            },
+            {
+              "id": 276256,
+              "uid": 122389,
+              "zone_id": 45289,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1783999120063687330",
+              "invoice_number": "INV17839991200638774",
+              "amount": 120,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "REGULAR",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T03:18:40.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 122389,
+                "package_id": 40,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 122389,
+                  "full_name": "Raseda",
+                  "mobile_number": "01940125171"
+                }
+              }
+            },
+            {
+              "id": 276255,
+              "uid": 139014,
+              "zone_id": 52589,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1783996653750653480",
+              "invoice_number": "INV17839966537506364",
+              "amount": 200,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "6Mbps-30Days",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T02:37:33.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 139014,
+                "package_id": 1008,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 139014,
+                  "full_name": "rohom",
+                  "mobile_number": "01903894868"
+                }
+              }
+            },
+            {
+              "id": 276254,
+              "uid": 26371,
+              "zone_id": 82430155,
+              "vendor_name": "wallet_point",
+              "trx_id": "1783991552U57306",
+              "invoice_number": "1783991551822866",
+              "amount": 150,
+              "service_charge": 0,
+              "purpose": "internet_bill_payment",
+              "package": "SHADHIN",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T01:12:33.000000Z",
+              "package_info": {
+                "id": 5,
+                "en_title": "Shadhin",
+                "type": "wifi",
+                "mikrotik_radius_group_name": "SHADHIN"
+              },
+              "internet_user": {
+                "uid": 26371,
+                "package_id": 5,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 26371,
+                  "full_name": "fabil",
+                  "mobile_number": "01735107979"
+                }
+              }
+            },
+            {
+              "id": 276253,
+              "uid": 188082,
+              "zone_id": 52589,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1783990905555129484",
+              "invoice_number": "INV17839909055553808",
+              "amount": 200,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "6Mbps-30Days",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-14T01:01:45.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 188082,
+                "package_id": 1008,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 188082,
+                  "full_name": "Moshomi",
+                  "mobile_number": "01346236288"
+                }
+              }
+            },
+            {
+              "id": 276251,
+              "uid": 56127,
+              "zone_id": 51771,
+              "vendor_name": "bkash",
+              "trx_id": "DGD0CNP9C4",
+              "invoice_number": "INV17839638221048856",
+              "amount": 525,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T17:30:22.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 56127,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 56127,
+                  "full_name": "Khairul Islam",
+                  "mobile_number": "01747315961"
+                }
+              }
+            },
+            {
+              "id": 276250,
+              "uid": 131648,
+              "zone_id": 11214197,
+              "vendor_name": "bkash",
+              "trx_id": "DGD5CMZY9X",
+              "invoice_number": "INV17839623261791999",
+              "amount": 685,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T17:05:26.000000Z",
+              "package_info": {
+                "id": 501,
+                "en_title": "Student",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Student"
+              },
+              "internet_user": {
+                "uid": 131648,
+                "package_id": 501,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 131648,
+                  "full_name": "Sayedul",
+                  "mobile_number": "01640807742"
+                }
+              }
+            },
+            {
+              "id": 276249,
+              "uid": 188073,
+              "zone_id": 141214,
+              "vendor_name": "bkash",
+              "trx_id": "DGD3CLTH2H",
+              "invoice_number": "INV17839602368556026",
+              "amount": 840,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Bondhu",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T16:30:37.000000Z",
+              "package_info": {
+                "id": 508,
+                "en_title": "Bondhu",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Bondhu"
+              },
+              "internet_user": {
+                "uid": 188073,
+                "package_id": 508,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188073,
+                  "full_name": "Md Rashed",
+                  "mobile_number": "01752549462"
+                }
+              }
+            },
+            {
+              "id": 276248,
+              "uid": 188071,
+              "zone_id": 11600210,
+              "vendor_name": "bkash",
+              "trx_id": "DGD2CLM3LI",
+              "invoice_number": "INV17839598937226545",
+              "amount": 321,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T16:24:54.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 188071,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188071,
+                  "full_name": "Shohag",
+                  "mobile_number": "01839489068"
+                }
+              }
+            },
+            {
+              "id": 276247,
+              "uid": 149368,
+              "zone_id": 141214,
+              "vendor_name": "bkash",
+              "trx_id": "DGD4CLFLHI",
+              "invoice_number": "INV17839595738697115",
+              "amount": 685,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Student",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T16:19:34.000000Z",
+              "package_info": {
+                "id": 501,
+                "en_title": "Student",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Student"
+              },
+              "internet_user": {
+                "uid": 149368,
+                "package_id": 501,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 149368,
+                  "full_name": "MD. FERDOS MIA",
+                  "mobile_number": "01728320025"
+                }
+              }
+            },
+            {
+              "id": 276246,
+              "uid": 188070,
+              "zone_id": 18140195,
+              "vendor_name": "bkash",
+              "trx_id": "DGD2CL6NX2",
+              "invoice_number": "INV17839592127548680",
+              "amount": 321,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T16:13:33.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 188070,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188070,
+                  "full_name": "Prosenjit Boiragee Opar",
+                  "mobile_number": "01629773407"
+                }
+              }
+            },
+            {
+              "id": 276245,
+              "uid": 106728,
+              "zone_id": 46371,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1783958994304364144",
+              "invoice_number": "INV17839589943047392",
+              "amount": 500,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Prothom",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T16:09:54.000000Z",
+              "package_info": {
+                "id": 517,
+                "en_title": "Prothom",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Prothom"
+              },
+              "internet_user": {
+                "uid": 106728,
+                "package_id": 45,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 106728,
+                  "full_name": "হালিমা বেগম",
+                  "mobile_number": "01758209705"
+                }
+              }
+            },
+            {
+              "id": 276244,
+              "uid": 188069,
+              "zone_id": 11600210,
+              "vendor_name": "bkash",
+              "trx_id": "DGD7CKPNNT",
+              "invoice_number": "INV17839585377095569",
+              "amount": 321,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T16:02:18.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 188069,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188069,
+                  "full_name": "Tamim Ahmed",
+                  "mobile_number": "01997937278"
+                }
+              }
+            },
+            {
+              "id": 276243,
+              "uid": 188067,
+              "zone_id": 52589,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1783957578285596409",
+              "invoice_number": "INV17839575782859165",
+              "amount": 200,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "6Mbps-30Days",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T15:46:18.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 188067,
+                "package_id": 1008,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 188067,
+                  "full_name": "Ruman",
+                  "mobile_number": "01613928535"
+                }
+              }
+            },
+            {
+              "id": 276242,
+              "uid": 30558,
+              "zone_id": 82430155,
+              "vendor_name": "wallet_point",
+              "trx_id": "1783957342U55248",
+              "invoice_number": "1783957342259399",
+              "amount": 150,
+              "service_charge": 0,
+              "purpose": "internet_bill_payment",
+              "package": "SHADHIN",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T15:42:24.000000Z",
+              "package_info": {
+                "id": 5,
+                "en_title": "Shadhin",
+                "type": "wifi",
+                "mikrotik_radius_group_name": "SHADHIN"
+              },
+              "internet_user": {
+                "uid": 30558,
+                "package_id": 5,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 30558,
+                  "full_name": "hojur",
+                  "mobile_number": "01738512844"
+                }
+              }
+            },
+            {
+              "id": 276241,
+              "uid": 136970,
+              "zone_id": 52589,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1783956783386924472",
+              "invoice_number": "INV17839567833863788",
+              "amount": 200,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "6Mbps-30Days",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T15:33:03.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 136970,
+                "package_id": 1008,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 136970,
+                  "full_name": "Alamger vii",
+                  "mobile_number": "01950725433"
+                }
+              }
+            },
+            {
+              "id": 276240,
+              "uid": 81320,
+              "zone_id": 52589,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1783956741581110772",
+              "invoice_number": "INV17839567415817024",
+              "amount": 200,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "6Mbps-30Days",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T15:32:21.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 81320,
+                "package_id": 1008,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 81320,
+                  "full_name": "Mojibul2",
+                  "mobile_number": "01838712967"
+                }
+              }
+            },
+            {
+              "id": 276239,
+              "uid": 188065,
+              "zone_id": 33225109,
+              "vendor_name": "bkash",
+              "trx_id": "DGD3CJDN2J",
+              "invoice_number": "INV17839566625677897",
+              "amount": 321,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T15:31:03.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 188065,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 188065,
+                  "full_name": "Arnab kumar singha",
+                  "mobile_number": "01776071377"
+                }
+              }
+            },
+            {
+              "id": 276238,
+              "uid": 188064,
+              "zone_id": 52589,
+              "vendor_name": "panel_money",
+              "trx_id": "TXN1783955500435684379",
+              "invoice_number": "INV17839555004354998",
+              "amount": 70,
+              "service_charge": 0,
+              "purpose": "hotspot_internet_bill_payment",
+              "package": "5Mbps-7Days",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T15:11:40.000000Z",
+              "package_info": null,
+              "internet_user": {
+                "uid": 188064,
+                "package_id": 1007,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 188064,
+                  "full_name": "Milon",
+                  "mobile_number": "01961137341"
+                }
+              }
+            },
+            {
+              "id": 276237,
+              "uid": 155511,
+              "zone_id": 46710137,
+              "vendor_name": "bkash",
+              "trx_id": "DGD6CI570O",
+              "invoice_number": "1783955114245765",
+              "amount": 525,
+              "service_charge": 0,
+              "purpose": "internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T15:06:06.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 155511,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 155511,
+                  "full_name": "soneka",
+                  "mobile_number": null
+                }
+              }
+            },
+            {
+              "id": 276236,
+              "uid": 184700,
+              "zone_id": 23501185,
+              "vendor_name": "bkash",
+              "trx_id": "DGD5CHYS9F",
+              "invoice_number": "INV17839548873193733",
+              "amount": 525,
+              "service_charge": 0,
+              "purpose": "broadband_internet_bill_payment",
+              "package": "Desh",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T15:01:27.000000Z",
+              "package_info": {
+                "id": 511,
+                "en_title": "Desh",
+                "type": "broadband",
+                "mikrotik_radius_group_name": "Desh"
+              },
+              "internet_user": {
+                "uid": 184700,
+                "package_id": 511,
+                "package_type": "broadband",
+                "user_profile": {
+                  "uid": 184700,
+                  "full_name": "Mushiqur Rahman Sifat",
+                  "mobile_number": "01613394363"
+                }
+              }
+            },
+            {
+              "id": 276234,
+              "uid": 65535,
+              "zone_id": 3325093,
+              "vendor_name": "bkash",
+              "trx_id": "DGD0CHU86C",
+              "invoice_number": "1783954639381611",
+              "amount": 150,
+              "service_charge": 0,
+              "purpose": "internet_bill_payment",
+              "package": "SHADHIN",
+              "transaction_status": "Completed",
+              "created_at": "2026-07-13T14:59:07.000000Z",
+              "package_info": {
+                "id": 5,
+                "en_title": "Shadhin",
+                "type": "wifi",
+                "mikrotik_radius_group_name": "SHADHIN"
+              },
+              "internet_user": {
+                "uid": 65535,
+                "package_id": 5,
+                "package_type": "wifi",
+                "user_profile": {
+                  "uid": 65535,
+                  "full_name": "tambir",
+                  "mobile_number": "01732498726"
+                }
+              }
+            }
+          ],
+          "status": "success",
+          "error_type": "",
+          "message": "",
+          "summary": {
+            "total_collection": 46468268.99000006,
+            "total_paid_customers": 29860,
+            "broadband_collection": 34355252.020000026,
+            "broadband_customers": 18854,
+            "hotspot_collection": 0,
+            "hotspot_customers": 0
+          }
+        }
+      '''
+    }
+  }
+}
