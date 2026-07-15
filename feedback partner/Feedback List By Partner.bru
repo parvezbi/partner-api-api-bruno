@@ -1,0 +1,316 @@
+meta {
+  name: Feedback List By Partner
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/partner/feedbacks
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: 6367|eDEreBHeZUhX2aALEww1ZrrGER7Pu8VACdZy8ZR7
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/feedbacks
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 15 Jul 2026 12:21:59 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "data": {
+            "current_page": 1,
+            "data": [
+              {
+                "id": 50,
+                "zone_id": 8221080,
+                "uid": "2990",
+                "rating": 1,
+                "type": "complaint",
+                "message": "Poor customer service. I have been trying to reach them for days with no response.",
+                "status": "pending",
+                "reply": null,
+                "reply_by": null,
+                "reply_at": null,
+                "created_at": "2026-07-14T07:06:07.000000Z",
+                "updated_at": "2026-07-14T07:06:07.000000Z"
+              },
+              {
+                "id": 19,
+                "zone_id": 8221080,
+                "uid": "2976",
+                "rating": 2,
+                "type": "complaint",
+                "message": "Billing issues every month. The invoices are never accurate.",
+                "status": "reviewed",
+                "reply": null,
+                "reply_by": null,
+                "reply_at": null,
+                "created_at": "2026-07-14T06:06:07.000000Z",
+                "updated_at": "2026-07-14T06:06:07.000000Z"
+              },
+              {
+                "id": 9,
+                "zone_id": 8221080,
+                "uid": "2971",
+                "rating": 1,
+                "type": "complaint",
+                "message": "Poor customer service. I have been trying to reach them for days with no response.",
+                "status": "pending",
+                "reply": null,
+                "reply_by": null,
+                "reply_at": null,
+                "created_at": "2026-07-13T23:06:07.000000Z",
+                "updated_at": "2026-07-13T23:06:07.000000Z"
+              },
+              {
+                "id": 31,
+                "zone_id": 8221080,
+                "uid": "2982",
+                "rating": 5,
+                "type": "feedback",
+                "message": "Best internet service provider in the area. Very satisfied with the connection quality.",
+                "status": "resolved",
+                "reply": "Thank you for your feedback! We appreciate your input and will work on improving our service.",
+                "reply_by": 1,
+                "reply_at": "2026-07-16T03:06:07.000000Z",
+                "created_at": "2026-07-12T16:06:07.000000Z",
+                "updated_at": "2026-07-16T03:06:07.000000Z"
+              },
+              {
+                "id": 8,
+                "zone_id": 8221080,
+                "uid": "1955",
+                "rating": 5,
+                "type": "feedback",
+                "message": "Best internet service provider in the area. Very satisfied with the connection quality.",
+                "status": "resolved",
+                "reply": null,
+                "reply_by": null,
+                "reply_at": null,
+                "created_at": "2026-07-11T10:06:07.000000Z",
+                "updated_at": "2026-07-11T10:06:07.000000Z"
+              },
+              {
+                "id": 44,
+                "zone_id": 8221080,
+                "uid": "2987",
+                "rating": 2,
+                "type": "complaint",
+                "message": "Internet connection keeps dropping frequently. Very frustrating during work hours.",
+                "status": "pending",
+                "reply": null,
+                "reply_by": null,
+                "reply_at": null,
+                "created_at": "2026-07-10T14:06:07.000000Z",
+                "updated_at": "2026-07-10T14:06:07.000000Z"
+              },
+              {
+                "id": 25,
+                "zone_id": 8221080,
+                "uid": "2979",
+                "rating": 1,
+                "type": "complaint",
+                "message": "Very disappointed with the service. Frequent outages and no proper support.",
+                "status": "pending",
+                "reply": null,
+                "reply_by": null,
+                "reply_at": null,
+                "created_at": "2026-07-10T02:06:07.000000Z",
+                "updated_at": "2026-07-10T02:06:07.000000Z"
+              },
+              {
+                "id": 17,
+                "zone_id": 8221080,
+                "uid": "2975",
+                "rating": 2,
+                "type": "complaint",
+                "message": "Internet connection keeps dropping frequently. Very frustrating during work hours.",
+                "status": "pending",
+                "reply": null,
+                "reply_by": null,
+                "reply_at": null,
+                "created_at": "2026-07-10T00:06:07.000000Z",
+                "updated_at": "2026-07-10T00:06:07.000000Z"
+              },
+              {
+                "id": 15,
+                "zone_id": 8221080,
+                "uid": "2974",
+                "rating": 4,
+                "type": "suggestion",
+                "message": "Add more wifi hotspots in different areas for better coverage.",
+                "status": "reviewed",
+                "reply": null,
+                "reply_by": null,
+                "reply_at": null,
+                "created_at": "2026-07-08T16:06:07.000000Z",
+                "updated_at": "2026-07-08T16:06:07.000000Z"
+              },
+              {
+                "id": 12,
+                "zone_id": 8221080,
+                "uid": "2973",
+                "rating": 3,
+                "type": "suggestion",
+                "message": "It would be great if you could offer more flexible package options for different needs.",
+                "status": "reviewed",
+                "reply": "We appreciate your honest feedback. This helps us serve you better.",
+                "reply_by": 1,
+                "reply_at": "2026-07-10T14:06:07.000000Z",
+                "created_at": "2026-07-08T04:06:07.000000Z",
+                "updated_at": "2026-07-10T14:06:07.000000Z"
+              },
+              {
+                "id": 41,
+                "zone_id": 8221080,
+                "uid": "2986",
+                "rating": 4,
+                "type": "suggestion",
+                "message": "Add more wifi hotspots in different areas for better coverage.",
+                "status": "reviewed",
+                "reply": "We appreciate your honest feedback. This helps us serve you better.",
+                "reply_by": 1,
+                "reply_at": "2026-07-08T19:06:07.000000Z",
+                "created_at": "2026-07-07T09:06:07.000000Z",
+                "updated_at": "2026-07-08T19:06:07.000000Z"
+              },
+              {
+                "id": 48,
+                "zone_id": 8221080,
+                "uid": "2989",
+                "rating": 2,
+                "type": "complaint",
+                "message": "Internet connection keeps dropping frequently. Very frustrating during work hours.",
+                "status": "pending",
+                "reply": null,
+                "reply_by": null,
+                "reply_at": null,
+                "created_at": "2026-07-06T21:06:07.000000Z",
+                "updated_at": "2026-07-06T21:06:07.000000Z"
+              },
+              {
+                "id": 20,
+                "zone_id": 8221080,
+                "uid": "2977",
+                "rating": 5,
+                "type": "feedback",
+                "message": "Excellent service! The internet speed is amazing and very stable. Highly recommend Shadhin to everyone.",
+                "status": "resolved",
+                "reply": "We have noted your complaint and our team is working on resolving the issue. Please allow us 24-48 hours.",
+                "reply_by": 1,
+                "reply_at": "2026-07-10T16:06:07.000000Z",
+                "created_at": "2026-07-05T06:06:07.000000Z",
+                "updated_at": "2026-07-10T16:06:07.000000Z"
+              },
+              {
+                "id": 2,
+                "zone_id": 8221080,
+                "uid": "357",
+                "rating": 2,
+                "type": "complaint",
+                "message": "The internet speed is much slower than what was promised in the package description.",
+                "status": "reviewed",
+                "reply": null,
+                "reply_by": null,
+                "reply_at": null,
+                "created_at": "2026-07-04T16:06:07.000000Z",
+                "updated_at": "2026-07-04T16:06:07.000000Z"
+              },
+              {
+                "id": 49,
+                "zone_id": 8221080,
+                "uid": "2989",
+                "rating": 4,
+                "type": "suggestion",
+                "message": "Add more wifi hotspots in different areas for better coverage.",
+                "status": "reviewed",
+                "reply": null,
+                "reply_by": null,
+                "reply_at": null,
+                "created_at": "2026-07-03T15:06:07.000000Z",
+                "updated_at": "2026-07-03T15:06:07.000000Z"
+              }
+            ],
+            "first_page_url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/feedbacks?page=1",
+            "from": 1,
+            "last_page": 4,
+            "last_page_url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/feedbacks?page=4",
+            "links": [
+              {
+                "url": null,
+                "label": "&laquo; Previous",
+                "active": false
+              },
+              {
+                "url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/feedbacks?page=1",
+                "label": "1",
+                "active": true
+              },
+              {
+                "url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/feedbacks?page=2",
+                "label": "2",
+                "active": false
+              },
+              {
+                "url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/feedbacks?page=3",
+                "label": "3",
+                "active": false
+              },
+              {
+                "url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/feedbacks?page=4",
+                "label": "4",
+                "active": false
+              },
+              {
+                "url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/feedbacks?page=2",
+                "label": "Next &raquo;",
+                "active": false
+              }
+            ],
+            "next_page_url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/feedbacks?page=2",
+            "path": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/feedbacks",
+            "per_page": 15,
+            "prev_page_url": null,
+            "to": 15,
+            "total": 50
+          }
+        }
+      '''
+    }
+  }
+}

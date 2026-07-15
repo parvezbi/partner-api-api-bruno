@@ -1,13 +1,17 @@
 meta {
-  name: List Summary
+  name: active - paid - online user list
   type: http
-  seq: 1
+  seq: 3
 }
 
 get {
-  url: {{base_url}}/partner/customer/list/summary
+  url: {{base_url}}/partner/customer/active-paid-online?package_type=broadband
   body: none
   auth: bearer
+}
+
+params:query {
+  package_type: broadband
 }
 
 auth:bearer {

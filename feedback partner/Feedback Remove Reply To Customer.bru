@@ -1,0 +1,199 @@
+meta {
+  name: Feedback Remove Reply To Customer
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{base_url}}/partner/feedbacks/remove/reply?uid=2987
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  uid: 2987
+}
+
+auth:bearer {
+  token: 6367|eDEreBHeZUhX2aALEww1ZrrGER7Pu8VACdZy8ZR7
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/feedbacks/add/reply
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      uid: 2987
+      reply: Thanks For Complaining
+      status: reviewed
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 15 Jul 2026 12:40:29 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "message": "Reply added successfully",
+          "data": {
+            "id": 46,
+            "zone_id": 8221080,
+            "uid": "2987",
+            "rating": 3,
+            "type": "suggestion",
+            "message": "Please improve the customer support response time during peak hours.",
+            "status": "reviewed",
+            "reply": "Thanks For Complaining",
+            "reply_by": 2,
+            "reply_at": "2026-07-15T12:40:29.000000Z",
+            "created_at": "2026-05-27T08:06:07.000000Z",
+            "updated_at": "2026-07-15T12:40:29.000000Z"
+          }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/feedbacks/update/reply
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      uid: 2987
+      reply: Thanks For Complaining Hello
+      status: resolved
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 15 Jul 2026 12:45:07 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "message": "Reply updated successfully",
+          "data": {
+            "id": 46,
+            "zone_id": 8221080,
+            "uid": "2987",
+            "rating": 3,
+            "type": "suggestion",
+            "message": "Please improve the customer support response time during peak hours.",
+            "status": "resolved",
+            "reply": "Thanks For Complaining Hello",
+            "reply_by": 2,
+            "reply_at": "2026-07-15T12:45:08.000000Z",
+            "created_at": "2026-05-27T08:06:07.000000Z",
+            "updated_at": "2026-07-15T12:45:08.000000Z"
+          }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/feedbacks/remove/reply?uid=2987
+    method: DELETE
+    mode: multipartForm
+    params:query: {
+      uid: 2987
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 15 Jul 2026 12:56:10 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 197
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "message": "Reply removed successfully",
+          "data": {
+            "id": 46,
+            "zone_id": 8221080,
+            "uid": "2987",
+            "rating": 3,
+            "type": "suggestion",
+            "message": "Please improve the customer support response time during peak hours.",
+            "status": "pending",
+            "reply": null,
+            "reply_by": null,
+            "reply_at": null,
+            "created_at": "2026-05-27T08:06:07.000000Z",
+            "updated_at": "2026-07-15T12:56:10.000000Z"
+          }
+        }
+      '''
+    }
+  }
+}

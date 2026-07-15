@@ -1,0 +1,82 @@
+meta {
+  name: Feedback Statistics By Partner
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/partner/feedbacks/statistics
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: 6367|eDEreBHeZUhX2aALEww1ZrrGER7Pu8VACdZy8ZR7
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: sucess-dev
+  
+  request: {
+    url: {{base_url}}/partner/feedbacks/statistics
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Wed, 15 Jul 2026 12:21:35 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "data": {
+            "total": 50,
+            "by_status": {
+              "pending": 15,
+              "reviewed": 20,
+              "resolved": 15
+            },
+            "by_type": {
+              "feedback": 17,
+              "complaint": 15,
+              "suggestion": 18
+            },
+            "average_rating": "3.3400",
+            "rating_distribution": {
+              "1_star": 4,
+              "2_star": 11,
+              "3_star": 13,
+              "4_star": 8,
+              "5_star": 14
+            },
+            "replied_count": 12,
+            "unreplied_count": 38
+          }
+        }
+      '''
+    }
+  }
+}
