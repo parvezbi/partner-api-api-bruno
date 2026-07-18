@@ -1,0 +1,187 @@
+meta {
+  name: Status Summary
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/partner/status/summary?month=2026-06&from_date=&to_date=&package_type=broadband
+  body: none
+  auth: bearer
+}
+
+params:query {
+  month: 2026-06
+  from_date: 
+  to_date: 
+  package_type: broadband
+}
+
+auth:bearer {
+  token: 6371|Ll90p6s1Sz90ySkTl5tXpUeyhlmBSXTHGOlr1G0m
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-local
+  
+  request: {
+    url: {{base_url}}/partner/status/summary?month=2026-06&from_date=&to_date=&package_type=broadband
+    method: GET
+    mode: none
+    params:query: {
+      month: 2026-06
+      from_date: 
+      to_date: 
+      package_type: broadband
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 16 Jul 2026 12:31:01 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "status": "success",
+          "results": {
+            "summary": {
+              "combined": {
+                "active_paid": {
+                  "count": 0,
+                  "percentage": 0
+                },
+                "active_connected": {
+                  "count": 0,
+                  "percentage": 0
+                },
+                "active_disconnected": {
+                  "count": 0,
+                  "percentage": 0
+                },
+                "inactive_unpaid": {
+                  "count": 0,
+                  "percentage": 0
+                },
+                "pending": {
+                  "count": 1,
+                  "percentage": 100
+                },
+                "total": {
+                  "count": 1,
+                  "percentage": 100
+                }
+              },
+              "broadband": {
+                "active_paid": {
+                  "count": 0,
+                  "percentage": 0
+                },
+                "active_connected": {
+                  "count": 0,
+                  "percentage": 0
+                },
+                "active_disconnected": {
+                  "count": 0,
+                  "percentage": 0
+                },
+                "inactive_unpaid": {
+                  "count": 0,
+                  "percentage": 0
+                },
+                "pending": {
+                  "count": 1,
+                  "percentage": 100
+                },
+                "total": {
+                  "count": 1,
+                  "percentage": 100
+                }
+              },
+              "hotspot": {
+                "active_paid": {
+                  "count": 0,
+                  "percentage": 0
+                },
+                "active_connected": {
+                  "count": 0,
+                  "percentage": 0
+                },
+                "active_disconnected": {
+                  "count": 0,
+                  "percentage": 0
+                },
+                "inactive_unpaid": {
+                  "count": 0,
+                  "percentage": 0
+                },
+                "pending": {
+                  "count": 0,
+                  "percentage": 0
+                },
+                "total": {
+                  "count": 0,
+                  "percentage": 100
+                }
+              }
+            },
+            "filters": {
+              "zone_id": "8221080",
+              "package_type": "broadband",
+              "month": "2026-06",
+              "from_date": null,
+              "to_date": null
+            },
+            "meta": {
+              "total_users": 1,
+              "execution_time_ms": 15078.89
+            },
+            "status_definitions": {
+              "active_paid": {
+                "description": "Active from internet_users and paid from payments table",
+                "bn_description": "ইন্টারনেট ইউজার থেকে সক্রিয় এবং পেমেন্ট টেবিল থেকে পেইড"
+              },
+              "active_connected": {
+                "description": "Active from internet_users and connected/online from MikroTik",
+                "bn_description": "ইন্টারনেট ইউজার থেকে সক্রিয় এবং মাইক্রোটিক থেকে সংযুক্ত/অনলাইন"
+              },
+              "active_disconnected": {
+                "description": "Active from internet_users but disconnected/offline from MikroTik",
+                "bn_description": "ইন্টারনেট ইউজার থেকে সক্রিয় কিন্তু মাইক্রোটিক থেকে সংযোগ বিচ্ছিন্ন/অফলাইন"
+              },
+              "inactive_unpaid": {
+                "description": "Inactive from internet_users and unpaid from payments table",
+                "bn_description": "ইন্টারনেট ইউজার থেকে নিষ্ক্রিয় এবং পেমেন্ট টেবিল থেকে আনপেইড"
+              },
+              "pending": {
+                "description": "Pending status from internet_users",
+                "bn_description": "ইন্টারনেট ইউজার থেকে পেন্ডিং স্ট্যাটাস"
+              }
+            }
+          }
+        }
+      '''
+    }
+  }
+}
