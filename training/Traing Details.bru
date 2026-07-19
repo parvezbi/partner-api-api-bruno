@@ -1,0 +1,105 @@
+meta {
+  name: Traing Details
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/partner/trainings/details?id=1
+  body: none
+  auth: bearer
+}
+
+params:query {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/trainings/details?id=1
+    method: GET
+    mode: none
+    params:query: {
+      id: 1
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 19 Jul 2026 10:16:41 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "data": {
+            "id": 1,
+            "title": "Customer Retention Strategies",
+            "type": "video",
+            "type_label": "Video",
+            "duration": "24 min",
+            "description": "Learn proven strategies for retaining ISP customers. This course covers customer satisfaction drivers, loyalty programs, communication best practices, and retention metrics used by top ISPs.",
+            "thumbnail": null,
+            "video_url": "https://nmsbackend.acloudplanet.com/storage/https://www.youtube.com/embed/dQw4w9WgXcQ",
+            "file_url": null,
+            "resources": [
+              {
+                "id": 1,
+                "title": "Retention Strategy Checklist.pdf",
+                "file_name": "retention_strategy_checklist.pdf",
+                "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_retention_strategy_checklist.pdf"
+              },
+              {
+                "id": 2,
+                "title": "Customer Retention Templates.docx",
+                "file_name": "customer_retention_templates.docx",
+                "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_customer_retention_templates.docx"
+              },
+              {
+                "id": 3,
+                "title": "Retention Metrics Dashboard.xlsx",
+                "file_name": "retention_metrics_dashboard.xlsx",
+                "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_retention_metrics_dashboard.xlsx"
+              }
+            ],
+            "progress": {
+              "status": "completed",
+              "percentage": 100,
+              "started_at": "2026-06-21T09:05:57.000000Z",
+              "completed_at": "2026-06-24T09:05:57.000000Z",
+              "last_accessed_at": "2026-06-24T09:05:57.000000Z"
+            },
+            "is_completed": true
+          }
+        }
+      '''
+    }
+  }
+}

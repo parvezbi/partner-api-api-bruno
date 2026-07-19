@@ -1,0 +1,88 @@
+meta {
+  name: Dashboard
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/partner/trainings/dashboard
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/trainings/dashboard
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 19 Jul 2026 09:46:05 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "data": {
+            "total_courses": 10,
+            "completed_courses": 3,
+            "completion_percentage": 30,
+            "recent_completed": [
+              {
+                "id": 3,
+                "title": "Upselling Fiber Packages",
+                "type": "article",
+                "duration": "8 min read",
+                "completed_at": "2026-06-26T09:05:58.000000Z"
+              },
+              {
+                "id": 1,
+                "title": "Customer Retention Strategies",
+                "type": "video",
+                "duration": "24 min",
+                "completed_at": "2026-06-24T09:05:57.000000Z"
+              },
+              {
+                "id": 2,
+                "title": "Handling Network Complaints",
+                "type": "video",
+                "duration": "18 min",
+                "completed_at": "2026-06-21T09:05:57.000000Z"
+              }
+            ],
+            "in_progress": 3
+          }
+        }
+      '''
+    }
+  }
+}

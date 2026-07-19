@@ -1,0 +1,128 @@
+meta {
+  name: ticket reply
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{base_url}}/partner/tickets/add/reply
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  id: 1
+  message: Hello, You 4554  solved?
+  attachment: @file(F:\Alamin\afrin-shahana.pdf) @contentType(application/pdf)
+  status: resolved
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/tickets/add/reply
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      id: 1
+      message: Hello, You 4554  solved?
+      attachment: @file(F:\Alamin\afrin-shahana.pdf) @contentType(application/pdf)
+      status: resolved
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Sat, 18 Jul 2026 11:39:50 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "message": "Reply added successfully",
+          "data": {
+            "id": 1,
+            "ticket_uid": "TKT-20260718-09061",
+            "user_id": 3298,
+            "service": "Billing",
+            "issue_type": "Invoice Issue",
+            "priority": "urgent",
+            "status": "resolved",
+            "description": "Late payment fee was applied incorrectly. Please waive it off.",
+            "attachment": null,
+            "created_at": "2026-06-20T05:22:26.000000Z",
+            "updated_at": "2026-07-18T11:38:32.000000Z",
+            "replies": [
+              {
+                "id": 1,
+                "ticket_id": 1,
+                "user_id": 2669,
+                "sender_type": "admin",
+                "message": "We have made some changes to your account. Please test and confirm.",
+                "attachment": null,
+                "created_at": "2026-06-20T10:36:26.000000Z",
+                "updated_at": "2026-06-20T10:36:26.000000Z"
+              },
+              {
+                "id": 2,
+                "ticket_id": 1,
+                "user_id": 3298,
+                "sender_type": "user",
+                "message": "Thank you for your assistance.",
+                "attachment": null,
+                "created_at": "2026-06-20T13:07:26.000000Z",
+                "updated_at": "2026-06-20T13:07:26.000000Z"
+              },
+              {
+                "id": 70,
+                "ticket_id": 1,
+                "user_id": 2,
+                "sender_type": "agent",
+                "message": "Hello, You Probnlem solved?",
+                "attachment": "tickets/replies/MWR74yGsZpxKtR4fm0hXkoJTVVPrr2tdat8RSAGO.pdf",
+                "created_at": "2026-07-18T11:38:32.000000Z",
+                "updated_at": "2026-07-18T11:38:32.000000Z"
+              },
+              {
+                "id": 71,
+                "ticket_id": 1,
+                "user_id": 2,
+                "sender_type": "agent",
+                "message": "Hello, You 4554  solved?",
+                "attachment": "tickets/replies/EDEA4RE8HCyewCZud7qaqjrSsPfTVCZpS0BcvouZ.pdf",
+                "created_at": "2026-07-18T11:39:50.000000Z",
+                "updated_at": "2026-07-18T11:39:50.000000Z"
+              }
+            ]
+          }
+        }
+      '''
+    }
+  }
+}

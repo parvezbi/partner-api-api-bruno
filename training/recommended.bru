@@ -1,0 +1,111 @@
+meta {
+  name: recommended
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/partner/trainings/recommended
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/trainings/recommended
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 19 Jul 2026 10:00:52 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "data": [
+            {
+              "id": 4,
+              "title": "Billing & Collection Best Practices",
+              "type": "video",
+              "type_label": "Video",
+              "duration": "31 min",
+              "description": "Master billing and collection best practices for ISP businesses. This course covers billing cycle management, payment collection strategies, handling late payments, and maintaining positive customer relationships during collection.",
+              "thumbnail": null,
+              "is_completed": false
+            },
+            {
+              "id": 5,
+              "title": "Fiber Optic Installation Best Practices",
+              "type": "video",
+              "type_label": "Video",
+              "duration": "45 min",
+              "description": "Learn the best practices for fiber optic installation. This course covers safety protocols, installation techniques, quality assurance, and troubleshooting common installation issues.",
+              "thumbnail": null,
+              "is_completed": false
+            },
+            {
+              "id": 6,
+              "title": "Customer Service Excellence in ISP Industry",
+              "type": "video",
+              "type_label": "Video",
+              "duration": "28 min",
+              "description": "Deliver exceptional customer service in the ISP industry. This course covers effective communication, problem-solving, handling difficult customers, and building long-term customer relationships.",
+              "thumbnail": null,
+              "is_completed": false
+            },
+            {
+              "id": 7,
+              "title": "Network Troubleshooting Fundamentals",
+              "type": "article",
+              "type_label": "Article",
+              "duration": "12 min read",
+              "description": "Build a solid foundation in network troubleshooting. This article covers common network issues, diagnostic tools, step-by-step troubleshooting methodology, and preventive maintenance strategies.",
+              "thumbnail": null,
+              "is_completed": false
+            },
+            {
+              "id": 8,
+              "title": "ISP Sales Techniques for Partners",
+              "type": "video",
+              "type_label": "Video",
+              "duration": "35 min",
+              "description": "Master effective sales techniques for ISP partners. This course covers lead generation, consultative selling, handling objections, closing techniques, and building a successful sales pipeline.",
+              "thumbnail": null,
+              "is_completed": false
+            }
+          ]
+        }
+      '''
+    }
+  }
+}

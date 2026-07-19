@@ -1,0 +1,71 @@
+meta {
+  name: markAsCompleted
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{base_url}}/partner/trainings/mask/as/complete
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/trainings/mask/as/complete
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      id: 1
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 19 Jul 2026 10:22:38 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "message": "Training marked as completed",
+          "data": {
+            "training_id": "1",
+            "completed_at": "2026-07-19T10:22:38.000000Z"
+          }
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,101 @@
+meta {
+  name: ticket show
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/partner/tickets/show?id=1
+  body: none
+  auth: bearer
+}
+
+params:query {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/tickets/show?id=1
+    method: GET
+    mode: none
+    params:query: {
+      id: 1
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Sat, 18 Jul 2026 11:27:46 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "data": {
+            "id": 1,
+            "ticket_uid": "TKT-20260718-09061",
+            "user_id": 3298,
+            "service": "Billing",
+            "issue_type": "Invoice Issue",
+            "priority": "urgent",
+            "status": "open",
+            "description": "Late payment fee was applied incorrectly. Please waive it off.",
+            "attachment": null,
+            "created_at": "2026-06-20T05:22:26.000000Z",
+            "updated_at": "2026-06-20T05:22:26.000000Z",
+            "replies": [
+              {
+                "id": 1,
+                "ticket_id": 1,
+                "user_id": 2669,
+                "sender_type": "admin",
+                "message": "We have made some changes to your account. Please test and confirm.",
+                "attachment": null,
+                "created_at": "2026-06-20T10:36:26.000000Z",
+                "updated_at": "2026-06-20T10:36:26.000000Z"
+              },
+              {
+                "id": 2,
+                "ticket_id": 1,
+                "user_id": 3298,
+                "sender_type": "user",
+                "message": "Thank you for your assistance.",
+                "attachment": null,
+                "created_at": "2026-06-20T13:07:26.000000Z",
+                "updated_at": "2026-06-20T13:07:26.000000Z"
+              }
+            ]
+          }
+        }
+      '''
+    }
+  }
+}

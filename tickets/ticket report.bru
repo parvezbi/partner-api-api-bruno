@@ -1,0 +1,281 @@
+meta {
+  name: ticket report
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{base_url}}/partner/tickets/report
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/tickets/report
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Sat, 18 Jul 2026 12:04:00 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "data": {
+            "zone_info": {
+              "zone_id": "8221080",
+              "zone_name": "muktagacha"
+            },
+            "period": {
+              "month": 7,
+              "year": 2026,
+              "month_name": "July",
+              "start_date": "2026-07-01",
+              "end_date": "2026-07-31"
+            },
+            "summary": {
+              "total_tickets": 11,
+              "ticket_trend": {
+                "change": -6,
+                "trend": "decreasing",
+                "trend_icon": "▼",
+                "trend_text": "decreased by 6 tickets from previous month"
+              },
+              "resolved_tickets": 7,
+              "resolution_rate": 63.64,
+              "open_tickets": 4,
+              "urgent_tickets": 3,
+              "urgent_percentage": 27.27,
+              "average_resolution_time": {
+                "hours": 3.86,
+                "days": 0.16,
+                "formatted": "0.16 days",
+                "tickets_count": 7
+              }
+            },
+            "status_distribution": {
+              "open": 1,
+              "processing": 2,
+              "awaiting_reply": 1,
+              "resolved": 4,
+              "closed": 3
+            },
+            "priority_distribution": {
+              "regular": 2,
+              "medium": 6,
+              "urgent": 3
+            },
+            "last_7_days": [
+              {
+                "date": "2026-07-12",
+                "day_name": "Sun",
+                "day": "12",
+                "total": 1,
+                "resolved": 0,
+                "urgent": 0,
+                "resolution_rate": 0
+              },
+              {
+                "date": "2026-07-13",
+                "day_name": "Mon",
+                "day": "13",
+                "total": 0,
+                "resolved": 0,
+                "urgent": 0,
+                "resolution_rate": 0
+              },
+              {
+                "date": "2026-07-14",
+                "day_name": "Tue",
+                "day": "14",
+                "total": 1,
+                "resolved": 1,
+                "urgent": 0,
+                "resolution_rate": 100
+              },
+              {
+                "date": "2026-07-15",
+                "day_name": "Wed",
+                "day": "15",
+                "total": 1,
+                "resolved": 1,
+                "urgent": 0,
+                "resolution_rate": 100
+              },
+              {
+                "date": "2026-07-16",
+                "day_name": "Thu",
+                "day": "16",
+                "total": 0,
+                "resolved": 0,
+                "urgent": 0,
+                "resolution_rate": 0
+              },
+              {
+                "date": "2026-07-17",
+                "day_name": "Fri",
+                "day": "17",
+                "total": 1,
+                "resolved": 1,
+                "urgent": 0,
+                "resolution_rate": 100
+              },
+              {
+                "date": "2026-07-18",
+                "day_name": "Sat",
+                "day": "18",
+                "total": 3,
+                "resolved": 0,
+                "urgent": 3,
+                "resolution_rate": 0
+              }
+            ],
+            "recent_tickets": [
+              {
+                "id": 33,
+                "ticket_uid": "TKT-20260718-59178",
+                "user_name": "Tanvir Mahtab",
+                "mobile_number": "01700503034",
+                "issue_type": "No Connection",
+                "priority": "urgent",
+                "status": "processing",
+                "created_at": "2026-07-18 16:15:26",
+                "has_reply": true
+              },
+              {
+                "id": 35,
+                "ticket_uid": "TKT-20260718-54085",
+                "user_name": "Tanvir Mahtab",
+                "mobile_number": "01700503034",
+                "issue_type": "Billing Issue",
+                "priority": "urgent",
+                "status": "awaiting_reply",
+                "created_at": "2026-07-18 13:15:26",
+                "has_reply": true
+              },
+              {
+                "id": 34,
+                "ticket_uid": "TKT-20260718-72845",
+                "user_name": "Tanvir Mahtab",
+                "mobile_number": "01700503034",
+                "issue_type": "Hardware Issue",
+                "priority": "urgent",
+                "status": "open",
+                "created_at": "2026-07-18 03:15:26",
+                "has_reply": true
+              },
+              {
+                "id": 29,
+                "ticket_uid": "TKT-20260718-52549",
+                "user_name": "Tanvir Mahtab",
+                "mobile_number": "01700503034",
+                "issue_type": "No Connection",
+                "priority": "medium",
+                "status": "resolved",
+                "created_at": "2026-07-17 23:00:26",
+                "has_reply": true
+              },
+              {
+                "id": 6,
+                "ticket_uid": "TKT-20260718-86833",
+                "user_name": "Tanvir Mahtab",
+                "mobile_number": "01700503034",
+                "issue_type": "Billing Cycle",
+                "priority": "regular",
+                "status": "closed",
+                "created_at": "2026-07-15 01:01:26",
+                "has_reply": true
+              },
+              {
+                "id": 9,
+                "ticket_uid": "TKT-20260718-78444",
+                "user_name": "Tanvir Mahtab",
+                "mobile_number": "01700503034",
+                "issue_type": "Billing Cycle",
+                "priority": "medium",
+                "status": "closed",
+                "created_at": "2026-07-14 18:27:26",
+                "has_reply": true
+              },
+              {
+                "id": 7,
+                "ticket_uid": "TKT-20260718-79748",
+                "user_name": "Tanvir Mahtab",
+                "mobile_number": "01700503034",
+                "issue_type": "Billing Cycle",
+                "priority": "medium",
+                "status": "processing",
+                "created_at": "2026-07-12 08:15:26",
+                "has_reply": true
+              },
+              {
+                "id": 28,
+                "ticket_uid": "TKT-20260718-28289",
+                "user_name": "Tanvir Mahtab",
+                "mobile_number": "01700503034",
+                "issue_type": "New Package",
+                "priority": "medium",
+                "status": "closed",
+                "created_at": "2026-07-08 22:28:26",
+                "has_reply": true
+              },
+              {
+                "id": 32,
+                "ticket_uid": "TKT-20260718-18048",
+                "user_name": "Tanvir Mahtab",
+                "mobile_number": "01700503034",
+                "issue_type": "Bill Dispute",
+                "priority": "regular",
+                "status": "resolved",
+                "created_at": "2026-07-07 17:15:26",
+                "has_reply": true
+              },
+              {
+                "id": 37,
+                "ticket_uid": "TKT-20260718-84514",
+                "user_name": "Tanvir Mahtab",
+                "mobile_number": "01700503034",
+                "issue_type": "Connection Drop",
+                "priority": "medium",
+                "status": "resolved",
+                "created_at": "2026-07-06 17:15:26",
+                "has_reply": true
+              }
+            ]
+          }
+        }
+      '''
+    }
+  }
+}

@@ -5,17 +5,21 @@ meta {
 }
 
 get {
-  url: {{base_url}}/partner/customer/active-paid?package_type=broadband
+  url: {{base_url}}/partner/customer/active-paid?package_type=broadband&month=2026-07
   body: none
   auth: bearer
 }
 
 params:query {
   package_type: broadband
+  month: 2026-07
+  ~from_date: 2026-07-01
+  ~to_date: 2026-07-18
+  ~search: 
 }
 
 auth:bearer {
-  token: 6367|eDEreBHeZUhX2aALEww1ZrrGER7Pu8VACdZy8ZR7
+  token: {{token}}
 }
 
 settings {

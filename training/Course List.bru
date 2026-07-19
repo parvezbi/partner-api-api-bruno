@@ -1,0 +1,491 @@
+meta {
+  name: Course List
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{base_url}}/partner/trainings/list
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/trainings/list
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 19 Jul 2026 10:14:23 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "data": {
+            "current_page": 1,
+            "data": [
+              {
+                "id": 1,
+                "title": "Customer Retention Strategies",
+                "type": "video",
+                "type_label": "Video",
+                "duration": "24 min",
+                "description": "Learn proven strategies for retaining ISP customers. This course covers customer satisfaction drivers, loyalty programs, communication best practices, and retention metrics used by top ISPs.",
+                "thumbnail": null,
+                "video_url": "https://nmsbackend.acloudplanet.com/storage/https://www.youtube.com/embed/dQw4w9WgXcQ",
+                "file_url": null,
+                "resources": [
+                  {
+                    "id": 1,
+                    "title": "Retention Strategy Checklist.pdf",
+                    "file_name": "retention_strategy_checklist.pdf",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_retention_strategy_checklist.pdf"
+                  },
+                  {
+                    "id": 2,
+                    "title": "Customer Retention Templates.docx",
+                    "file_name": "customer_retention_templates.docx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_customer_retention_templates.docx"
+                  },
+                  {
+                    "id": 3,
+                    "title": "Retention Metrics Dashboard.xlsx",
+                    "file_name": "retention_metrics_dashboard.xlsx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_retention_metrics_dashboard.xlsx"
+                  }
+                ],
+                "progress": {
+                  "status": "completed",
+                  "percentage": 100,
+                  "started_at": "2026-06-21T09:05:57.000000Z",
+                  "completed_at": "2026-06-24T09:05:57.000000Z",
+                  "last_accessed_at": "2026-06-24T09:05:57.000000Z"
+                },
+                "is_completed": true,
+                "created_at": "2026-06-25T09:04:56.000000Z"
+              },
+              {
+                "id": 2,
+                "title": "Handling Network Complaints",
+                "type": "video",
+                "type_label": "Video",
+                "duration": "18 min",
+                "description": "Master the art of handling network complaints from ISP customers effectively. This course covers root-cause identification, empathetic communication, escalation procedures, and resolution best practices used by top ISP partners.",
+                "thumbnail": null,
+                "video_url": "https://nmsbackend.acloudplanet.com/storage/https://www.youtube.com/embed/9bZkp7q19f0",
+                "file_url": null,
+                "resources": [
+                  {
+                    "id": 4,
+                    "title": "Complaint Handling Script.pdf",
+                    "file_name": "complaint_handling_script.pdf",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_complaint_handling_script.pdf"
+                  },
+                  {
+                    "id": 5,
+                    "title": "Escalation Matrix.xlsx",
+                    "file_name": "escalation_matrix.xlsx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_escalation_matrix.xlsx"
+                  },
+                  {
+                    "id": 6,
+                    "title": "Customer Satisfaction Templates.docx",
+                    "file_name": "customer_satisfaction_templates.docx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_customer_satisfaction_templates.docx"
+                  }
+                ],
+                "progress": {
+                  "status": "completed",
+                  "percentage": 100,
+                  "started_at": "2026-06-17T09:05:57.000000Z",
+                  "completed_at": "2026-06-21T09:05:57.000000Z",
+                  "last_accessed_at": "2026-06-21T09:05:57.000000Z"
+                },
+                "is_completed": true,
+                "created_at": "2026-07-05T09:05:57.000000Z"
+              },
+              {
+                "id": 3,
+                "title": "Upselling Fiber Packages",
+                "type": "article",
+                "type_label": "Article",
+                "duration": "8 min read",
+                "description": "Discover effective techniques for upselling fiber packages to existing customers. Learn to identify upselling opportunities, present value propositions, handle objections, and close deals successfully.",
+                "thumbnail": null,
+                "video_url": null,
+                "file_url": null,
+                "resources": [
+                  {
+                    "id": 7,
+                    "title": "Upselling Scripts.pdf",
+                    "file_name": "upselling_scripts.pdf",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_upselling_scripts.pdf"
+                  },
+                  {
+                    "id": 8,
+                    "title": "Package Comparison Chart.xlsx",
+                    "file_name": "package_comparison_chart.xlsx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_package_comparison_chart.xlsx"
+                  },
+                  {
+                    "id": 9,
+                    "title": "Value Proposition Templates.docx",
+                    "file_name": "value_proposition_templates.docx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_value_proposition_templates.docx"
+                  }
+                ],
+                "progress": {
+                  "status": "completed",
+                  "percentage": 100,
+                  "started_at": "2026-06-22T09:05:58.000000Z",
+                  "completed_at": "2026-06-26T09:05:58.000000Z",
+                  "last_accessed_at": "2026-06-26T09:05:58.000000Z"
+                },
+                "is_completed": true,
+                "created_at": "2026-06-29T09:05:57.000000Z"
+              },
+              {
+                "id": 4,
+                "title": "Billing & Collection Best Practices",
+                "type": "video",
+                "type_label": "Video",
+                "duration": "31 min",
+                "description": "Master billing and collection best practices for ISP businesses. This course covers billing cycle management, payment collection strategies, handling late payments, and maintaining positive customer relationships during collection.",
+                "thumbnail": null,
+                "video_url": "https://nmsbackend.acloudplanet.com/storage/https://www.youtube.com/embed/tgbNymZ7vqY",
+                "file_url": null,
+                "resources": [
+                  {
+                    "id": 10,
+                    "title": "Collection Scripts.pdf",
+                    "file_name": "collection_scripts.pdf",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_collection_scripts.pdf"
+                  },
+                  {
+                    "id": 11,
+                    "title": "Billing Cycle Template.xlsx",
+                    "file_name": "billing_cycle_template.xlsx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_billing_cycle_template.xlsx"
+                  },
+                  {
+                    "id": 12,
+                    "title": "Payment Reminder Templates.docx",
+                    "file_name": "payment_reminder_templates.docx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_payment_reminder_templates.docx"
+                  }
+                ],
+                "progress": {
+                  "status": "in_progress",
+                  "percentage": 80,
+                  "started_at": "2026-07-16T09:05:58.000000Z",
+                  "completed_at": null,
+                  "last_accessed_at": "2026-07-18T23:05:58.000000Z"
+                },
+                "is_completed": false,
+                "created_at": "2026-07-05T09:05:58.000000Z"
+              },
+              {
+                "id": 5,
+                "title": "Fiber Optic Installation Best Practices",
+                "type": "video",
+                "type_label": "Video",
+                "duration": "45 min",
+                "description": "Learn the best practices for fiber optic installation. This course covers safety protocols, installation techniques, quality assurance, and troubleshooting common installation issues.",
+                "thumbnail": null,
+                "video_url": "https://nmsbackend.acloudplanet.com/storage/https://www.youtube.com/embed/jNQXAC9IVRw",
+                "file_url": null,
+                "resources": [
+                  {
+                    "id": 13,
+                    "title": "Installation Checklist.pdf",
+                    "file_name": "installation_checklist.pdf",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_installation_checklist.pdf"
+                  },
+                  {
+                    "id": 14,
+                    "title": "Safety Guidelines.docx",
+                    "file_name": "safety_guidelines.docx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_safety_guidelines.docx"
+                  },
+                  {
+                    "id": 15,
+                    "title": "Quality Assurance Template.xlsx",
+                    "file_name": "quality_assurance_template.xlsx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_quality_assurance_template.xlsx"
+                  }
+                ],
+                "progress": {
+                  "status": "in_progress",
+                  "percentage": 77,
+                  "started_at": "2026-07-09T09:05:58.000000Z",
+                  "completed_at": null,
+                  "last_accessed_at": "2026-07-18T20:05:58.000000Z"
+                },
+                "is_completed": false,
+                "created_at": "2026-07-03T09:05:58.000000Z"
+              },
+              {
+                "id": 6,
+                "title": "Customer Service Excellence in ISP Industry",
+                "type": "video",
+                "type_label": "Video",
+                "duration": "28 min",
+                "description": "Deliver exceptional customer service in the ISP industry. This course covers effective communication, problem-solving, handling difficult customers, and building long-term customer relationships.",
+                "thumbnail": null,
+                "video_url": "https://nmsbackend.acloudplanet.com/storage/https://www.youtube.com/embed/5qap5aO4i9A",
+                "file_url": null,
+                "resources": [
+                  {
+                    "id": 16,
+                    "title": "Service Excellence Guide.pdf",
+                    "file_name": "service_excellence_guide.pdf",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_service_excellence_guide.pdf"
+                  },
+                  {
+                    "id": 17,
+                    "title": "Communication Templates.docx",
+                    "file_name": "communication_templates.docx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_communication_templates.docx"
+                  },
+                  {
+                    "id": 18,
+                    "title": "Customer Feedback Form.xlsx",
+                    "file_name": "customer_feedback_form.xlsx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_customer_feedback_form.xlsx"
+                  }
+                ],
+                "progress": {
+                  "status": "in_progress",
+                  "percentage": 65,
+                  "started_at": "2026-07-10T09:05:58.000000Z",
+                  "completed_at": null,
+                  "last_accessed_at": "2026-07-17T17:05:58.000000Z"
+                },
+                "is_completed": false,
+                "created_at": "2026-07-09T09:05:58.000000Z"
+              },
+              {
+                "id": 7,
+                "title": "Network Troubleshooting Fundamentals",
+                "type": "article",
+                "type_label": "Article",
+                "duration": "12 min read",
+                "description": "Build a solid foundation in network troubleshooting. This article covers common network issues, diagnostic tools, step-by-step troubleshooting methodology, and preventive maintenance strategies.",
+                "thumbnail": null,
+                "video_url": null,
+                "file_url": null,
+                "resources": [
+                  {
+                    "id": 19,
+                    "title": "Troubleshooting Guide.pdf",
+                    "file_name": "troubleshooting_guide.pdf",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_troubleshooting_guide.pdf"
+                  },
+                  {
+                    "id": 20,
+                    "title": "Network Diagnostic Tools Checklist.xlsx",
+                    "file_name": "diagnostic_tools_checklist.xlsx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_diagnostic_tools_checklist.xlsx"
+                  },
+                  {
+                    "id": 21,
+                    "title": "Maintenance Schedule Template.docx",
+                    "file_name": "maintenance_schedule_template.docx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_maintenance_schedule_template.docx"
+                  }
+                ],
+                "progress": {
+                  "status": "not_started",
+                  "percentage": 0,
+                  "started_at": null,
+                  "completed_at": null,
+                  "last_accessed_at": null
+                },
+                "is_completed": false,
+                "created_at": "2026-05-25T09:05:58.000000Z"
+              },
+              {
+                "id": 8,
+                "title": "ISP Sales Techniques for Partners",
+                "type": "video",
+                "type_label": "Video",
+                "duration": "35 min",
+                "description": "Master effective sales techniques for ISP partners. This course covers lead generation, consultative selling, handling objections, closing techniques, and building a successful sales pipeline.",
+                "thumbnail": null,
+                "video_url": "https://nmsbackend.acloudplanet.com/storage/https://www.youtube.com/embed/oHg5SJYRHA0",
+                "file_url": null,
+                "resources": [
+                  {
+                    "id": 22,
+                    "title": "Sales Playbook.pdf",
+                    "file_name": "sales_playbook.pdf",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_sales_playbook.pdf"
+                  },
+                  {
+                    "id": 23,
+                    "title": "Lead Generation Templates.xlsx",
+                    "file_name": "lead_generation_templates.xlsx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_lead_generation_templates.xlsx"
+                  },
+                  {
+                    "id": 24,
+                    "title": "Sales Scripts.docx",
+                    "file_name": "sales_scripts.docx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_sales_scripts.docx"
+                  }
+                ],
+                "progress": {
+                  "status": "not_started",
+                  "percentage": 0,
+                  "started_at": null,
+                  "completed_at": null,
+                  "last_accessed_at": null
+                },
+                "is_completed": false,
+                "created_at": "2026-07-13T09:05:58.000000Z"
+              },
+              {
+                "id": 9,
+                "title": "Cyber Security Awareness for ISP Staff",
+                "type": "article",
+                "type_label": "Article",
+                "duration": "10 min read",
+                "description": "Stay safe and secure while working in the ISP industry. This article covers cybersecurity best practices, data protection, password security, phishing awareness, and incident response procedures.",
+                "thumbnail": null,
+                "video_url": null,
+                "file_url": null,
+                "resources": [
+                  {
+                    "id": 25,
+                    "title": "Security Best Practices.pdf",
+                    "file_name": "security_best_practices.pdf",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_security_best_practices.pdf"
+                  },
+                  {
+                    "id": 26,
+                    "title": "Incident Response Plan.docx",
+                    "file_name": "incident_response_plan.docx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_incident_response_plan.docx"
+                  },
+                  {
+                    "id": 27,
+                    "title": "Password Policy Template.xlsx",
+                    "file_name": "password_policy_template.xlsx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_password_policy_template.xlsx"
+                  }
+                ],
+                "progress": {
+                  "status": "not_started",
+                  "percentage": 0,
+                  "started_at": null,
+                  "completed_at": null,
+                  "last_accessed_at": null
+                },
+                "is_completed": false,
+                "created_at": "2026-06-28T09:05:58.000000Z"
+              },
+              {
+                "id": 10,
+                "title": "ISP Business Growth Strategies",
+                "type": "video",
+                "type_label": "Video",
+                "duration": "42 min",
+                "description": "Learn effective strategies for growing your ISP business. This course covers market analysis, competition analysis, service diversification, customer acquisition, and business scaling strategies.",
+                "thumbnail": null,
+                "video_url": "https://nmsbackend.acloudplanet.com/storage/https://www.youtube.com/embed/6n3pFFPSlW4",
+                "file_url": null,
+                "resources": [
+                  {
+                    "id": 28,
+                    "title": "Growth Strategy Guide.pdf",
+                    "file_name": "growth_strategy_guide.pdf",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_growth_strategy_guide.pdf"
+                  },
+                  {
+                    "id": 29,
+                    "title": "Market Analysis Template.xlsx",
+                    "file_name": "market_analysis_template.xlsx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_market_analysis_template.xlsx"
+                  },
+                  {
+                    "id": 30,
+                    "title": "Business Plan Template.docx",
+                    "file_name": "business_plan_template.docx",
+                    "file_url": "https://nmsbackend.acloudplanet.com/storage/trainings/resources/sample_business_plan_template.docx"
+                  }
+                ],
+                "progress": {
+                  "status": "not_started",
+                  "percentage": 0,
+                  "started_at": null,
+                  "completed_at": null,
+                  "last_accessed_at": null
+                },
+                "is_completed": false,
+                "created_at": "2026-06-07T09:05:58.000000Z"
+              }
+            ],
+            "first_page_url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/trainings/list?page=1",
+            "from": 1,
+            "last_page": 1,
+            "last_page_url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/trainings/list?page=1",
+            "links": [
+              {
+                "url": null,
+                "label": "&laquo; Previous",
+                "active": false
+              },
+              {
+                "url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/trainings/list?page=1",
+                "label": "1",
+                "active": true
+              },
+              {
+                "url": null,
+                "label": "Next &raquo;",
+                "active": false
+              }
+            ],
+            "next_page_url": null,
+            "path": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/trainings/list",
+            "per_page": 15,
+            "prev_page_url": null,
+            "to": 10,
+            "total": 10
+          }
+        }
+      '''
+    }
+  }
+}
