@@ -1,0 +1,165 @@
+meta {
+  name: Profile Update
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{base_url}}/partner/auth/profile/update
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  full_name: Md. Abad Mahmud
+  alternative_mobile: 01812345678
+  whatsapp_number: 01812345678
+  profession: Business
+  nid: 1234567890123
+  gender: male
+  division_id: 1
+  district_id: 1
+  upazila_id: 555
+  union_id: 4740
+  village_id: 86058
+  address: গ্রাম: মোগলটুলী (বজ্রপুর ও মনোহরপুর মৌজা), ইউনিয়ন/পৌরসভা: ওয়ার্ড-০৫, থানা/উপজেলা: কোতোয়ালী থানা, জেলা: কুমিল্লা, বিভাগ: চট্টগ্রাম।
+  latitude: 23.465119
+  longitude: 91.181616
+  house_no: 01
+  road_no: 01
+  profile_image: @file(F:\Alamin\fresh.jpg) @contentType(image/jpeg)
+  nid_front_image: @file(F:\Alamin\alamin.png) @contentType(image/png)
+  nid_back_image: @file(F:\Alamin\alamin-1.png) @contentType(image/png)
+  nid_photo: @file(F:\Alamin\md-parvez.png) @contentType(image/png)
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/auth/profile/update
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      full_name: Md. Abad Mahmud
+      alternative_mobile: 01812345678
+      whatsapp_number: 01812345678
+      profession: Business
+      nid: 1234567890123
+      gender: male
+      division_id: 1
+      district_id: 1
+      upazila_id: 555
+      union_id: 4740
+      village_id: 86058
+      address: গ্রাম: মোগলটুলী (বজ্রপুর ও মনোহরপুর মৌজা), ইউনিয়ন/পৌরসভা: ওয়ার্ড-০৫, থানা/উপজেলা: কোতোয়ালী থানা, জেলা: কুমিল্লা, বিভাগ: চট্টগ্রাম।
+      latitude: 23.465119
+      longitude: 91.181616
+      house_no: 01
+      road_no: 01
+      profile_image: @file(F:\Alamin\fresh.jpg) @contentType(image/jpeg)
+      nid_front_image: @file(F:\Alamin\alamin.png) @contentType(image/png)
+      nid_back_image: @file(F:\Alamin\alamin-1.png) @contentType(image/png)
+      nid_photo: @file(F:\Alamin\md-parvez.png) @contentType(image/png)
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 19 Jul 2026 11:17:11 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "user": {
+              "id": 2,
+              "auth_id": "01700000002",
+              "base_role": "support_center",
+              "status": "active"
+            },
+            "profile": {
+              "id": 2,
+              "uid": 2,
+              "full_name": "Md. Abad Mahmud",
+              "wallet_amount": 1847,
+              "mobile_number": "01700000002",
+              "alternative_mobile": "01812345678",
+              "whatsapp_number": "01812345678",
+              "email": "mail@mail.com",
+              "profile_image": "https://nmsbackend.acloudplanet.com/storage/partner/profiles/2_1784459831_6a5cb237ad1de.jpg",
+              "profession": "Business",
+              "nid": "1234567890123",
+              "nid_front_image": "https://nmsbackend.acloudplanet.com/storage/partner/nid/2_1784459831_6a5cb237b0581.png",
+              "nid_back_image": "https://nmsbackend.acloudplanet.com/storage/partner/nid/2_1784459831_6a5cb237b3c2d.png",
+              "nid_photo": "https://nmsbackend.acloudplanet.com/storage/partner/nid/2_1784459831_6a5cb237b56c7.png",
+              "gender": "male",
+              "division_id": 6,
+              "district_id": 47,
+              "upazila_id": 502,
+              "union_id": 4853,
+              "village_id": "87036",
+              "house_no": "01",
+              "road_no": "01",
+              "building_name": null,
+              "address": "গ্রাম: মোগলটুলী (বজ্রপুর ও মনোহরপুর মৌজা), ইউনিয়ন/পৌরসভা: ওয়ার্ড-০৫, থানা/উপজেলা: কোতোয়ালী থানা, জেলা: কুমিল্লা, বিভাগ: চট্টগ্রাম।",
+              "latitude": "23.465119",
+              "longitude": "91.181616",
+              "address_direction": "shhsh",
+              "device_info": "{\"brand\":\"samsung\",\"model\":\"SM-G996U\",\"deviceId\":\"AP3A.240905.015.A2\"}",
+              "is_smartphone": 0,
+              "created_at": "2023-03-09T05:27:50.000000Z",
+              "updated_at": "2026-07-19T11:17:11.000000Z"
+            },
+            "partner_info": {
+              "id": 204,
+              "uid": 2,
+              "division_id": 1,
+              "district_id": 1,
+              "upazila_id": 555,
+              "union_id": 4740,
+              "village_id": 86058,
+              "address": "গ্রাম: মোগলটুলী (বজ্রপুর ও মনোহরপুর মৌজা), ইউনিয়ন/পৌরসভা: ওয়ার্ড-০৫, থানা/উপজেলা: কোতোয়ালী থানা, জেলা: কুমিল্লা, বিভাগ: চট্টগ্রাম।",
+              "latitude": 23.465119,
+              "longitude": 91.181616,
+              "status": "active",
+              "created_at": "2023-06-22T04:11:40.000000Z",
+              "updated_at": "2026-07-19T11:17:11.000000Z"
+            },
+            "message": "Profile updated successfully."
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Profile updated successfully.",
+          "message_en": "Profile updated successfully.",
+          "message_bn": "প্রোফাইল সফলভাবে আপডেট করা হয়েছে।"
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,187 @@
+meta {
+  name: Language Change Bangla English
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{base_url}}/partner/auth/languages/switch
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  locale: bn
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/auth/2fa/enable-email
+    method: POST
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 19 Jul 2026 12:00:08 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 3
+      x-ratelimit-remaining: 2
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "message": "2FA OTP has been sent to your email.",
+            "expires_in": 10,
+            "two_factor_type": "email"
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "2FA OTP sent successfully."
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/auth/2fa/enable-sms
+    method: POST
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 19 Jul 2026 12:16:25 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "otp": "397584",
+            "message": "2FA OTP has been sent to your mobile.",
+            "expires_in": 10,
+            "two_factor_type": "sms"
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "2FA OTP sent successfully."
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/auth/languages/switch
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      locale: bn
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 19 Jul 2026 12:28:46 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      set-cookie: locale=bn; expires=Tue, 18-Aug-2026 12:28:46 GMT; Max-Age=2592000; path=/; secure; httponly; samesite=lax
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "message": "Language switched successfully",
+          "data": {
+            "locale": "bn",
+            "current": {
+              "code": "bn",
+              "name": "Bangla",
+              "native_name": "বাংলা",
+              "flag": "🇧🇩",
+              "direction": "ltr"
+            },
+            "available": [
+              {
+                "code": "en",
+                "name": "English",
+                "native_name": "English",
+                "flag": "🇬🇧",
+                "direction": "ltr"
+              },
+              {
+                "code": "bn",
+                "name": "Bangla",
+                "native_name": "বাংলা",
+                "flag": "🇧🇩",
+                "direction": "ltr"
+              }
+            ]
+          }
+        }
+      '''
+    }
+  }
+}

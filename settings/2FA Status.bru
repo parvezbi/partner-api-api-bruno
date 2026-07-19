@@ -1,0 +1,69 @@
+meta {
+  name: 2FA Status
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base_url}}/partner/auth/2fa/status
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/auth/2fa/status
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 19 Jul 2026 12:13:23 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "two_factor_enabled": false,
+            "two_factor_type": null,
+            "two_factor_verified": false,
+            "two_factor_expires_at": null,
+            "has_email": true,
+            "has_mobile": true
+          },
+          "status": "success",
+          "error_type": "",
+          "message": ""
+        }
+      '''
+    }
+  }
+}
