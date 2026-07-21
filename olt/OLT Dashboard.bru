@@ -1,0 +1,195 @@
+meta {
+  name: OLT Dashboard
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/partner/olt/dashboard
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/olt/dashboard
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Mon, 20 Jul 2026 11:59:50 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "network_health": {
+              "total_onu": 356,
+              "online": 275,
+              "offline": 81,
+              "health_percentage": 77.25,
+              "status": "good"
+            },
+            "olt_devices": [
+              {
+                "id": 1,
+                "name": "Shantiganj",
+                "ip_address": "172.27.2.2",
+                "model": "P3600-08",
+                "status": "Active",
+                "total_onu": 356,
+                "online": 275,
+                "offline": 81,
+                "health_percentage": 77.25,
+                "health_status": "good",
+                "pon_ports": {
+                  "used": 7,
+                  "total": 8,
+                  "free": 1
+                },
+                "pon_port_list": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5",
+                  "6",
+                  "7"
+                ]
+              }
+            ],
+            "total_counts": {
+              "total_onu": 356,
+              "online": 275,
+              "offline": 81,
+              "online_percentage": 77.25,
+              "offline_percentage": 22.75
+            },
+            "live_traffic": {
+              "download_mbps": 1.12,
+              "upload_mbps": 0.04,
+              "total_mbps": 1.16,
+              "active_users": 2,
+              "total_users": 397,
+              "status": "active"
+            },
+            "traffic_graph": {
+              "data": [
+                {
+                  "hour": "10:00",
+                  "hour_label": "10:00 AM",
+                  "timestamp": 1784523590,
+                  "download_mbps": 3.72,
+                  "upload_mbps": 0.17,
+                  "total_mbps": 3.89
+                },
+                {
+                  "hour": "11:00",
+                  "hour_label": "11:00 AM",
+                  "timestamp": 1784527190,
+                  "download_mbps": 2.19,
+                  "upload_mbps": 0.08,
+                  "total_mbps": 2.27
+                },
+                {
+                  "hour": "12:00",
+                  "hour_label": "12:00 PM",
+                  "timestamp": 1784530790,
+                  "download_mbps": 0.51,
+                  "upload_mbps": 0.1,
+                  "total_mbps": 0.61
+                },
+                {
+                  "hour": "13:00",
+                  "hour_label": "1:00 PM",
+                  "timestamp": 1784534390,
+                  "download_mbps": 4.76,
+                  "upload_mbps": 0.13,
+                  "total_mbps": 4.89
+                },
+                {
+                  "hour": "14:00",
+                  "hour_label": "2:00 PM",
+                  "timestamp": 1784537990,
+                  "download_mbps": 0.51,
+                  "upload_mbps": 0.12,
+                  "total_mbps": 0.63
+                },
+                {
+                  "hour": "15:00",
+                  "hour_label": "3:00 PM",
+                  "timestamp": 1784541590,
+                  "download_mbps": 0.06,
+                  "upload_mbps": 0.28,
+                  "total_mbps": 0.34
+                },
+                {
+                  "hour": "16:00",
+                  "hour_label": "4:00 PM",
+                  "timestamp": 1784545190,
+                  "download_mbps": 8.32,
+                  "upload_mbps": 0.98,
+                  "total_mbps": 9.3
+                }
+              ],
+              "summary": {
+                "peak_download": 8.32,
+                "peak_upload": 0.98,
+                "average_download": 2.87,
+                "average_upload": 0.27
+              },
+              "status": "success"
+            },
+            "uptime": {
+              "uptime": "2w4d2h8m57s",
+              "uptime_seconds": 172800,
+              "uptime_human": "2d 0h 0m",
+              "cpu_load": "10",
+              "free_memory": "12644630528",
+              "total_memory": "16710107136",
+              "status": "connected"
+            },
+            "meta": {
+              "execution_time_ms": 712.99,
+              "zone_id": "38776",
+              "zone_name": "shantiganjup",
+              "zone_ip": "103.131.146.18"
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Network OLT dashboard data fetched successfully."
+        }
+      '''
+    }
+  }
+}

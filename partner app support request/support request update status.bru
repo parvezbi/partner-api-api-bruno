@@ -1,0 +1,76 @@
+meta {
+  name: support request update status
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{base_url}}/partner/support/update-status
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  id: 12
+  status: in_progress
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/support/update-status
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      id: 12
+      status: in_progress
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Mon, 20 Jul 2026 08:20:34 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "message": "Status updated successfully",
+          "data": {
+            "id": 12,
+            "ticket_number": "SPT-20260720-PXB6XE",
+            "status": "in_progress",
+            "status_label": "In Progress",
+            "resolved_at": null
+          }
+        }
+      '''
+    }
+  }
+}

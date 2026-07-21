@@ -1,0 +1,264 @@
+meta {
+  name: Total Dashboard
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/partner/dashboard/total?filter=daily&date=
+  body: none
+  auth: bearer
+}
+
+params:query {
+  filter: daily
+  date: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/dashboard/total?filter=daily&date=
+    method: GET
+    mode: none
+    params:query: {
+      filter: daily
+      date: 
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Tue, 21 Jul 2026 12:25:31 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "summary": {
+              "total_customers": 101,
+              "active_customers": 34,
+              "inactive_customers": 7,
+              "pending_customers": 60,
+              "total_revenue": 0,
+              "total_commission": 0,
+              "total_tickets": 0,
+              "online_users": 0
+            },
+            "revenue_graph": [
+              {
+                "label": "12:00 AM",
+                "hour": "00:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784570400
+              },
+              {
+                "label": "01:00 AM",
+                "hour": "01:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784574000
+              },
+              {
+                "label": "02:00 AM",
+                "hour": "02:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784577600
+              },
+              {
+                "label": "03:00 AM",
+                "hour": "03:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784581200
+              },
+              {
+                "label": "04:00 AM",
+                "hour": "04:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784584800
+              },
+              {
+                "label": "05:00 AM",
+                "hour": "05:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784588400
+              },
+              {
+                "label": "06:00 AM",
+                "hour": "06:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784592000
+              },
+              {
+                "label": "07:00 AM",
+                "hour": "07:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784595600
+              },
+              {
+                "label": "08:00 AM",
+                "hour": "08:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784599200
+              },
+              {
+                "label": "09:00 AM",
+                "hour": "09:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784602800
+              },
+              {
+                "label": "10:00 AM",
+                "hour": "10:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784606400
+              },
+              {
+                "label": "11:00 AM",
+                "hour": "11:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784610000
+              },
+              {
+                "label": "12:00 PM",
+                "hour": "12:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784613600
+              },
+              {
+                "label": "01:00 PM",
+                "hour": "13:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784617200
+              },
+              {
+                "label": "02:00 PM",
+                "hour": "14:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784620800
+              },
+              {
+                "label": "03:00 PM",
+                "hour": "15:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784624400
+              },
+              {
+                "label": "04:00 PM",
+                "hour": "16:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784628000
+              },
+              {
+                "label": "05:00 PM",
+                "hour": "17:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784631600
+              },
+              {
+                "label": "06:00 PM",
+                "hour": "18:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784635200
+              },
+              {
+                "label": "07:00 PM",
+                "hour": "19:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784638800
+              },
+              {
+                "label": "08:00 PM",
+                "hour": "20:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784642400
+              },
+              {
+                "label": "09:00 PM",
+                "hour": "21:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784646000
+              },
+              {
+                "label": "10:00 PM",
+                "hour": "22:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784649600
+              },
+              {
+                "label": "11:00 PM",
+                "hour": "23:00",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1784653200
+              }
+            ],
+            "notices": {
+              "total": 0,
+              "latest": []
+            },
+            "recent_activities": [],
+            "meta": {
+              "execution_time_ms": 15098.67,
+              "filter": "daily",
+              "date": "2026-07-21",
+              "zone_id": "8221080",
+              "zone_name": "muktagacha"
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Total dashboard data fetched successfully."
+        }
+      '''
+    }
+  }
+}

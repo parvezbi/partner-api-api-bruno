@@ -1,0 +1,580 @@
+meta {
+  name: Dashboard
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/partner/bandwidth-analytics/dashboard?filter=monthly&date=
+  body: none
+  auth: bearer
+}
+
+params:query {
+  filter: monthly
+  date: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/bandwidth-analytics/dashboard?filter=monthly&date=
+    method: GET
+    mode: none
+    params:query: {
+      filter: monthly
+      date: 
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Tue, 21 Jul 2026 06:20:18 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "summary": {
+              "total_download_tb": 101.83,
+              "total_upload_tb": 9.44,
+              "total_bandwidth_tb": 111.27,
+              "peak_download_gbps": 0.09,
+              "peak_upload_gbps": 0.1,
+              "peak_total_gbps": 0.19,
+              "average_per_customer_gb": 378.57,
+              "active_customers": 301,
+              "total_customers": 398,
+              "period": {
+                "start": "2026-07-01 00:00:00",
+                "end": "2026-07-31 23:59:59"
+              }
+            },
+            "graph": {
+              "data": [
+                {
+                  "label": "01 Jul",
+                  "date": "2026-07-01",
+                  "timestamp": 1782842400,
+                  "day_name": "Wed",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "02 Jul",
+                  "date": "2026-07-02",
+                  "timestamp": 1782928800,
+                  "day_name": "Thu",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "03 Jul",
+                  "date": "2026-07-03",
+                  "timestamp": 1783015200,
+                  "day_name": "Fri",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "04 Jul",
+                  "date": "2026-07-04",
+                  "timestamp": 1783101600,
+                  "day_name": "Sat",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "05 Jul",
+                  "date": "2026-07-05",
+                  "timestamp": 1783188000,
+                  "day_name": "Sun",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "06 Jul",
+                  "date": "2026-07-06",
+                  "timestamp": 1783274400,
+                  "day_name": "Mon",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "07 Jul",
+                  "date": "2026-07-07",
+                  "timestamp": 1783360800,
+                  "day_name": "Tue",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "08 Jul",
+                  "date": "2026-07-08",
+                  "timestamp": 1783447200,
+                  "day_name": "Wed",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "09 Jul",
+                  "date": "2026-07-09",
+                  "timestamp": 1783533600,
+                  "day_name": "Thu",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "10 Jul",
+                  "date": "2026-07-10",
+                  "timestamp": 1783620000,
+                  "day_name": "Fri",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "11 Jul",
+                  "date": "2026-07-11",
+                  "timestamp": 1783706400,
+                  "day_name": "Sat",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "12 Jul",
+                  "date": "2026-07-12",
+                  "timestamp": 1783792800,
+                  "day_name": "Sun",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "13 Jul",
+                  "date": "2026-07-13",
+                  "timestamp": 1783879200,
+                  "day_name": "Mon",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "14 Jul",
+                  "date": "2026-07-14",
+                  "timestamp": 1783965600,
+                  "day_name": "Tue",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "15 Jul",
+                  "date": "2026-07-15",
+                  "timestamp": 1784052000,
+                  "day_name": "Wed",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "16 Jul",
+                  "date": "2026-07-16",
+                  "timestamp": 1784138400,
+                  "day_name": "Thu",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "17 Jul",
+                  "date": "2026-07-17",
+                  "timestamp": 1784224800,
+                  "day_name": "Fri",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "18 Jul",
+                  "date": "2026-07-18",
+                  "timestamp": 1784311200,
+                  "day_name": "Sat",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "19 Jul",
+                  "date": "2026-07-19",
+                  "timestamp": 1784397600,
+                  "day_name": "Sun",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "20 Jul",
+                  "date": "2026-07-20",
+                  "timestamp": 1784484000,
+                  "day_name": "Mon",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "21 Jul",
+                  "date": "2026-07-21",
+                  "timestamp": 1784570400,
+                  "day_name": "Tue",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "22 Jul",
+                  "date": "2026-07-22",
+                  "timestamp": 1784656800,
+                  "day_name": "Wed",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "23 Jul",
+                  "date": "2026-07-23",
+                  "timestamp": 1784743200,
+                  "day_name": "Thu",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "24 Jul",
+                  "date": "2026-07-24",
+                  "timestamp": 1784829600,
+                  "day_name": "Fri",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "25 Jul",
+                  "date": "2026-07-25",
+                  "timestamp": 1784916000,
+                  "day_name": "Sat",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "26 Jul",
+                  "date": "2026-07-26",
+                  "timestamp": 1785002400,
+                  "day_name": "Sun",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "27 Jul",
+                  "date": "2026-07-27",
+                  "timestamp": 1785088800,
+                  "day_name": "Mon",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "28 Jul",
+                  "date": "2026-07-28",
+                  "timestamp": 1785175200,
+                  "day_name": "Tue",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "29 Jul",
+                  "date": "2026-07-29",
+                  "timestamp": 1785261600,
+                  "day_name": "Wed",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "30 Jul",
+                  "date": "2026-07-30",
+                  "timestamp": 1785348000,
+                  "day_name": "Thu",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                },
+                {
+                  "label": "31 Jul",
+                  "date": "2026-07-31",
+                  "timestamp": 1785434400,
+                  "day_name": "Fri",
+                  "download_gb": 0,
+                  "upload_gb": 0,
+                  "total_gb": 0,
+                  "peak_in_mbps": 0,
+                  "peak_out_mbps": 0
+                }
+              ],
+              "summary": {
+                "peak_download_gb": 0,
+                "peak_upload_gb": 0,
+                "average_download_gb": 0,
+                "average_upload_gb": 0
+              },
+              "status": "success"
+            },
+            "top_users": [
+              {
+                "rank": 1,
+                "username": "01747510118",
+                "user_id": 146341,
+                "full_name": "Trisa&Onik",
+                "mobile_number": "01747510118",
+                "download_gb": 216.06,
+                "upload_gb": 1391,
+                "total_gb": 1607.06,
+                "peak_in_mbps": 93.07,
+                "peak_out_mbps": 23.58,
+                "total_records": 21
+              },
+              {
+                "rank": 2,
+                "username": "01614575845",
+                "user_id": 40908,
+                "full_name": "Md Hayder Ali",
+                "mobile_number": "01614575845",
+                "download_gb": 1231.37,
+                "upload_gb": 76.54,
+                "total_gb": 1307.91,
+                "peak_in_mbps": 14.33,
+                "peak_out_mbps": 40.44,
+                "total_records": 21
+              },
+              {
+                "rank": 3,
+                "username": "01330878184",
+                "user_id": 44660,
+                "full_name": "Boyes Hostel textile 2",
+                "mobile_number": "01330878184",
+                "download_gb": 1143.13,
+                "upload_gb": 69.52,
+                "total_gb": 1212.65,
+                "peak_in_mbps": 15.81,
+                "peak_out_mbps": 38.67,
+                "total_records": 21
+              },
+              {
+                "rank": 4,
+                "username": "01705245686",
+                "user_id": 143908,
+                "full_name": "Abdar Husen",
+                "mobile_number": "01705245686",
+                "download_gb": 393.45,
+                "upload_gb": 794.78,
+                "total_gb": 1188.23,
+                "peak_in_mbps": 99.68,
+                "peak_out_mbps": 15.57,
+                "total_records": 21
+              },
+              {
+                "rank": 5,
+                "username": "01710526864",
+                "user_id": 119250,
+                "full_name": "Oliur Rahman",
+                "mobile_number": "01710526864",
+                "download_gb": 1089.93,
+                "upload_gb": 54.8,
+                "total_gb": 1144.73,
+                "peak_in_mbps": 2.98,
+                "peak_out_mbps": 35.97,
+                "total_records": 21
+              },
+              {
+                "rank": 6,
+                "username": "01793965027",
+                "user_id": 187049,
+                "full_name": "Somser Uttorkanda",
+                "mobile_number": "01793965027",
+                "download_gb": 1067.93,
+                "upload_gb": 58.23,
+                "total_gb": 1126.16,
+                "peak_in_mbps": 8.95,
+                "peak_out_mbps": 55.93,
+                "total_records": 17
+              },
+              {
+                "rank": 7,
+                "username": "01626650704",
+                "user_id": 145502,
+                "full_name": "Mm Builders 2",
+                "mobile_number": "01626650704",
+                "download_gb": 986.22,
+                "upload_gb": 62.59,
+                "total_gb": 1048.81,
+                "peak_in_mbps": 17.91,
+                "peak_out_mbps": 37.35,
+                "total_records": 21
+              },
+              {
+                "rank": 8,
+                "username": "01717491536",
+                "user_id": 57683,
+                "full_name": "Jahed Ahmed",
+                "mobile_number": "01717491536",
+                "download_gb": 958.26,
+                "upload_gb": 55.08,
+                "total_gb": 1013.34,
+                "peak_in_mbps": 16.71,
+                "peak_out_mbps": 41.67,
+                "total_records": 21
+              },
+              {
+                "rank": 9,
+                "username": "01725640725",
+                "user_id": 185167,
+                "full_name": "Murad Dokkinkanda",
+                "mobile_number": "01725640725",
+                "download_gb": 915.03,
+                "upload_gb": 39.25,
+                "total_gb": 954.28,
+                "peak_in_mbps": 13.82,
+                "peak_out_mbps": 42.25,
+                "total_records": 21
+              },
+              {
+                "rank": 10,
+                "username": "01785708531",
+                "user_id": 42046,
+                "full_name": "Naeem",
+                "mobile_number": "01785708531",
+                "download_gb": 858.06,
+                "upload_gb": 55.95,
+                "total_gb": 914.01,
+                "peak_in_mbps": 6.15,
+                "peak_out_mbps": 55.51,
+                "total_records": 21
+              }
+            ],
+            "meta": {
+              "execution_time_ms": 245.14,
+              "filter": "monthly",
+              "date": "2026-07-21",
+              "zone_id": "38776",
+              "zone_name": "shantiganjup",
+              "total_customers": 399,
+              "active_customers": 301
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Bandwidth analytics data fetched successfully."
+        }
+      '''
+    }
+  }
+}

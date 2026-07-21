@@ -1,0 +1,81 @@
+meta {
+  name: support priorities
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/partner/support/priorities
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/support/priorities
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Mon, 20 Jul 2026 05:37:46 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "success": true,
+          "data": [
+            {
+              "value": "low",
+              "label": "Low",
+              "color": "#10B981"
+            },
+            {
+              "value": "medium",
+              "label": "Medium",
+              "color": "#3B82F6"
+            },
+            {
+              "value": "high",
+              "label": "High",
+              "color": "#F59E0B"
+            },
+            {
+              "value": "urgent",
+              "label": "Urgent",
+              "color": "#EF4444"
+            }
+          ]
+        }
+      '''
+    }
+  }
+}

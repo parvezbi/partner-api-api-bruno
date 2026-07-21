@@ -1,0 +1,157 @@
+meta {
+  name: lead details
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/partner/leads/details?uid=2
+  body: none
+  auth: bearer
+}
+
+params:query {
+  uid: 2
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/leads/details?uid=2
+    method: GET
+    mode: none
+    params:query: {
+      uid: 2
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Tue, 21 Jul 2026 13:02:43 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "lead": {
+              "id": 38425,
+              "uid": 2,
+              "mobile_number": "01700000002",
+              "password": "123456",
+              "full_name": "Md. Abad Mahmud",
+              "email": "mail@mail.com",
+              "alternative_mobile": "01812345678",
+              "whatsapp_number": "01812345678",
+              "address": "গ্রাম: মোগলটুলী (বজ্রপুর ও মনোহরপুর মৌজা), ইউনিয়ন/পৌরসভা: ওয়ার্ড-০৫, থানা/উপজেলা: কোতোয়ালী থানা, জেলা: কুমিল্লা, বিভাগ: চট্টগ্রাম।",
+              "address_direction": "shhsh",
+              "latitude": "23.465119",
+              "longitude": "91.181616",
+              "house_no": "01",
+              "road_no": "01",
+              "building_name": null,
+              "profile_image": "partner/profiles/2_1784459831_6a5cb237ad1de.jpg",
+              "nid": "1234567890123",
+              "nid_front_image": "partner/nid/2_1784459831_6a5cb237b0581.png",
+              "nid_back_image": "partner/nid/2_1784459831_6a5cb237b3c2d.png",
+              "gender": "male",
+              "profession": "Business",
+              "package": {
+                "id": 5,
+                "name": "Shadhin",
+                "price": 100,
+                "type": "wifi"
+              },
+              "package_type": "wifi",
+              "connection_status": "pending",
+              "connection_media": null,
+              "created_at": "2026-04-13T14:11:41.000000Z",
+              "updated_at": "2026-04-13T14:11:41.000000Z",
+              "location": {
+                "division": "Dhaka",
+                "district": "Dhaka",
+                "upazila": "Gulshan",
+                "union": null,
+                "village": null
+              },
+              "communication_summary": {
+                "total": 0,
+                "contacted": 0,
+                "not_contacted": 0,
+                "pending": 0,
+                "last_communication": null
+              },
+              "latest_communication": null
+            },
+            "timeline": [
+              {
+                "type": "payment",
+                "title": "Payment Completed",
+                "description": "Payment of 1 BDT completed via bkash",
+                "status": "completed",
+                "icon": "credit-card",
+                "color": "#ffc107",
+                "created_at": "2025-11-15 00:22:14",
+                "time_ago": "8 months ago",
+                "details": {
+                  "amount": 1,
+                  "vendor": "bkash",
+                  "invoice_number": "INV17631445336388816",
+                  "trx_id": "CKF37XYWK7"
+                }
+              },
+              {
+                "type": "registration",
+                "title": "Lead Registration",
+                "description": "Lead registered with wifi package",
+                "status": "completed",
+                "icon": "user-plus",
+                "color": "#28a745",
+                "created_at": "2026-04-13T14:11:41.000000Z",
+                "time_ago": "3 months ago",
+                "details": {
+                  "package_type": "wifi",
+                  "connection_status": "pending",
+                  "connection_media": null
+                }
+              }
+            ],
+            "partner_info": {
+              "partner_upazila_id": 502,
+              "partner_zone_id": "8221080",
+              "partner_zone_name": "muktagacha"
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Lead details fetched successfully."
+        }
+      '''
+    }
+  }
+}

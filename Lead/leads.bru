@@ -1,0 +1,141 @@
+meta {
+  name: leads
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{base_url}}/partner/leads
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-dev
+  
+  request: {
+    url: {{base_url}}/partner/leads
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Tue, 21 Jul 2026 12:46:44 GMT
+      server: Apache/2.4.59 (Debian)
+      vary: Authorization,Origin
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "leads": [
+              {
+                "id": 38425,
+                "uid": 2,
+                "mobile_number": "01700000002",
+                "password": "123456",
+                "full_name": "Md. Abad Mahmud",
+                "email": "mail@mail.com",
+                "address": "গ্রাম: মোগলটুলী (বজ্রপুর ও মনোহরপুর মৌজা), ইউনিয়ন/পৌরসভা: ওয়ার্ড-০৫, থানা/উপজেলা: কোতোয়ালী থানা, জেলা: কুমিল্লা, বিভাগ: চট্টগ্রাম।",
+                "latitude": "23.465119",
+                "longitude": "91.181616",
+                "profile_image": "partner/profiles/2_1784459831_6a5cb237ad1de.jpg",
+                "package": {
+                  "id": 5,
+                  "name": "Shadhin",
+                  "price": 100,
+                  "type": "wifi"
+                },
+                "package_type": "wifi",
+                "connection_status": "pending",
+                "connection_media": null,
+                "created_at": "2026-04-13T14:11:41.000000Z",
+                "updated_at": "2026-04-13T14:11:41.000000Z",
+                "location": {
+                  "division": "Dhaka",
+                  "district": "Dhaka",
+                  "upazila": "Gulshan",
+                  "union": null,
+                  "village": null
+                }
+              },
+              {
+                "id": 38330,
+                "uid": 2905,
+                "mobile_number": "01863674831",
+                "password": "01621335716",
+                "full_name": "আল আমিন",
+                "email": null,
+                "address": "1212, জনস্বাস্থ্য ইনস্টিটিউট, উত্তর সিটি কর্পোরেশন, গুলশান থানা,ঢাকা,ঢাকা",
+                "latitude": "23.7770054",
+                "longitude": "23.7770054",
+                "profile_image": null,
+                "package": {
+                  "id": null,
+                  "name": null,
+                  "price": null,
+                  "type": null
+                },
+                "package_type": "Broadband",
+                "connection_status": "pending",
+                "connection_media": null,
+                "created_at": "2026-03-28T06:56:54.000000Z",
+                "updated_at": "2026-03-28T06:56:54.000000Z",
+                "location": {
+                  "division": "Dhaka",
+                  "district": "Dhaka",
+                  "upazila": "Gulshan",
+                  "union": null,
+                  "village": null
+                }
+              }
+            ],
+            "pagination": {
+              "current_page": 1,
+              "per_page": 20,
+              "total": 2,
+              "last_page": 1
+            },
+            "filters": {
+              "search": null,
+              "sort_by": "created_at",
+              "sort_order": "desc"
+            },
+            "partner_info": {
+              "partner_upazila_id": 502,
+              "partner_zone_id": "8221080",
+              "partner_zone_name": "muktagacha"
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Lead list fetched successfully."
+        }
+      '''
+    }
+  }
+}

@@ -1,0 +1,81 @@
+meta {
+  name: OLT Health Summary
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/partner/olt/health-summary
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-live
+  
+  request: {
+    url: {{base_url}}/partner/olt/health-summary
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Mon, 20 Jul 2026 12:04:01 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "total_olts": 1,
+            "devices": [
+              {
+                "id": 1,
+                "name": "Shantiganj",
+                "total_onu": 356,
+                "online": "275",
+                "offline": 81,
+                "health_percentage": 77.25
+              }
+            ],
+            "summary": {
+              "total_onu": 356,
+              "online": 275,
+              "offline": 81,
+              "health_percentage": 77.25,
+              "health_status": "good"
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "OLT health summary fetched successfully."
+        }
+      '''
+    }
+  }
+}
