@@ -15,7 +15,7 @@ params:query {
 }
 
 auth:bearer {
-  token: 6355|cPiZv6mgHruxZjVxBH0dsnlNprlwyHc0x4Ua2Fcd
+  token: {{token}}
 }
 
 settings {
@@ -44,6 +44,53 @@ example {
       x-ratelimit-limit: 10
       x-ratelimit-remaining: 9
       keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": [],
+          "status": "success",
+          "error_type": "",
+          "message": "Notice deleted successfully",
+          "message_en": "Notice deleted successfully",
+          "message_bn": "বিজ্ঞপ্তি সফলভাবে মুছে ফেলা হয়েছে"
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/notices/delete?id=1
+    method: POST
+    mode: none
+    params:query: {
+      id: 1
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 04:36:09 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 10
+      x-ratelimit-remaining: 9
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
       connection: Keep-Alive
       transfer-encoding: chunked
       content-type: application/json

@@ -5,17 +5,17 @@ meta {
 }
 
 get {
-  url: {{base_url}}/partner/notices/show?id=7
+  url: {{base_url}}/partner/notices/show?id=1
   body: multipartForm
   auth: bearer
 }
 
 params:query {
-  id: 7
+  id: 1
 }
 
 auth:bearer {
-  token: 6355|cPiZv6mgHruxZjVxBH0dsnlNprlwyHc0x4Ua2Fcd
+  token: {{token}}
 }
 
 body:multipart-form {
@@ -100,6 +100,77 @@ example {
               "created_at": "2026-06-20T06:35:28.000000Z",
               "updated_at": "2026-07-09T10:44:27.000000Z",
               "is_admin": 0
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Notice details retrieved successfully",
+          "message_en": "Notice details retrieved successfully",
+          "message_bn": "বিজ্ঞপ্তির বিবরণ সফলভাবে প্রাপ্ত হয়েছে"
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/notices/show?id=1
+    method: GET
+    mode: multipartForm
+    params:query: {
+      id: 1
+    }
+  
+    body:multipart-form: {
+      ~id: 1
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 04:34:46 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "id": 1,
+            "title": "Heloo Bangladhes",
+            "message": "This is under maintenace",
+            "type": "Announcement",
+            "attachment_path": "notices/attachments/5589/afrin-shahana_1784781237_6a6199b5cd307.pdf",
+            "attachment_name": "afrin-shahana.pdf",
+            "target_segment": "all",
+            "user_id": 5589,
+            "is_active": false,
+            "published_at": null,
+            "expires_at": null,
+            "created_at": "2026-07-23T04:10:04.000000Z",
+            "updated_at": "2026-07-23T04:33:57.000000Z",
+            "attachment_url": "https://userapp-backend.shadhinwifi.com/storage/notices/attachments/5589/afrin-shahana_1784781237_6a6199b5cd307.pdf",
+            "attachment_size_formatted": "53.21 KB",
+            "type_label": {
+              "en": "Announcement",
+              "bn": "ঘোষণা"
             }
           },
           "status": "success",

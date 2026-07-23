@@ -390,3 +390,375 @@ example {
     }
   }
 }
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/customer/disconnection/report
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 05:13:48 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "summary": {
+              "total_users": 399,
+              "disconnected_users": 29,
+              "reconnected_users": 37,
+              "estimated_revenue_lost": 20420,
+              "estimated_revenue_gain": 24435,
+              "disconnection_percentage": 7.27,
+              "reconnection_percentage": 9.27,
+              "selected_month": "2026-07",
+              "previous_month": "2026-06"
+            },
+            "graph": [
+              {
+                "date": "2026-07-18",
+                "disconnected": 69,
+                "reconnected": 0
+              },
+              {
+                "date": "2026-07-19",
+                "disconnected": 67,
+                "reconnected": 0
+              },
+              {
+                "date": "2026-07-20",
+                "disconnected": 69,
+                "reconnected": 1
+              },
+              {
+                "date": "2026-07-21",
+                "disconnected": 70,
+                "reconnected": 0
+              },
+              {
+                "date": "2026-07-22",
+                "disconnected": 70,
+                "reconnected": 0
+              },
+              {
+                "date": "2026-07-23",
+                "disconnected": 70,
+                "reconnected": 0
+              }
+            ],
+            "users": {
+              "disconnected": [
+                {
+                  "uid": 41494,
+                  "mobile_number": "01792866618",
+                  "full_name": "Textile office",
+                  "address": "House No: 12, Village: Sultanpur, Union: Joykalash, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 508,
+                    "name": "Bondhu",
+                    "price": 840,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "inactive"
+                },
+                {
+                  "uid": 79937,
+                  "mobile_number": "01600075168",
+                  "full_name": "Textile 2nd floor",
+                  "address": "House No: 34, Village: Sultanpur, Union: Joykalash, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 508,
+                    "name": "Bondhu",
+                    "price": 840,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "inactive"
+                },
+                {
+                  "uid": 138502,
+                  "mobile_number": "01721226096",
+                  "full_name": "Bugdadi restaurant",
+                  "address": "House No: 01, Village: Shantiganj , Union: Joykalash, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 511,
+                    "name": "Desh",
+                    "price": 525,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 140347,
+                  "mobile_number": "01777997347",
+                  "full_name": "Suhag Gaji",
+                  "address": "House No: 01, Village: Dungria, Union: Joykalash, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 501,
+                    "name": "Student",
+                    "price": 685,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 140651,
+                  "mobile_number": "01718350153",
+                  "full_name": "Alfaj",
+                  "address": "House No: 01, Village: Dungria, Union: Joykalash, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 511,
+                    "name": "Desh",
+                    "price": 525,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "inactive"
+                },
+                {
+                  "uid": 148828,
+                  "mobile_number": "01311217610",
+                  "full_name": "Foyej Chakolpara",
+                  "address": "House No: 01, Village: Dungria, Union: Joykalash, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 501,
+                    "name": "Student",
+                    "price": 685,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 182153,
+                  "mobile_number": "০১৭২৪৭৩৫৮৭৫",
+                  "full_name": "Abir Tegoria",
+                  "address": "01 ,Tegoria ,Joykalash ,South Sunamganj ,Sunamganj ,Sylhet",
+                  "package": {
+                    "id": 501,
+                    "name": "Student",
+                    "price": 685,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 182184,
+                  "mobile_number": "01308089043",
+                  "full_name": "Abdul Kobir Chakolpara",
+                  "address": "491 ,Dungria ,Joykalash ,South Sunamganj ,Sunamganj ,Sylhet",
+                  "package": {
+                    "id": 508,
+                    "name": "Bondhu",
+                    "price": 840,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 182283,
+                  "mobile_number": "01740462887",
+                  "full_name": "Sirajul Islam puberbari",
+                  "address": "01 ,Dungria ,Joykalash ,South Sunamganj ,Sunamganj ,Sylhet",
+                  "package": {
+                    "id": 511,
+                    "name": "Desh",
+                    "price": 525,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "inactive"
+                },
+                {
+                  "uid": 182391,
+                  "mobile_number": "01723486197",
+                  "full_name": "Nipro fashion shantiganj",
+                  "address": "01 ,Shantiganj  ,Joykalash ,South Sunamganj ,Sunamganj ,Sylhet",
+                  "package": {
+                    "id": 511,
+                    "name": "Desh",
+                    "price": 525,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "inactive"
+                }
+              ],
+              "reconnected": [
+                {
+                  "uid": 39836,
+                  "mobile_number": "01796702821",
+                  "full_name": "Nabil",
+                  "address": "House No: 34, Village: Shipur, Union: n/a, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 501,
+                    "name": "Student",
+                    "price": 685,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 40908,
+                  "mobile_number": "01614575845",
+                  "full_name": "Md Hayder Ali",
+                  "address": "House No: 22, Village: Sultanpur, Union: Joykalash, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 501,
+                    "name": "Student",
+                    "price": 685,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 41900,
+                  "mobile_number": "01326193528",
+                  "full_name": "Rofu Mia",
+                  "address": "House No: 43, Village: Shibpur, Union: Joykalash, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 501,
+                    "name": "Student",
+                    "price": 685,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 44442,
+                  "mobile_number": "01853220595",
+                  "full_name": "আরিফ হোসেন",
+                  "address": "বাড়ি: ২৯, গ্রাম: কদমতলা বাসাবো, ইউনিয়ন/পৌরসভা: ঢাকা দক্ষিণ সিটি  কর্পোরেশন, থানা/উপজেলা: সবুজবাগ থানা, জেলা: ঢাকা, বিভাগ: ঢাকা। (kodomtola school goli basa 29/ka)",
+                  "package": {
+                    "id": 5,
+                    "name": "Shadhin",
+                    "price": 150,
+                    "type": "wifi"
+                  },
+                  "package_type": "wifi",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 44499,
+                  "mobile_number": "01517805856",
+                  "full_name": "Nazmul Islam textile",
+                  "address": "বাড়ি: ১৭, গ্রাম: -, ইউনিয়ন/পৌরসভা: পূর্ব পাগলা, থানা/উপজেলা: দক্ষিণ সুনামগঞ্জ/ শান্তিগঞ্জ, জেলা: সুনামগঞ্জ, বিভাগ: সিলেট। (-)",
+                  "package": {
+                    "id": 501,
+                    "name": "Student",
+                    "price": 685,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 44660,
+                  "mobile_number": "01330878184",
+                  "full_name": "Boyes Hostel textile 2",
+                  "address": "House No: 34, Village: Sultanpur, Union: Joykalash, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 508,
+                    "name": "Bondhu",
+                    "price": 840,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 47457,
+                  "mobile_number": "01742494795",
+                  "full_name": "Mujahid Ahmed",
+                  "address": "House No: 01, Village: Dungria, Union: Joykalash, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 501,
+                    "name": "Student",
+                    "price": 685,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 47467,
+                  "mobile_number": "01731192827",
+                  "full_name": "Saidur Rahman",
+                  "address": "House No: 74, Village: Dungria, Union: Joykalash, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 501,
+                    "name": "Student",
+                    "price": 685,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 48893,
+                  "mobile_number": "01617859176",
+                  "full_name": "Koycor mia Vitac",
+                  "address": "House No: 01, Village: Shantiganj, Union: Joykalash, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 501,
+                    "name": "Student",
+                    "price": 685,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                },
+                {
+                  "uid": 56630,
+                  "mobile_number": "01714698729",
+                  "full_name": "Sayem N",
+                  "address": "House No: 01, Village: Shantiganj, Union: Joykalash, Upazila/Thana: South Sunamganj, District: Sunamganj, Division: Sylhet",
+                  "package": {
+                    "id": 511,
+                    "name": "Desh",
+                    "price": 525,
+                    "type": "broadband"
+                  },
+                  "package_type": "broadband",
+                  "connection_status": "active"
+                }
+              ]
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Partner disconnection report fetched successfully."
+        }
+      '''
+    }
+  }
+}

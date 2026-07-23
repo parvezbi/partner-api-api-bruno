@@ -16,7 +16,7 @@ auth:bearer {
 
 body:json {
   {
-    "uid": 1895,
+    "uid": 190297,
     "package_id": 504,
     "package_type": "broadband",
     "connection_media": "fiber",
@@ -24,10 +24,10 @@ body:json {
     "ip_type": "dynamic",
     "billing_cycle": "fixed_date",
     "payment_method": "bkash",
-    "billing_start_date": "2026-07-18",
+    "billing_start_date": "2026-07-23",
     "billing_due_days": 10,
     "pop_id": 1,
-    "installation_date": "2026-07-18",
+    "installation_date": "2026-07-23",
     "installation_notes": "Install on 3rd floor, Building A",
     "ins_cost": 500
   }
@@ -97,6 +97,76 @@ example {
             "billing_cycle": "fixed_date",
             "payment_method": "bkash",
             "payment_cache_key": "broadband_payment_3298"
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Broadband user setup completed. Please proceed to payment."
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/customer/broadband/payment/details
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "uid": 190297,
+        "package_id": 504,
+        "package_type": "broadband",
+        "connection_media": "fiber",
+        "user_type": "individual",
+        "ip_type": "dynamic",
+        "billing_cycle": "fixed_date",
+        "payment_method": "bkash",
+        "billing_start_date": "2026-07-23",
+        "billing_due_days": 10,
+        "pop_id": 1,
+        "installation_date": "2026-07-23",
+        "installation_notes": "Install on 3rd floor, Building A",
+        "ins_cost": 500
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 05:34:29 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "uid": 190297,
+            "zone_id": "8221080",
+            "mobile_number": "01314351680",
+            "package": "Freelancer",
+            "package_price": 2625,
+            "payable_amount": 762.1,
+            "billing_cycle": "fixed_date",
+            "payment_method": "bkash",
+            "payment_cache_key": "broadband_payment_190297"
           },
           "status": "success",
           "error_type": "",

@@ -11,14 +11,13 @@ post {
 }
 
 auth:bearer {
-  token: 6327|YzMivXaeiMxugbejGMERLnMn9QKExPfSqUv6vbrJ
+  token: {{token}}
 }
 
 body:multipart-form {
-  client_id: 2
-  full_name: Md. Rahim Khan
-  mobile_number: 01712345678
-  alternative_mobile: 01898765432
+  full_name: Md. Alamin Khan
+  mobile_number: 01314351680
+  alternative_mobile: 01314351680
   email: rahim.updated@example.com
   nid: 9876543210123
   gender: male
@@ -36,7 +35,7 @@ body:multipart-form {
   whatsapp_number: 01998765432
   profession: Senior Software Engineer
   address_direction: Near Gulshan Lake, opposite to Police Box
-  uid: 3294
+  uid: 190297
 }
 
 settings {
@@ -129,6 +128,99 @@ example {
             ],
             "nid_front_image": "https://nmsbackend.acloudplanet.com/storage/users/nid_images/3294_1783496983_6a4e0117e81e6.png",
             "nid_back_image": "https://nmsbackend.acloudplanet.com/storage/users/nid_images/3294_1783496983_6a4e0117eb1c3.png"
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "User updated successfully."
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/customer/profile/update
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      full_name: Md. Alamin Khan
+      mobile_number: 01314351680
+      alternative_mobile: 01314351680
+      email: rahim.updated@example.com
+      nid: 9876543210123
+      gender: male
+      division_id: 1
+      district_id: 1
+      upazila_id: 1
+      union_id: 1
+      village_id: 2696
+      house_no: 78/B
+      road_no: 25
+      address: House #78/B, Road #25, Gulshan-1
+      latitude: 23.7900
+      longitude: 90.4150
+      building_name: Blue Sky Apartment
+      whatsapp_number: 01998765432
+      profession: Senior Software Engineer
+      address_direction: Near Gulshan Lake, opposite to Police Box
+      uid: 190297
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 05:32:31 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "uid": 190297,
+            "mobile_number": "01314351680",
+            "updated_fields": [
+              "uid",
+              "full_name",
+              "mobile_number",
+              "alternative_mobile",
+              "email",
+              "nid",
+              "gender",
+              "division_id",
+              "district_id",
+              "upazila_id",
+              "union_id",
+              "village_id",
+              "house_no",
+              "road_no",
+              "address",
+              "latitude",
+              "longitude",
+              "building_name",
+              "whatsapp_number",
+              "profession",
+              "address_direction"
+            ],
+            "nid_front_image": "https://userapp-backend.shadhinwifi.com/storage/users/nid_images/190297_1784784664_6a61a718bac62.png",
+            "nid_back_image": "https://userapp-backend.shadhinwifi.com/storage/users/nid_images/190297_1784784664_6a61a718bb756.png"
           },
           "status": "success",
           "error_type": "",

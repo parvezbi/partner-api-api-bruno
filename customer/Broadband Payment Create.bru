@@ -11,17 +11,17 @@ post {
 }
 
 auth:bearer {
-  token: 6326|9vuI9sHdOJso3TqXIdmqOfWCCAbIKKIYqdWQzxVS
+  token: {{token}}
 }
 
 body:json {
   {
     "zone_id": 8221080,
-    "uid": 3298,
-    "mobile_number": "01700503034",
-    "payable_amount": 2032.26,
+    "uid": 190297,
+    "mobile_number": "01314351680",
+    "payable_amount": 762.1,
     "package": "Freelancer",
-    "cache_key": "broadband_payment_3298"
+    "cache_key": "broadband_payment_190297"
   }
 }
 
@@ -79,6 +79,62 @@ example {
             "payment_id": "TR0011wRGxXQO1783527761270",
             "invoice_number": "INV17835277608951766",
             "amount": 2032.26
+          }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/customer/broadband/payment/create
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "zone_id": 8221080,
+        "uid": 190297,
+        "mobile_number": "01314351680",
+        "payable_amount": 762.1,
+        "package": "Freelancer",
+        "cache_key": "broadband_payment_190297"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 05:55:16 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "status": "success",
+          "message": "Payment initiated successfully.",
+          "result": {
+            "payment_url": "https://sandbox.payment.bkash.com/?paymentId=TR0011oU8XNAo1784786116625&hash=su3oNwL_9nxpoJf.dmtbi9!KnX6t34Oi3LhUBPj*R(!J91A0YS2as-a2Y9_bX02TkYqzdaoh)mBdwhWCi!o47F74)pnnP.Al_9jI1784786116625&mode=0011&apiVersion=v1.2.0-beta/",
+            "payment_id": "TR0011oU8XNAo1784786116625",
+            "invoice_number": "INV17847861088408071",
+            "amount": 762.1
           }
         }
       '''

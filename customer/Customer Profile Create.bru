@@ -11,14 +11,13 @@ post {
 }
 
 auth:bearer {
-  token: 6326|9vuI9sHdOJso3TqXIdmqOfWCCAbIKKIYqdWQzxVS
+  token: {{token}}
 }
 
 body:multipart-form {
-  client_id: 2
-  full_name: Md. Rahim Khan
-  mobile_number: 01712345678
-  alternative_mobile: 01712345678
+  full_name: Md. Parvez Khan
+  mobile_number: 01314351680
+  alternative_mobile: 01314351680
   email: rahim.khan@example.com
   nid: 1234567890123
   nid_front_image: @file(F:\Alamin\alamin.png) @contentType(image/png)
@@ -330,6 +329,78 @@ example {
           "status": "success",
           "error_type": "",
           "message": "Broadband user created successfully."
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/customer/profile/create
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      full_name: Md. Parvez Khan
+      mobile_number: 01314351680
+      alternative_mobile: 01314351680
+      email: rahim.khan@example.com
+      nid: 1234567890123
+      nid_front_image: @file(F:\Alamin\alamin.png) @contentType(image/png)
+      nid_back_image: @file(F:\Alamin\alamin-1.png) @contentType(image/png)
+      gender: male
+      division_id: 1
+      district_id: 1
+      upazila_id: 1
+      union_id: 1
+      village_id: 2696
+      house_no: House : 5
+      road_no: Road : 5
+      address: House #45, Road #12, Dhanmondi Residential Area
+      latitude: 23.8103
+      longitude: 90.4125
+      building_name: Green Tower, 5th Floor
+      whatsapp_number: 01912345678
+      profession: Software Engineer
+      address_direction: Near Dhanmondi Lake, beside City Bank
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 05:31:04 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "uid": 190297,
+            "mobile_number": "01314351680",
+            "password": 5950,
+            "nid_front_image": "https://userapp-backend.shadhinwifi.com/storage/users/nid_images/190297_1784784664_6a61a718bac62.png",
+            "nid_back_image": "https://userapp-backend.shadhinwifi.com/storage/users/nid_images/190297_1784784664_6a61a718bb756.png"
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "User created successfully."
         }
       '''
     }

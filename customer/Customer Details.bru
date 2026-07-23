@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{base_url}}/partner/customer/details?uid=3298&status=all
+  url: {{base_url}}/partner/customer/details?uid=162269&status=all
   body: none
   auth: bearer
 }
 
 params:query {
-  uid: 3298
+  uid: 162269
   status: all
 }
 
@@ -157,6 +157,149 @@ example {
             "navigation": {
               "previous_id": 3297,
               "next_id": 3299
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": ""
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/customer/details?uid=162269&status=all
+    method: GET
+    mode: none
+    params:query: {
+      uid: 162269
+      status: all
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 05:12:02 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "user": {
+              "id": 139483,
+              "uid": 162269,
+              "mobile_number": "01765124892",
+              "full_name": "Kayom",
+              "email": "salehaparvinmon@gmail.com",
+              "nid": "9024704187090",
+              "gender": "Male",
+              "address": "158",
+              "latitude": "24.774337",
+              "longitude": "91.565922",
+              "division": "Sylhet",
+              "district": "Sunamganj",
+              "upazila": "Jagannathpur",
+              "union": null
+            },
+            "packages": {
+              "broadband": {
+                "id": 139483,
+                "package_id": 511,
+                "package_name": "Desh",
+                "package_type": "broadband",
+                "price": 525,
+                "download_limit": 50,
+                "upload_limit": 50,
+                "expiration": 43200,
+                "connection_status": "inactive",
+                "zone_id": "3306630",
+                "zone_name": "habibpur",
+                "connection_media": null,
+                "user_type": "regular",
+                "ip_type": null,
+                "billing_cycle": null,
+                "billing_start_date": null,
+                "billing_due_days": null,
+                "installation_date": null,
+                "installation_notes": null,
+                "installation_charge": 0,
+                "activation_date": "2022-04-11 12:20:28",
+                "created_at": "2026-05-16T07:31:15.000000Z",
+                "bandwidth_usage": {
+                  "download_gb": 9.53,
+                  "upload_gb": 227.31,
+                  "total_gb": 236.84,
+                  "download_percentage": 19.06,
+                  "upload_percentage": 100,
+                  "overall_percentage": 100,
+                  "status": "critical",
+                  "limit": {
+                    "download_gb": 50,
+                    "upload_gb": 50,
+                    "total_gb": 100
+                  }
+                }
+              }
+            },
+            "package_types": [
+              "broadband"
+            ],
+            "has_multiple_packages": false,
+            "device_info": {
+              "onu": {
+                "interface_name": null,
+                "mac_address": null,
+                "connection_state": null,
+                "vendor_id": null,
+                "model_id": null,
+                "bind_type": null,
+                "dereg_reason": null,
+                "brand": null,
+                "rx_power": 0,
+                "signal_quality": "Unknown",
+                "performance": "Unknown",
+                "distance": 0,
+                "pon_port": null,
+                "uptime": null,
+                "last_up_time": null,
+                "last_down_time": null,
+                "updated_at": null,
+                "description_info": null,
+                "status": null
+              },
+              "olt": {
+                "ip_address": null,
+                "name": null,
+                "model": null,
+                "status": null,
+                "zone": null
+              },
+              "connected_devices": [],
+              "connected_devices_count": 0
+            },
+            "navigation": {
+              "previous_id": 162268,
+              "next_id": 162270
             }
           },
           "status": "success",

@@ -11,7 +11,7 @@ get {
 }
 
 auth:bearer {
-  token: 6352|WxoFY1FD3HT9z5WPEXV8yPBhVC2OGP9KkIYBLA0Y
+  token: {{token}}
 }
 
 settings {
@@ -119,6 +119,67 @@ example {
               }
             ],
             "partner_id": 3270
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Statistics retrieved successfully",
+          "message_en": "Statistics retrieved successfully",
+          "message_bn": "পরিসংখ্যান সফলভাবে প্রাপ্ত হয়েছে"
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/notices/statistics
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 04:10:59 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 198
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "total": 1,
+            "active": 1,
+            "inactive": 0,
+            "published_today": 1,
+            "expired": 0,
+            "type_wise": [
+              {
+                "type": "Announcement",
+                "type_label": {
+                  "en": "Announcement",
+                  "bn": "ঘোষণা"
+                },
+                "count": 1
+              }
+            ],
+            "partner_id": 5589
           },
           "status": "success",
           "error_type": "",

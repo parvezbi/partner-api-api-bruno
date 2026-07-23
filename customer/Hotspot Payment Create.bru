@@ -11,17 +11,17 @@ post {
 }
 
 auth:bearer {
-  token: 6326|9vuI9sHdOJso3TqXIdmqOfWCCAbIKKIYqdWQzxVS
+  token: {{token}}
 }
 
 body:json {
   {
     "zone_id": 8221080,
-    "uid": 3298,
-    "mobile_number": "01700503034",
-    "payable_amount": 100,
+    "uid": 190297,
+    "mobile_number": "01314351680",
+    "payable_amount": 150,
     "package": "SHADHIN",
-    "cache_key": "hotspot_payment_3298"
+    "cache_key": "hotspot_payment_190297"
   }
 }
 
@@ -79,6 +79,62 @@ example {
             "payment_id": "TR0011F85hSGj1783588691758",
             "invoice_number": "INV17835886912735563",
             "amount": 100
+          }
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/hotspot/payment/bkash/create
+    method: POST
+    mode: json
+    body:json: {
+      {
+        "zone_id": 8221080,
+        "uid": 190297,
+        "mobile_number": "01314351680",
+        "payable_amount": 150,
+        "package": "SHADHIN",
+        "cache_key": "hotspot_payment_190297"
+      }
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 06:07:59 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "status": "success",
+          "message": "Payment initiated successfully.",
+          "result": {
+            "payment_url": "https://sandbox.payment.bkash.com/?paymentId=TR00118GGuo3i1784786879291&hash=qE9fS6pJy9h2O67aDBabA7pXTHJ.g3Y*AL_Oj8-oq3IWuJBZSY)Gz8gOi)OgXyJrrom02eipOuRad9Ro.gNUpi!kBHC!jD_Vg_ZH1784786879292&mode=0011&apiVersion=v1.2.0-beta/",
+            "payment_id": "TR00118GGuo3i1784786879291",
+            "invoice_number": "INV17847868788631307",
+            "amount": 150
           }
         }
       '''

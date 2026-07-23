@@ -11,16 +11,16 @@ post {
 }
 
 auth:bearer {
-  token: 6355|cPiZv6mgHruxZjVxBH0dsnlNprlwyHc0x4Ua2Fcd
+  token: {{token}}
 }
 
 body:multipart-form {
-  id: 7
+  id: 1
   title: Heloo Bangladhes
   message: This is under maintenace
   type: Announcement
   attachment: @file(F:\Alamin\afrin-shahana.pdf) @contentType(application/pdf)
-  target_segment: active
+  target_segment: all
   is_active: 0
   published_at: 
   expires_at: 
@@ -116,6 +116,79 @@ example {
               "created_at": "2026-06-20T06:35:28.000000Z",
               "updated_at": "2026-07-09T10:44:27.000000Z",
               "is_admin": 0
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Notice updated successfully",
+          "message_en": "Notice updated successfully",
+          "message_bn": "বিজ্ঞপ্তি সফলভাবে আপডেট করা হয়েছে"
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/notices/update
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      id: 1
+      title: Heloo Bangladhes
+      message: This is under maintenace
+      type: Announcement
+      attachment: @file(F:\Alamin\afrin-shahana.pdf) @contentType(application/pdf)
+      target_segment: all
+      is_active: 0
+      published_at: 
+      expires_at: 
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 04:33:57 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "id": 1,
+            "title": "Heloo Bangladhes",
+            "message": "This is under maintenace",
+            "type": "Announcement",
+            "attachment_path": "notices/attachments/5589/afrin-shahana_1784781237_6a6199b5cd307.pdf",
+            "attachment_name": "afrin-shahana.pdf",
+            "target_segment": "all",
+            "user_id": 5589,
+            "is_active": false,
+            "published_at": null,
+            "expires_at": null,
+            "created_at": "2026-07-23T04:10:04.000000Z",
+            "updated_at": "2026-07-23T04:33:57.000000Z",
+            "user": {
+              "id": 5589,
+              "auth_id": "01916782048"
             }
           },
           "status": "success",

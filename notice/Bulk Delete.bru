@@ -11,7 +11,7 @@ post {
 }
 
 auth:bearer {
-  token: 6355|cPiZv6mgHruxZjVxBH0dsnlNprlwyHc0x4Ua2Fcd
+  token: {{token}}
 }
 
 body:multipart-form {
@@ -46,6 +46,60 @@ example {
       x-ratelimit-limit: 200
       x-ratelimit-remaining: 199
       keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "deleted_count": 2,
+            "deleted_ids": [
+              2,
+              3
+            ]
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "2 notice(s) deleted successfully",
+          "message_en": "2 notice(s) deleted successfully",
+          "message_bn": "2 টি বিজ্ঞপ্তি সফলভাবে মুছে ফেলা হয়েছে"
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/notices/bulk-delete
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      ids[0]: 2
+      ids[1]: 3
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 04:39:07 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
       connection: Keep-Alive
       transfer-encoding: chunked
       content-type: application/json

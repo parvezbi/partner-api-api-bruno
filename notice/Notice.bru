@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{base_url}}/partner/notices?page=&per_page=&sort_by=&sort_order=&title=&type=&types=&from_date=&to_date=&published_from=&published_to=&is_active=&target_segment_id=&target_segment_ids=&search=&expired=
+  url: {{base_url}}/partner/notices?page=&per_page=&sort_by=&sort_order=&title=&type=&types=&from_date=&to_date=&published_from=&published_to=&is_active=&search=&expired=
   body: none
   auth: bearer
 }
@@ -23,15 +23,12 @@ params:query {
   published_from: 
   published_to: 
   is_active: 
-  target_segment_id: 
-  target_segment_ids: 
   search: 
   expired: 
-  ~user_id: 3270
 }
 
 auth:bearer {
-  token: 6355|cPiZv6mgHruxZjVxBH0dsnlNprlwyHc0x4Ua2Fcd
+  token: {{token}}
 }
 
 settings {
@@ -40,10 +37,10 @@ settings {
 }
 
 example {
-  name: success-dev
+  name: success-live-muktagacha
   
   request: {
-    url: {{base_url}}/partner/notices?page=&per_page=&sort_by=&sort_order=&title=&type=&types=&from_date=&to_date=&published_from=&published_to=&is_active=&target_segment_id=&target_segment_ids=&search=&expired=
+    url: {{base_url}}/partner/notices?page=&per_page=&sort_by=&sort_order=&title=&type=&types=&from_date=&to_date=&published_from=&published_to=&is_active=&search=&expired=
     method: GET
     mode: none
     params:query: {
@@ -59,9 +56,6 @@ example {
       published_from: 
       published_to: 
       is_active: 
-      ~user_id: 3270
-      target_segment_id: 
-      target_segment_ids: 
       search: 
       expired: 
     }
@@ -69,13 +63,13 @@ example {
   
   response: {
     headers: {
-      date: Thu, 09 Jul 2026 15:38:31 GMT
-      server: Apache/2.4.59 (Debian)
-      vary: Authorization,Origin
+      date: Thu, 23 Jul 2026 04:30:33 GMT
+      server: Apache/2.4.66 (Debian)
       cache-control: no-cache, private
       x-ratelimit-limit: 200
-      x-ratelimit-remaining: 199
-      keep-alive: timeout=5, max=100
+      x-ratelimit-remaining: 198
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
       connection: Keep-Alive
       transfer-encoding: chunked
       content-type: application/json
@@ -96,113 +90,28 @@ example {
               "data": [
                 {
                   "id": 1,
-                  "title": "Maintenace",
-                  "message": "This is under maintenace",
+                  "title": "Leave Announcement",
+                  "message": "All Are in Leave",
                   "type": "Announcement",
-                  "attachment_path": "notices/attachments/3270/afrin-shahana_1783610373_6a4fbc05d97b7.pdf",
+                  "attachment_path": "notices/attachments/5589/afrin-shahana_1784779804_6a61941c1e08f.pdf",
                   "attachment_name": "afrin-shahana.pdf",
-                  "user_id": 3270,
+                  "target_segment": null,
+                  "user_id": 5589,
                   "is_active": true,
-                  "published_at": "2026-07-09T15:19:33.000000Z",
+                  "published_at": "2026-07-23T04:10:04.000000Z",
                   "expires_at": null,
-                  "created_at": "2026-07-09T15:19:33.000000Z",
-                  "updated_at": "2026-07-09T15:19:33.000000Z",
-                  "targets": [],
+                  "created_at": "2026-07-23T04:10:04.000000Z",
+                  "updated_at": "2026-07-23T04:10:04.000000Z",
                   "user": {
-                    "id": 3270,
-                    "user_unique_id": "SHD-846920",
-                    "auth_id": "01764717803",
-                    "status": "active",
-                    "panel_access": 0,
-                    "base_role": "support_center",
-                    "text_password": "123456",
-                    "permissions": null,
-                    "is_password_changed": 0,
-                    "last_access": "2026-06-20 12:35:28",
-                    "created_at": "2026-06-20T06:35:28.000000Z",
-                    "updated_at": "2026-07-09T10:44:27.000000Z",
-                    "is_admin": 0
-                  }
-                },
-                {
-                  "id": 2,
-                  "title": "Maintenace",
-                  "message": "This is under maintenace",
-                  "type": "Announcement",
-                  "attachment_path": "notices/attachments/3270/afrin-shahana_1783610534_6a4fbca6a83a0.pdf",
-                  "attachment_name": "afrin-shahana.pdf",
-                  "user_id": 3270,
-                  "is_active": true,
-                  "published_at": "2026-07-09T15:22:14.000000Z",
-                  "expires_at": null,
-                  "created_at": "2026-07-09T15:22:14.000000Z",
-                  "updated_at": "2026-07-09T15:22:14.000000Z",
-                  "targets": [],
-                  "user": {
-                    "id": 3270,
-                    "user_unique_id": "SHD-846920",
-                    "auth_id": "01764717803",
-                    "status": "active",
-                    "panel_access": 0,
-                    "base_role": "support_center",
-                    "text_password": "123456",
-                    "permissions": null,
-                    "is_password_changed": 0,
-                    "last_access": "2026-06-20 12:35:28",
-                    "created_at": "2026-06-20T06:35:28.000000Z",
-                    "updated_at": "2026-07-09T10:44:27.000000Z",
-                    "is_admin": 0
-                  }
-                },
-                {
-                  "id": 3,
-                  "title": "Maintenace",
-                  "message": "This is under maintenace",
-                  "type": "Announcement",
-                  "attachment_path": "notices/attachments/3270/afrin-shahana_1783610563_6a4fbcc36f976.pdf",
-                  "attachment_name": "afrin-shahana.pdf",
-                  "user_id": 3270,
-                  "is_active": true,
-                  "published_at": "2026-07-09T15:22:43.000000Z",
-                  "expires_at": null,
-                  "created_at": "2026-07-09T15:22:43.000000Z",
-                  "updated_at": "2026-07-09T15:22:43.000000Z",
-                  "targets": [
-                    {
-                      "id": 1,
-                      "name": "Premium Customers",
-                      "slug": "premium-customers",
-                      "description": "Those Users are Premium Customers",
-                      "is_active": true,
-                      "created_at": "2026-07-09T15:14:50.000000Z",
-                      "updated_at": "2026-07-09T15:14:50.000000Z",
-                      "pivot": {
-                        "notice_id": 3,
-                        "target_segment_id": 1
-                      }
-                    }
-                  ],
-                  "user": {
-                    "id": 3270,
-                    "user_unique_id": "SHD-846920",
-                    "auth_id": "01764717803",
-                    "status": "active",
-                    "panel_access": 0,
-                    "base_role": "support_center",
-                    "text_password": "123456",
-                    "permissions": null,
-                    "is_password_changed": 0,
-                    "last_access": "2026-06-20 12:35:28",
-                    "created_at": "2026-06-20T06:35:28.000000Z",
-                    "updated_at": "2026-07-09T10:44:27.000000Z",
-                    "is_admin": 0
+                    "id": 5589,
+                    "auth_id": "01916782048"
                   }
                 }
               ],
-              "first_page_url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/notices?page=1",
+              "first_page_url": "https://userapp-backend.shadhinwifi.com/api/shadhin/v3/partner/notices?page=1",
               "from": 1,
               "last_page": 1,
-              "last_page_url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/notices?page=1",
+              "last_page_url": "https://userapp-backend.shadhinwifi.com/api/shadhin/v3/partner/notices?page=1",
               "links": [
                 {
                   "url": null,
@@ -210,7 +119,7 @@ example {
                   "active": false
                 },
                 {
-                  "url": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/notices?page=1",
+                  "url": "https://userapp-backend.shadhinwifi.com/api/shadhin/v3/partner/notices?page=1",
                   "label": "1",
                   "active": true
                 },
@@ -221,11 +130,11 @@ example {
                 }
               ],
               "next_page_url": null,
-              "path": "https://nmsbackend.acloudplanet.com/api/shadhin/v3/partner/notices",
+              "path": "https://userapp-backend.shadhinwifi.com/api/shadhin/v3/partner/notices",
               "per_page": 15,
               "prev_page_url": null,
-              "to": 3,
-              "total": 3
+              "to": 1,
+              "total": 1
             },
             "notice_types": {
               "Announcement": {
@@ -282,13 +191,11 @@ example {
               "published_from": null,
               "published_to": null,
               "is_active": null,
-              "target_segment_id": null,
-              "target_segment_ids": null,
               "search": null,
               "expired": null
             },
             "current_language": "en",
-            "partner_id": 3270
+            "partner_id": 5589
           },
           "status": "success",
           "error_type": "",

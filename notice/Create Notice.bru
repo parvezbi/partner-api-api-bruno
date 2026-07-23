@@ -11,11 +11,11 @@ post {
 }
 
 auth:bearer {
-  token: 6355|cPiZv6mgHruxZjVxBH0dsnlNprlwyHc0x4Ua2Fcd
+  token: {{token}}
 }
 
 body:multipart-form {
-  title: Leave Announcement
+  title: network problem
   message: All Are in Leave
   type: Announcement
   attachment: @file(F:\Alamin\afrin-shahana.pdf) @contentType(application/pdf)
@@ -114,6 +114,94 @@ example {
               "created_at": "2026-06-20T06:35:28.000000Z",
               "updated_at": "2026-07-09T10:44:27.000000Z",
               "is_admin": 0
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Notice created successfully",
+          "message_en": "Notice created successfully",
+          "message_bn": "বিজ্ঞপ্তি সফলভাবে তৈরি করা হয়েছে"
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/notices
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      title: Leave Announcement
+      message: All Are in Leave
+      type: Announcement
+      attachment: @file(F:\Alamin\afrin-shahana.pdf) @contentType(application/pdf)
+      target_segment: all
+      is_active: 1
+      published_at: 
+      expires_at: 
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 04:10:04 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "title": "Leave Announcement",
+            "message": "All Are in Leave",
+            "type": "Announcement",
+            "is_active": true,
+            "published_at": "2026-07-23T04:10:04.000000Z",
+            "expires_at": null,
+            "user_id": 5589,
+            "attachment_path": "notices/attachments/5589/afrin-shahana_1784779804_6a61941c1e08f.pdf",
+            "attachment_name": "afrin-shahana.pdf",
+            "updated_at": "2026-07-23T04:10:04.000000Z",
+            "created_at": "2026-07-23T04:10:04.000000Z",
+            "id": 1,
+            "user": {
+              "id": 5589,
+              "user_unique_id": null,
+              "auth_id": "01916782048",
+              "status": "active",
+              "added_by": null,
+              "panel_access": 0,
+              "base_role": "support_center",
+              "text_password": "2197",
+              "is_password_changed": 0,
+              "permissions": null,
+              "two_factor_enabled": 0,
+              "two_factor_type": null,
+              "two_factor_secret": null,
+              "two_factor_verified": 0,
+              "two_factor_expires_at": null,
+              "is_admin": 0,
+              "last_access": "2023-04-25 04:24:28",
+              "created_at": "2023-04-24T22:24:28.000000Z",
+              "updated_at": "2026-05-04T13:47:17.000000Z"
             }
           },
           "status": "success",

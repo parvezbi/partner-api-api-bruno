@@ -11,7 +11,7 @@ get {
 }
 
 auth:bearer {
-  token: 6355|cPiZv6mgHruxZjVxBH0dsnlNprlwyHc0x4Ua2Fcd
+  token: {{token}}
 }
 
 settings {
@@ -37,6 +37,105 @@ example {
       x-ratelimit-limit: 200
       x-ratelimit-remaining: 199
       keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": [
+            {
+              "id": "Announcement",
+              "label": "Announcement",
+              "label_en": "Announcement",
+              "label_bn": "ঘোষণা",
+              "value": "Announcement"
+            },
+            {
+              "id": "Maintenance",
+              "label": "Maintenance",
+              "label_en": "Maintenance",
+              "label_bn": "রক্ষণাবেক্ষণ",
+              "value": "Maintenance"
+            },
+            {
+              "id": "Promotion",
+              "label": "Promotion",
+              "label_en": "Promotion",
+              "label_bn": "প্রচারণা",
+              "value": "Promotion"
+            },
+            {
+              "id": "Urgent",
+              "label": "Urgent",
+              "label_en": "Urgent",
+              "label_bn": "জরুরি",
+              "value": "Urgent"
+            },
+            {
+              "id": "Information",
+              "label": "Information",
+              "label_en": "Information",
+              "label_bn": "তথ্য",
+              "value": "Information"
+            },
+            {
+              "id": "Policy Update",
+              "label": "Policy Update",
+              "label_en": "Policy Update",
+              "label_bn": "নীতি হালনাগাদ",
+              "value": "Policy Update"
+            },
+            {
+              "id": "Event",
+              "label": "Event",
+              "label_en": "Event",
+              "label_bn": "ইভেন্ট",
+              "value": "Event"
+            },
+            {
+              "id": "Reminder",
+              "label": "Reminder",
+              "label_en": "Reminder",
+              "label_bn": "স্মারক",
+              "value": "Reminder"
+            }
+          ],
+          "status": "success",
+          "error_type": "",
+          "message": "Notice types retrieved successfully"
+        }
+      '''
+    }
+  }
+}
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/notices/types
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 04:08:56 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
       connection: Keep-Alive
       transfer-encoding: chunked
       content-type: application/json

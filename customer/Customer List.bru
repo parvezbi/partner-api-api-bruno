@@ -4790,3 +4790,2521 @@ example {
     }
   }
 }
+
+example {
+  name: success-live-muktagacha
+  
+  request: {
+    url: {{base_url}}/partner/customer/list?status=all&communication_status=&package_type=&package_id=&division=&district=&upazila=&union=&skip=
+    method: GET
+    mode: none
+    params:query: {
+      status: all
+      communication_status: 
+      package_type: 
+      package_id: 
+      division: 
+      district: 
+      upazila: 
+      union: 
+      skip: 
+      ~client_id: 28380
+    }
+  }
+  
+  response: {
+    headers: {
+      date: Thu, 23 Jul 2026 04:40:41 GMT
+      server: Apache/2.4.66 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin,Authorization
+      keep-alive: timeout=10, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "customer_list": [
+              {
+                "uid": 188023,
+                "mobile_number": "01339160485",
+                "user_profile": {
+                  "full_name": "Md Mohan",
+                  "mobile_number": "01339160485",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 163942,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 2.18,
+                        "upload_gb": 0.54,
+                        "total_gb": 2.72
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 4.36,
+                        "upload": 1.08,
+                        "overall": 2.72
+                      },
+                      "status": "normal"
+                    },
+                    "created_at": "2026-07-13T09:37:33.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 187886,
+                "mobile_number": "01962653536",
+                "user_profile": {
+                  "full_name": "Johirul",
+                  "mobile_number": "01962653536",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 163812,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 5.86,
+                        "upload_gb": 43.42,
+                        "total_gb": 49.28
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 11.72,
+                        "upload": 86.84,
+                        "overall": 49.28
+                      },
+                      "status": "normal"
+                    },
+                    "created_at": "2026-07-11T10:20:55.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 187829,
+                "mobile_number": "01736984077",
+                "user_profile": {
+                  "full_name": "Suruj",
+                  "mobile_number": "01736984077",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 163802,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 5.6,
+                        "upload_gb": 95.07,
+                        "total_gb": 100.67
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 11.2,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-07-11T08:27:41.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 187715,
+                "mobile_number": "01603780107",
+                "user_profile": {
+                  "full_name": "Md Rezwan Hasan",
+                  "mobile_number": "01603780107",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 163766,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 12.98,
+                        "upload_gb": 78.53,
+                        "total_gb": 91.51
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 25.96,
+                        "upload": 100,
+                        "overall": 91.51
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-07-10T15:49:57.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 187609,
+                "mobile_number": "01724227183",
+                "user_profile": {
+                  "full_name": "Md Biplob",
+                  "mobile_number": "01724227183",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 163664,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 8.51,
+                        "upload_gb": 148.88,
+                        "total_gb": 157.39
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 17.02,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-07-09T10:34:53.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 187546,
+                "mobile_number": "01704867549",
+                "user_profile": {
+                  "full_name": "Md Ruhul Amin",
+                  "mobile_number": "01704867549",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 163608,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 6.94,
+                        "upload_gb": 108.05,
+                        "total_gb": 114.99
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 13.88,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-07-08T10:07:13.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 187090,
+                "mobile_number": "01610969822",
+                "user_profile": {
+                  "full_name": "Showrob",
+                  "mobile_number": "01610969822",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 163415,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 10.29,
+                        "upload_gb": 175.36,
+                        "total_gb": 185.65
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 20.58,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-07-05T14:15:21.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 187006,
+                "mobile_number": "01877244121",
+                "user_profile": {
+                  "full_name": "Md Halim",
+                  "mobile_number": "01877244121",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 163353,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 10.43,
+                        "upload_gb": 160.78,
+                        "total_gb": 171.21
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 20.86,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-07-05T07:57:10.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 186878,
+                "mobile_number": "01856213794",
+                "user_profile": {
+                  "full_name": "Masum",
+                  "mobile_number": "01856213794",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 163315,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 10.58,
+                        "upload_gb": 144.13,
+                        "total_gb": 154.71
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 21.16,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-07-04T15:45:25.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 186487,
+                "mobile_number": "01959645399",
+                "user_profile": {
+                  "full_name": "Sadikul",
+                  "mobile_number": "01959645399",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 163022,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 19.78,
+                        "upload_gb": 245.37,
+                        "total_gb": 265.15
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 39.56,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-07-01T10:45:39.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 185933,
+                "mobile_number": "01612347045",
+                "user_profile": {
+                  "full_name": "Shakahawat",
+                  "mobile_number": "01612347045",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 162791,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 31.48,
+                        "upload_gb": 356.17,
+                        "total_gb": 387.65
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 62.96,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-06-29T11:06:32.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 185440,
+                "mobile_number": "01998431357",
+                "user_profile": {
+                  "full_name": "Shuvo",
+                  "mobile_number": "01998431357",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": "Basati"
+                },
+                "packages": {
+                  "hotspot": {
+                    "id": 162488,
+                    "package": {
+                      "package_name": "Welcome",
+                      "package_price": 0,
+                      "download_limit": 0,
+                      "upload_limit": 0,
+                      "total_limit": 0
+                    },
+                    "connection_status": "inactive",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 2.41,
+                        "upload_gb": 42.1,
+                        "total_gb": 44.51
+                      },
+                      "limits": {
+                        "download_gb": 0,
+                        "upload_gb": 0,
+                        "total_gb": 0
+                      },
+                      "percentages": {
+                        "download": 0,
+                        "upload": 0,
+                        "overall": 0
+                      },
+                      "status": "no_usage"
+                    },
+                    "created_at": "2026-06-26T03:21:46.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "wifi"
+                ]
+              },
+              {
+                "uid": 185149,
+                "mobile_number": "01687490011",
+                "user_profile": {
+                  "full_name": "Rifat",
+                  "mobile_number": "01687490011",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 162278,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "inactive",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 22.47,
+                        "upload_gb": 288.32,
+                        "total_gb": 310.79
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 44.94,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-06-22T16:04:10.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 185139,
+                "mobile_number": "01687962550",
+                "user_profile": {
+                  "full_name": "Abu Taher",
+                  "mobile_number": "01687962550",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 162269,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 27.59,
+                        "upload_gb": 246.13,
+                        "total_gb": 273.72
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 55.18,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-06-22T13:48:32.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 184659,
+                "mobile_number": "01637626492",
+                "user_profile": {
+                  "full_name": "Juel",
+                  "mobile_number": "01637626492",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 161855,
+                    "package": {
+                      "package_name": "Bondhu",
+                      "package_price": 840,
+                      "download_limit": 0,
+                      "upload_limit": 0,
+                      "total_limit": 0
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 5.58,
+                        "upload_gb": 106.77,
+                        "total_gb": 112.35
+                      },
+                      "limits": {
+                        "download_gb": 0,
+                        "upload_gb": 0,
+                        "total_gb": 0
+                      },
+                      "percentages": {
+                        "download": 0,
+                        "upload": 0,
+                        "overall": 0
+                      },
+                      "status": "no_usage"
+                    },
+                    "created_at": "2026-06-16T18:07:50.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 184524,
+                "mobile_number": "01749258767",
+                "user_profile": {
+                  "full_name": "Md Monir",
+                  "mobile_number": "01749258767",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 161762,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 7.89,
+                        "upload_gb": 83.58,
+                        "total_gb": 91.47
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 15.78,
+                        "upload": 100,
+                        "overall": 91.47
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-06-15T16:20:54.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 184350,
+                "mobile_number": "01956018294",
+                "user_profile": {
+                  "full_name": "Ali Hossen",
+                  "mobile_number": "01956018294",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 161635,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 40.67,
+                        "upload_gb": 385.98,
+                        "total_gb": 426.65
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 81.34,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-06-14T11:43:30.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 183788,
+                "mobile_number": "01964053490",
+                "user_profile": {
+                  "full_name": "Kajol",
+                  "mobile_number": "01964053490",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 161214,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 40.43,
+                        "upload_gb": 523.51,
+                        "total_gb": 563.94
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 80.86,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-06-10T10:13:39.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 183513,
+                "mobile_number": "01903335944",
+                "user_profile": {
+                  "full_name": "Md Muktar Miya",
+                  "mobile_number": "01903335944",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 160994,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 2.99,
+                        "upload_gb": 52.49,
+                        "total_gb": 55.48
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 5.98,
+                        "upload": 100,
+                        "overall": 55.48
+                      },
+                      "status": "moderate"
+                    },
+                    "created_at": "2026-06-08T11:01:04.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 183489,
+                "mobile_number": "01986081264",
+                "user_profile": {
+                  "full_name": "Rubel hossen",
+                  "mobile_number": "01986081264",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 160975,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 38.1,
+                        "upload_gb": 354.9,
+                        "total_gb": 393
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 76.2,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-06-08T09:03:35.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 22990,
+                "mobile_number": "01844770158",
+                "user_profile": {
+                  "full_name": "Babu",
+                  "mobile_number": "01844770158",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 160781,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 11.77,
+                        "upload_gb": 141.78,
+                        "total_gb": 153.55
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 23.54,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-06-06T12:10:03.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 182979,
+                "mobile_number": "01791692518",
+                "user_profile": {
+                  "full_name": "Abdur Razzak",
+                  "mobile_number": "01791692518",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 160645,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 15.46,
+                        "upload_gb": 161.22,
+                        "total_gb": 176.68
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 30.92,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-06-05T10:01:04.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 182809,
+                "mobile_number": "01774901913",
+                "user_profile": {
+                  "full_name": "Rashedul Islam",
+                  "mobile_number": "01774901913",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": "Basati"
+                },
+                "packages": {
+                  "hotspot": {
+                    "id": 160557,
+                    "package": {
+                      "package_name": "Shadhin Express",
+                      "package_price": 250,
+                      "download_limit": 0,
+                      "upload_limit": 0,
+                      "total_limit": 0
+                    },
+                    "connection_status": "pending",
+                    "c_status": "interested",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 0,
+                        "upload_gb": 0,
+                        "total_gb": 0
+                      },
+                      "limits": {
+                        "download_gb": 0,
+                        "upload_gb": 0,
+                        "total_gb": 0
+                      },
+                      "percentages": {
+                        "download": 0,
+                        "upload": 0,
+                        "overall": 0
+                      },
+                      "status": "no_usage"
+                    },
+                    "created_at": "2026-06-04T08:48:13.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "wifi"
+                ]
+              },
+              {
+                "uid": 182527,
+                "mobile_number": "01782567957",
+                "user_profile": {
+                  "full_name": "Siam",
+                  "mobile_number": "01782567957",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 160385,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 11.31,
+                        "upload_gb": 191.34,
+                        "total_gb": 202.65
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 22.62,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-06-02T14:09:42.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 182162,
+                "mobile_number": "01757682716",
+                "user_profile": {
+                  "full_name": "Sohidul islam",
+                  "mobile_number": "01757682716",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 160137,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 22.75,
+                        "upload_gb": 423.52,
+                        "total_gb": 446.27
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 45.5,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-31T11:08:09.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 182095,
+                "mobile_number": "01841997854",
+                "user_profile": {
+                  "full_name": "Amdadull",
+                  "mobile_number": "01841997854",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 160078,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 25.53,
+                        "upload_gb": 330.28,
+                        "total_gb": 355.81
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 51.06,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-30T10:52:18.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 181970,
+                "mobile_number": "01603761038",
+                "user_profile": {
+                  "full_name": "Siyem",
+                  "mobile_number": "01603761038",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 159969,
+                    "package": {
+                      "package_name": "Bondhu",
+                      "package_price": 840,
+                      "download_limit": 0,
+                      "upload_limit": 0,
+                      "total_limit": 0
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 21.76,
+                        "upload_gb": 389.78,
+                        "total_gb": 411.54
+                      },
+                      "limits": {
+                        "download_gb": 0,
+                        "upload_gb": 0,
+                        "total_gb": 0
+                      },
+                      "percentages": {
+                        "download": 0,
+                        "upload": 0,
+                        "overall": 0
+                      },
+                      "status": "no_usage"
+                    },
+                    "created_at": "2026-05-27T15:25:38.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 181965,
+                "mobile_number": "01978035220",
+                "user_profile": {
+                  "full_name": "Sojib",
+                  "mobile_number": "01978035220",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 159963,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 10.21,
+                        "upload_gb": 120.91,
+                        "total_gb": 131.12
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 20.42,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-27T14:24:15.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 181946,
+                "mobile_number": "01761712746",
+                "user_profile": {
+                  "full_name": "Suhel",
+                  "mobile_number": "01761712746",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 159944,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 20.88,
+                        "upload_gb": 326.22,
+                        "total_gb": 347.1
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 41.76,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-27T11:30:15.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 181922,
+                "mobile_number": "01628969281",
+                "user_profile": {
+                  "full_name": "Md Mustamin",
+                  "mobile_number": "01628969281",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 159921,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 31.51,
+                        "upload_gb": 353.87,
+                        "total_gb": 385.38
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 63.02,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-27T07:02:33.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 181800,
+                "mobile_number": "01775254681",
+                "user_profile": {
+                  "full_name": "Samin",
+                  "mobile_number": "01775254681",
+                  "division_id": null,
+                  "district_id": null,
+                  "upazila_id": null,
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 159819,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 14.56,
+                        "upload_gb": 166.57,
+                        "total_gb": 181.13
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 29.12,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-25T12:40:28.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171647,
+                "mobile_number": "01970544831",
+                "user_profile": {
+                  "full_name": "Romjan",
+                  "mobile_number": "01970544831",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149308,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 45.2,
+                        "upload_gb": 306.76,
+                        "total_gb": 351.96
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 90.4,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:31.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171646,
+                "mobile_number": "01738639430",
+                "user_profile": {
+                  "full_name": "Sumon",
+                  "mobile_number": "01738639430",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149307,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "inactive",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 0.88,
+                        "upload_gb": 8.92,
+                        "total_gb": 9.8
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 1.76,
+                        "upload": 17.84,
+                        "overall": 9.8
+                      },
+                      "status": "normal"
+                    },
+                    "created_at": "2026-05-16T13:05:30.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171645,
+                "mobile_number": "01714372831",
+                "user_profile": {
+                  "full_name": "Md Forhad",
+                  "mobile_number": "01714372831",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149306,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 21.39,
+                        "upload_gb": 268.8,
+                        "total_gb": 290.19
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 42.78,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:29.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171643,
+                "mobile_number": "01642544875",
+                "user_profile": {
+                  "full_name": "Faruk",
+                  "mobile_number": "01642544875",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149304,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 17.06,
+                        "upload_gb": 243.39,
+                        "total_gb": 260.45
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 34.12,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:28.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171644,
+                "mobile_number": "01729993465",
+                "user_profile": {
+                  "full_name": "Manik ",
+                  "mobile_number": "01729993465",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149305,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 15.24,
+                        "upload_gb": 263.61,
+                        "total_gb": 278.85
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 30.48,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:28.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171642,
+                "mobile_number": "01611926073",
+                "user_profile": {
+                  "full_name": "Md Rasel",
+                  "mobile_number": "01611926073",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149303,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 31.48,
+                        "upload_gb": 434.74,
+                        "total_gb": 466.22
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 62.96,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:27.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171641,
+                "mobile_number": "01831593755",
+                "user_profile": {
+                  "full_name": "Hasan ",
+                  "mobile_number": "01831593755",
+                  "division_id": "Dhaka",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Tangail Sadar",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149302,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 18.92,
+                        "upload_gb": 266.26,
+                        "total_gb": 285.18
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 37.84,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:26.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171639,
+                "mobile_number": "01719923085",
+                "user_profile": {
+                  "full_name": "kovir",
+                  "mobile_number": "01719923085",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149300,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 16.79,
+                        "upload_gb": 245.32,
+                        "total_gb": 262.11
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 33.58,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:25.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171640,
+                "mobile_number": "01648601874",
+                "user_profile": {
+                  "full_name": "Abu Rayhan",
+                  "mobile_number": "01648601874",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149301,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 4.42,
+                        "upload_gb": 46.6,
+                        "total_gb": 51.02
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 8.84,
+                        "upload": 93.2,
+                        "overall": 51.02
+                      },
+                      "status": "moderate"
+                    },
+                    "created_at": "2026-05-16T13:05:25.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171638,
+                "mobile_number": "01878851758",
+                "user_profile": {
+                  "full_name": "Sabbir Hossen",
+                  "mobile_number": "01878851758",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149299,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 21.97,
+                        "upload_gb": 327.22,
+                        "total_gb": 349.19
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 43.94,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:24.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171636,
+                "mobile_number": "01331172206",
+                "user_profile": {
+                  "full_name": "Jakariya",
+                  "mobile_number": "01331172206",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149297,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "inactive",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 0,
+                        "upload_gb": 0,
+                        "total_gb": 0
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 0,
+                        "upload": 0,
+                        "overall": 0
+                      },
+                      "status": "no_usage"
+                    },
+                    "created_at": "2026-05-16T13:05:23.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171637,
+                "mobile_number": "01988593671",
+                "user_profile": {
+                  "full_name": "Kanon begom",
+                  "mobile_number": "01988593671",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149298,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 14.73,
+                        "upload_gb": 160.25,
+                        "total_gb": 174.98
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 29.46,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:23.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171635,
+                "mobile_number": "01338553427",
+                "user_profile": {
+                  "full_name": "Hira Miya",
+                  "mobile_number": "01338553427",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149296,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 27.97,
+                        "upload_gb": 345.89,
+                        "total_gb": 373.86
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 55.94,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:22.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171633,
+                "mobile_number": "01783199888",
+                "user_profile": {
+                  "full_name": "Jakaria",
+                  "mobile_number": "01783199888",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149294,
+                    "package": {
+                      "package_name": "Student",
+                      "package_price": 685,
+                      "download_limit": 0,
+                      "upload_limit": 0,
+                      "total_limit": 0
+                    },
+                    "connection_status": "inactive",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 0,
+                        "upload_gb": 0,
+                        "total_gb": 0
+                      },
+                      "limits": {
+                        "download_gb": 0,
+                        "upload_gb": 0,
+                        "total_gb": 0
+                      },
+                      "percentages": {
+                        "download": 0,
+                        "upload": 0,
+                        "overall": 0
+                      },
+                      "status": "no_usage"
+                    },
+                    "created_at": "2026-05-16T13:05:21.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171634,
+                "mobile_number": "01995353265",
+                "user_profile": {
+                  "full_name": "Rina",
+                  "mobile_number": "01995353265",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149295,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 41.83,
+                        "upload_gb": 364.15,
+                        "total_gb": 405.98
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 83.66,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:21.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171632,
+                "mobile_number": "01316698973",
+                "user_profile": {
+                  "full_name": "Safwan",
+                  "mobile_number": "01316698973",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149293,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 12.8,
+                        "upload_gb": 108.28,
+                        "total_gb": 121.08
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 25.6,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:20.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171631,
+                "mobile_number": "01609834760",
+                "user_profile": {
+                  "full_name": "Md Asraful Alam",
+                  "mobile_number": "01609834760",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149292,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "active",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 14.18,
+                        "upload_gb": 273.35,
+                        "total_gb": 287.53
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 28.36,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:19.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171629,
+                "mobile_number": "01716890900",
+                "user_profile": {
+                  "full_name": "Md Rasel",
+                  "mobile_number": "01716890900",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149290,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "inactive",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 20.4,
+                        "upload_gb": 208.45,
+                        "total_gb": 228.85
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 40.8,
+                        "upload": 100,
+                        "overall": 100
+                      },
+                      "status": "critical"
+                    },
+                    "created_at": "2026-05-16T13:05:18.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              },
+              {
+                "uid": 171630,
+                "mobile_number": "01784800984",
+                "user_profile": {
+                  "full_name": "Monnaf",
+                  "mobile_number": "01784800984",
+                  "division_id": "Mymensingh",
+                  "district_id": "Mymensingh",
+                  "upazila_id": "Muktagacha",
+                  "union_id": null
+                },
+                "packages": {
+                  "broadband": {
+                    "id": 149291,
+                    "package": {
+                      "package_name": "Desh",
+                      "package_price": 525,
+                      "download_limit": 50,
+                      "upload_limit": 50,
+                      "total_limit": 100
+                    },
+                    "connection_status": "inactive",
+                    "c_status": "Uncontacted",
+                    "bandwidth_usage": {
+                      "current_month": {
+                        "download_gb": 0,
+                        "upload_gb": 0,
+                        "total_gb": 0
+                      },
+                      "limits": {
+                        "download_gb": 50,
+                        "upload_gb": 50,
+                        "total_gb": 100
+                      },
+                      "percentages": {
+                        "download": 0,
+                        "upload": 0,
+                        "overall": 0
+                      },
+                      "status": "no_usage"
+                    },
+                    "created_at": "2026-05-16T13:05:18.000000Z"
+                  }
+                },
+                "has_multiple_packages": false,
+                "package_types": [
+                  "broadband"
+                ]
+              }
+            ],
+            "pagination": {
+              "current_page": 1,
+              "per_page": 50,
+              "total": 1050,
+              "last_page": 21,
+              "from": 1,
+              "to": 50,
+              "has_more_pages": true,
+              "next_page_url": "https://userapp-backend.shadhinwifi.com/api/shadhin/v3/partner/customer/list?page=2",
+              "previous_page_url": null
+            }
+          },
+          "status": "success",
+          "error_type": "",
+          "message": ""
+        }
+      '''
+    }
+  }
+}
