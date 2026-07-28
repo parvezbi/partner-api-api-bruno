@@ -1,0 +1,25 @@
+meta {
+  name: customer live bandwidth
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{base_url}}/partner/customer/bandwidth/live?username=01310166052&type=pppoe
+  body: none
+  auth: bearer
+}
+
+params:query {
+  username: 01310166052
+  type: pppoe
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
