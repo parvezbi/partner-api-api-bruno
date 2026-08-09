@@ -5,9 +5,14 @@ meta {
 }
 
 get {
-  url: {{base_url}}/partner/business/dashboard
+  url: {{base_url}}/partner/business/dashboard?type=broadband&month=2026-06
   body: none
   auth: bearer
+}
+
+params:query {
+  type: broadband
+  month: 2026-06
 }
 
 auth:bearer {
