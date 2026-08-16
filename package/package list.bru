@@ -1,0 +1,89 @@
+meta {
+  name: package list
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://nmsbackend.acloudplanet.com/api/v2/shared/internet_package/2/broadband
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+example {
+  name: success-sample
+  
+  request: {
+    url: https://nmsbackend.acloudplanet.com/api/v2/shared/internet_package/2/broadband
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      date: Sun, 16 Aug 2026 05:22:54 GMT
+      server: Apache/2.4.59 (Debian)
+      cache-control: no-cache, private
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+      vary: Origin
+      keep-alive: timeout=5, max=100
+      connection: Keep-Alive
+      transfer-encoding: chunked
+      content-type: application/json
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": [
+            {
+              "id": 501,
+              "mikrotik_radius_group_name": "Student",
+              "price": 1,
+              "en_title": "Student"
+            },
+            {
+              "id": 502,
+              "mikrotik_radius_group_name": "Home",
+              "price": 1050,
+              "en_title": "Home"
+            },
+            {
+              "id": 504,
+              "mikrotik_radius_group_name": "Freelancer",
+              "price": 2625,
+              "en_title": "Freelancer"
+            },
+            {
+              "id": 508,
+              "mikrotik_radius_group_name": "Bondhu",
+              "price": 1,
+              "en_title": "Bondhu"
+            },
+            {
+              "id": 511,
+              "mikrotik_radius_group_name": "Desh",
+              "price": 1,
+              "en_title": "Desh"
+            }
+          ],
+          "status": "success",
+          "error_type": "",
+          "message": ""
+        }
+      '''
+    }
+  }
+}
