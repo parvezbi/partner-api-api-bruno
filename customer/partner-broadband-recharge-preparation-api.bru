@@ -1,0 +1,91 @@
+meta {
+  name: partner-broadband-recharge-preparation-api
+  type: http
+  seq: 13
+}
+
+post {
+  url: {{base_url}}/partner/customer/broadband/recharge
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  uid: 155618
+  package_id: 501
+  billing_cycle: fixed_date
+  payment_method: bkash
+  billing_start_date: 27-08-26
+  billing_due_days: 10
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
+
+example {
+  name: success-sample
+  
+  request: {
+    url: {{base_url}}/partner/customer/broadband/recharge
+    method: POST
+    mode: multipartForm
+    body:multipart-form: {
+      uid: 155618
+      package_id: 501
+      billing_cycle: fixed_date
+      payment_method: bkash
+      billing_start_date: 27-08-26
+      billing_due_days: 10
+    }
+  }
+  
+  response: {
+    headers: {
+      server: nginx/1.25.2
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      vary: Accept-Encoding, Origin
+      x-powered-by: PHP/8.2.32
+      cache-control: no-cache, private
+      date: Thu, 27 Aug 2026 10:28:20 GMT
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "uid": "155618",
+            "zone_id": "2350039",
+            "mobile_number": "01315914880",
+            "package": "Student",
+            "package_price": 685,
+            "payable_amount": 685,
+            "billing_cycle": "fixed_date",
+            "payment_method": "bkash",
+            "payment_cache_key": "broadband_recharge_155618",
+            "is_recharge": true
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Broadband recharge initiated. Please proceed to payment."
+        }
+      '''
+    }
+  }
+}

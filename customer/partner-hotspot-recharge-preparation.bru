@@ -1,0 +1,84 @@
+meta {
+  name: partner-hotspot-recharge-preparation
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{base_url}}/partner/customer/hotspot/recharge?uid=155686&package_id=5&payment_method=bkash
+  body: none
+  auth: bearer
+}
+
+params:query {
+  uid: 155686
+  package_id: 5
+  payment_method: bkash
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
+
+example {
+  name: success-sample
+  
+  request: {
+    url: {{base_url}}/partner/customer/hotspot/recharge?uid=155686&package_id=5&payment_method=bkash
+    method: POST
+    mode: none
+    params:query: {
+      uid: 155686
+      package_id: 5
+      payment_method: bkash
+    }
+  }
+  
+  response: {
+    headers: {
+      server: nginx/1.25.2
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      vary: Accept-Encoding, Origin
+      x-powered-by: PHP/8.2.32
+      cache-control: no-cache, private
+      date: Thu, 27 Aug 2026 10:31:34 GMT
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": {
+            "uid": "155686",
+            "zone_id": "2350039",
+            "mobile_number": "01883159541",
+            "package": "SHADHIN",
+            "package_price": 150,
+            "payable_amount": 150,
+            "payment_method": "bkash",
+            "payment_cache_key": "hotspot_recharge_155686",
+            "is_recharge": true
+          },
+          "status": "success",
+          "error_type": "",
+          "message": "Hotspot recharge initiated. Please proceed to payment."
+        }
+      '''
+    }
+  }
+}
