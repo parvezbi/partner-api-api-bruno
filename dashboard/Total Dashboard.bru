@@ -25,7 +25,7 @@ settings {
 }
 
 example {
-  name: success-live-muktagacha
+  name: Dashboard Response New
   
   request: {
     url: {{base_url}}/partner/dashboard/total?filter=monthly&date=
@@ -39,16 +39,16 @@ example {
   
   response: {
     headers: {
-      date: Thu, 23 Jul 2026 03:59:04 GMT
-      server: Apache/2.4.66 (Debian)
+      server: nginx/1.25.2
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      vary: Accept-Encoding, Origin
+      x-powered-by: PHP/8.2.32
       cache-control: no-cache, private
+      date: Wed, 28 Oct 2026 10:39:16 GMT
       x-ratelimit-limit: 200
       x-ratelimit-remaining: 199
-      vary: Origin,Authorization
-      keep-alive: timeout=10, max=100
-      connection: Keep-Alive
-      transfer-encoding: chunked
-      content-type: application/json
     }
   
     status: {
@@ -62,391 +62,277 @@ example {
         {
           "results": {
             "summary": {
-              "total_customers": 1050,
-              "active_customers": 201,
-              "inactive_customers": 277,
-              "pending_customers": 572,
-              "total_revenue": 10036,
-              "broadband_revenue": 9886,
-              "hotspot_revenue": 150,
-              "broadband_commission": 3954.4,
-              "hotspot_commission": 0,
-              "total_commission": 3954.4,
+              "total_customers": 8,
+              "active_customers": 7,
+              "inactive_customers": 0,
+              "pending_customers": 1,
+              "total_revenue": 2935,
+              "total_commission": 0,
               "total_tickets": 0,
-              "online_users": 169
+              "online_users": 0,
+              "billing_cards": {
+                "paid_total_users": 6,
+                "paid_broadband_users": 5,
+                "paid_wifi_users": 1,
+                "expired_users": 0,
+                "unpaid_users": 1,
+                "paid_total_amount": 2935,
+                "paid_broadband_amount": 2785,
+                "paid_wifi_amount": 150,
+                "expired_amount": 0,
+                "unpaid_amount": 525,
+                "free_users": 0,
+                "free_amount": 0
+              }
             },
             "revenue_graph": [
               {
-                "label": "01 Jul",
-                "date": "2026-07-01",
-                "day_name": "Wed",
-                "broadband_revenue": 525,
-                "hotspot_revenue": 0,
-                "total_revenue": 525,
-                "broadband_commission": 210,
-                "hotspot_commission": 0,
-                "total_commission": 210,
-                "timestamp": 1782842400
-              },
-              {
-                "label": "02 Jul",
-                "date": "2026-07-02",
+                "label": "01 Oct",
+                "date": "2026-10-01",
                 "day_name": "Thu",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1782928800
+                "revenue": 2785,
+                "commission": 0,
+                "timestamp": 1790791200
               },
               {
-                "label": "03 Jul",
-                "date": "2026-07-03",
+                "label": "02 Oct",
+                "date": "2026-10-02",
                 "day_name": "Fri",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1783015200
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1790877600
               },
               {
-                "label": "04 Jul",
-                "date": "2026-07-04",
+                "label": "03 Oct",
+                "date": "2026-10-03",
                 "day_name": "Sat",
-                "broadband_revenue": 474,
-                "hotspot_revenue": 0,
-                "total_revenue": 474,
-                "broadband_commission": 189.6,
-                "hotspot_commission": 0,
-                "total_commission": 189.6,
-                "timestamp": 1783101600
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1790964000
               },
               {
-                "label": "05 Jul",
-                "date": "2026-07-05",
+                "label": "04 Oct",
+                "date": "2026-10-04",
                 "day_name": "Sun",
-                "broadband_revenue": 914,
-                "hotspot_revenue": 0,
-                "total_revenue": 914,
-                "broadband_commission": 365.6,
-                "hotspot_commission": 0,
-                "total_commission": 365.6,
-                "timestamp": 1783188000
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1791050400
               },
               {
-                "label": "06 Jul",
-                "date": "2026-07-06",
+                "label": "05 Oct",
+                "date": "2026-10-05",
                 "day_name": "Mon",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1783274400
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1791136800
               },
               {
-                "label": "07 Jul",
-                "date": "2026-07-07",
+                "label": "06 Oct",
+                "date": "2026-10-06",
                 "day_name": "Tue",
-                "broadband_revenue": 2100,
-                "hotspot_revenue": 150,
-                "total_revenue": 2250,
-                "broadband_commission": 840,
-                "hotspot_commission": 0,
-                "total_commission": 840,
-                "timestamp": 1783360800
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1791223200
               },
               {
-                "label": "08 Jul",
-                "date": "2026-07-08",
+                "label": "07 Oct",
+                "date": "2026-10-07",
                 "day_name": "Wed",
-                "broadband_revenue": 406,
-                "hotspot_revenue": 0,
-                "total_revenue": 406,
-                "broadband_commission": 162.4,
-                "hotspot_commission": 0,
-                "total_commission": 162.4,
-                "timestamp": 1783447200
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1791309600
               },
               {
-                "label": "09 Jul",
-                "date": "2026-07-09",
+                "label": "08 Oct",
+                "date": "2026-10-08",
                 "day_name": "Thu",
-                "broadband_revenue": 389,
-                "hotspot_revenue": 0,
-                "total_revenue": 389,
-                "broadband_commission": 155.6,
-                "hotspot_commission": 0,
-                "total_commission": 155.6,
-                "timestamp": 1783533600
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1791396000
               },
               {
-                "label": "10 Jul",
-                "date": "2026-07-10",
+                "label": "09 Oct",
+                "date": "2026-10-09",
                 "day_name": "Fri",
-                "broadband_revenue": 2472,
-                "hotspot_revenue": 0,
-                "total_revenue": 2472,
-                "broadband_commission": 988.8,
-                "hotspot_commission": 0,
-                "total_commission": 988.8,
-                "timestamp": 1783620000
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1791482400
               },
               {
-                "label": "11 Jul",
-                "date": "2026-07-11",
+                "label": "10 Oct",
+                "date": "2026-10-10",
                 "day_name": "Sat",
-                "broadband_revenue": 2285,
-                "hotspot_revenue": 0,
-                "total_revenue": 2285,
-                "broadband_commission": 914,
-                "hotspot_commission": 0,
-                "total_commission": 914,
-                "timestamp": 1783706400
+                "revenue": 150,
+                "commission": 0,
+                "timestamp": 1791568800
               },
               {
-                "label": "12 Jul",
-                "date": "2026-07-12",
+                "label": "11 Oct",
+                "date": "2026-10-11",
                 "day_name": "Sun",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1783792800
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1791655200
               },
               {
-                "label": "13 Jul",
-                "date": "2026-07-13",
+                "label": "12 Oct",
+                "date": "2026-10-12",
                 "day_name": "Mon",
-                "broadband_revenue": 321,
-                "hotspot_revenue": 0,
-                "total_revenue": 321,
-                "broadband_commission": 128.4,
-                "hotspot_commission": 0,
-                "total_commission": 128.4,
-                "timestamp": 1783879200
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1791741600
               },
               {
-                "label": "14 Jul",
-                "date": "2026-07-14",
+                "label": "13 Oct",
+                "date": "2026-10-13",
                 "day_name": "Tue",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1783965600
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1791828000
               },
               {
-                "label": "15 Jul",
-                "date": "2026-07-15",
+                "label": "14 Oct",
+                "date": "2026-10-14",
                 "day_name": "Wed",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1784052000
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1791914400
               },
               {
-                "label": "16 Jul",
-                "date": "2026-07-16",
+                "label": "15 Oct",
+                "date": "2026-10-15",
                 "day_name": "Thu",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1784138400
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1792000800
               },
               {
-                "label": "17 Jul",
-                "date": "2026-07-17",
+                "label": "16 Oct",
+                "date": "2026-10-16",
                 "day_name": "Fri",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1784224800
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1792087200
               },
               {
-                "label": "18 Jul",
-                "date": "2026-07-18",
+                "label": "17 Oct",
+                "date": "2026-10-17",
                 "day_name": "Sat",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1784311200
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1792173600
               },
               {
-                "label": "19 Jul",
-                "date": "2026-07-19",
+                "label": "18 Oct",
+                "date": "2026-10-18",
                 "day_name": "Sun",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1784397600
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1792260000
               },
               {
-                "label": "20 Jul",
-                "date": "2026-07-20",
+                "label": "19 Oct",
+                "date": "2026-10-19",
                 "day_name": "Mon",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1784484000
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1792346400
               },
               {
-                "label": "21 Jul",
-                "date": "2026-07-21",
+                "label": "20 Oct",
+                "date": "2026-10-20",
                 "day_name": "Tue",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1784570400
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1792432800
               },
               {
-                "label": "22 Jul",
-                "date": "2026-07-22",
+                "label": "21 Oct",
+                "date": "2026-10-21",
                 "day_name": "Wed",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1784656800
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1792519200
               },
               {
-                "label": "23 Jul",
-                "date": "2026-07-23",
+                "label": "22 Oct",
+                "date": "2026-10-22",
                 "day_name": "Thu",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1784743200
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1792605600
               },
               {
-                "label": "24 Jul",
-                "date": "2026-07-24",
+                "label": "23 Oct",
+                "date": "2026-10-23",
                 "day_name": "Fri",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1784829600
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1792692000
               },
               {
-                "label": "25 Jul",
-                "date": "2026-07-25",
+                "label": "24 Oct",
+                "date": "2026-10-24",
                 "day_name": "Sat",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1784916000
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1792778400
               },
               {
-                "label": "26 Jul",
-                "date": "2026-07-26",
+                "label": "25 Oct",
+                "date": "2026-10-25",
                 "day_name": "Sun",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1785002400
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1792864800
               },
               {
-                "label": "27 Jul",
-                "date": "2026-07-27",
+                "label": "26 Oct",
+                "date": "2026-10-26",
                 "day_name": "Mon",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1785088800
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1792951200
               },
               {
-                "label": "28 Jul",
-                "date": "2026-07-28",
+                "label": "27 Oct",
+                "date": "2026-10-27",
                 "day_name": "Tue",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1785175200
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1793037600
               },
               {
-                "label": "29 Jul",
-                "date": "2026-07-29",
+                "label": "28 Oct",
+                "date": "2026-10-28",
                 "day_name": "Wed",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1785261600
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1793124000
               },
               {
-                "label": "30 Jul",
-                "date": "2026-07-30",
+                "label": "29 Oct",
+                "date": "2026-10-29",
                 "day_name": "Thu",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1785348000
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1793210400
               },
               {
-                "label": "31 Jul",
-                "date": "2026-07-31",
+                "label": "30 Oct",
+                "date": "2026-10-30",
                 "day_name": "Fri",
-                "broadband_revenue": 0,
-                "hotspot_revenue": 0,
-                "total_revenue": 0,
-                "broadband_commission": 0,
-                "hotspot_commission": 0,
-                "total_commission": 0,
-                "timestamp": 1785434400
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1793296800
+              },
+              {
+                "label": "31 Oct",
+                "date": "2026-10-31",
+                "day_name": "Sat",
+                "revenue": 0,
+                "commission": 0,
+                "timestamp": 1793383200
               }
             ],
             "notices": {
@@ -457,54 +343,55 @@ example {
               {
                 "type": "status_update",
                 "title": "Connection Status Updated",
-                "description": "Md Parvez status changed to inactive",
-                "status": "inactive",
-                "created_at": "2026-07-15T18:33:48.000000Z",
-                "time_ago": "1 week ago",
-                "user_id": 171523
+                "description": "Jane Doe 6 status changed to pending",
+                "status": "pending",
+                "created_at": "2026-10-13T12:03:46.000000Z",
+                "time_ago": "2 weeks ago",
+                "user_id": 157646
               },
               {
                 "type": "status_update",
                 "title": "Connection Status Updated",
-                "description": "Md. Jowel mia status changed to inactive",
-                "status": "inactive",
-                "created_at": "2026-07-15T17:24:22.000000Z",
-                "time_ago": "1 week ago",
-                "user_id": 136171
-              },
-              {
-                "type": "status_update",
-                "title": "Connection Status Updated",
-                "description": "Foysal Ahammad status changed to inactive",
-                "status": "inactive",
-                "created_at": "2026-07-15T14:39:19.000000Z",
-                "time_ago": "1 week ago",
-                "user_id": 88658
-              },
-              {
-                "type": "status_update",
-                "title": "Connection Status Updated",
-                "description": "Siddique  status changed to inactive",
-                "status": "inactive",
-                "created_at": "2026-07-14T13:25:49.000000Z",
-                "time_ago": "1 week ago",
-                "user_id": 99120
-              },
-              {
-                "type": "status_update",
-                "title": "Connection Status Updated",
-                "description": "Md Mohan status changed to active",
+                "description": "John Doe 2 status changed to active",
                 "status": "active",
-                "created_at": "2026-07-13T09:38:44.000000Z",
-                "time_ago": "1 week ago",
-                "user_id": 188023
+                "created_at": "2026-10-12T12:03:34.000000Z",
+                "time_ago": "2 weeks ago",
+                "user_id": 157633
+              },
+              {
+                "type": "status_update",
+                "title": "Connection Status Updated",
+                "description": "John Doe 5 status changed to active",
+                "status": "active",
+                "created_at": "2026-10-12T11:42:09.000000Z",
+                "time_ago": "2 weeks ago",
+                "user_id": 157636
+              },
+              {
+                "type": "status_update",
+                "title": "Connection Status Updated",
+                "description": "John Doe 4 status changed to active",
+                "status": "active",
+                "created_at": "2026-10-12T11:18:55.000000Z",
+                "time_ago": "2 weeks ago",
+                "user_id": 157635
+              },
+              {
+                "type": "status_update",
+                "title": "Connection Status Updated",
+                "description": "Jamal Bass status changed to active",
+                "status": "active",
+                "created_at": "2026-10-12T07:11:21.000000Z",
+                "time_ago": "2 weeks ago",
+                "user_id": 157631
               }
             ],
             "meta": {
-              "execution_time_ms": 665.93,
+              "execution_time_ms": 684.29,
               "filter": "monthly",
-              "zone_id": "8221080",
-              "zone_name": "muktagacha"
+              "date": "2026-10-28",
+              "zone_id": "2350040",
+              "zone_name": "cumillareseller"
             }
           },
           "status": "success",

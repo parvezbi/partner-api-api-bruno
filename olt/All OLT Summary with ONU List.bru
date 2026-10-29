@@ -1,0 +1,26 @@
+meta {
+  name: All OLT Summary with ONU List
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base_url}}/partner/olt/onu-summary?zone_id=3303067&status=offline
+  body: none
+  auth: bearer
+}
+
+params:query {
+  zone_id: 3303067
+  status: offline
+}
+
+auth:bearer {
+  token: 266128|1APGa7888p6ksG2W4UeBswUBQPAj11V7NC9wUyuv
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}

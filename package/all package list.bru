@@ -1,0 +1,21 @@
+meta {
+  name: all package list
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/partner/packages/all
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}

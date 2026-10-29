@@ -1,0 +1,21 @@
+meta {
+  name: api/shadhin/v3/apps/internet_user_details/{user_auth_id}
+  type: http
+  seq: 15
+}
+
+get {
+  url: https://userapp-backend.shadhinwifi.com/api/shadhin/v3/apps/internet_user_details/35299
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}

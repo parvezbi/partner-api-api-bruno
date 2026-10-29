@@ -1,0 +1,24 @@
+meta {
+  name: paid customers
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{base_url}}/partner/customer/active-paid-online?package_type=broadband
+  body: none
+  auth: bearer
+}
+
+params:query {
+  package_type: broadband
+}
+
+auth:bearer {
+  token: 6367|eDEreBHeZUhX2aALEww1ZrrGER7Pu8VACdZy8ZR7
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,112 @@
+meta {
+  name: package-list-in-mk-users
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{base_url}}/partner/packages/all
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+  forwardAuthorizationHeader: false
+}
+
+example {
+  name: success-sample-response
+  
+  request: {
+    url: {{base_url}}/partner/packages/all
+    method: GET
+    mode: none
+  }
+  
+  response: {
+    headers: {
+      server: nginx/1.25.2
+      content-type: application/json
+      transfer-encoding: chunked
+      connection: keep-alive
+      vary: Accept-Encoding, Origin
+      x-powered-by: PHP/8.2.32
+      cache-control: no-cache, private
+      date: Wed, 28 Oct 2026 10:56:22 GMT
+      x-ratelimit-limit: 200
+      x-ratelimit-remaining: 199
+    }
+  
+    status: {
+      code: 200
+      text: OK
+    }
+  
+    body: {
+      type: json
+      content: '''
+        {
+          "results": [
+            {
+              "id": 1,
+              "mikrotik_radius_group_name": "FREE-PACKAGE",
+              "price": 0,
+              "en_title": "Welcome"
+            },
+            {
+              "id": 5,
+              "mikrotik_radius_group_name": "SHADHIN",
+              "price": 150,
+              "en_title": "Shadhin"
+            },
+            {
+              "id": 6,
+              "mikrotik_radius_group_name": "SHADHIN-EXPRESS",
+              "price": 250,
+              "en_title": "Shadhin Express"
+            },
+            {
+              "id": 501,
+              "mikrotik_radius_group_name": "Student",
+              "price": 685,
+              "en_title": "Student"
+            },
+            {
+              "id": 502,
+              "mikrotik_radius_group_name": "Home",
+              "price": 1050,
+              "en_title": "Home"
+            },
+            {
+              "id": 507,
+              "mikrotik_radius_group_name": "StartUP",
+              "price": 4200,
+              "en_title": "StartUP"
+            },
+            {
+              "id": 508,
+              "mikrotik_radius_group_name": "Bondhu",
+              "price": 840,
+              "en_title": "Bondhu"
+            },
+            {
+              "id": 511,
+              "mikrotik_radius_group_name": "Desh",
+              "price": 525,
+              "en_title": "Desh"
+            }
+          ],
+          "status": "success",
+          "error_type": "",
+          "message": ""
+        }
+      '''
+    }
+  }
+}
